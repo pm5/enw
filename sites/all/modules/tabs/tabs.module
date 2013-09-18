@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the tabs feature.
+ */
+
+include_once 'tabs.features.inc';

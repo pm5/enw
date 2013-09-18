@@ -1,0 +1,13 @@
+diff --git modules/system/system.install modules/system/system.install
+index c4e1010..cf5adce 100644
+--- modules/system/system.install
++++ modules/system/system.install
+@@ -37,7 +37,7 @@ function system_requirements($phase) {
+       $requirements['install_profile'] = array(
+         'title' => $t('Install profile'),
+         'value' => $t('%profile_name (%profile-%version)', array(
+-          '%profile_name' => $info['name'],
++          '%profile_name' => $info['distribution_name'],
+           '%profile' => $profile,
+           '%version' => $info['version']
+         )),
