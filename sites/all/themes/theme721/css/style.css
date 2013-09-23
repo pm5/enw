@@ -1077,8 +1077,8 @@ ul.contextual-links li a:hover {}
 }
 
 .flexslider .slider-content {
-	padding: 8px 30px 0px 38px;
-	line-height: 1em;
+	padding: 8px 30px 10px 38px;
+	line-height: 1.5em;
 	margin:-10px 0px;
 }
 
@@ -1438,7 +1438,7 @@ h2.pane-title {
 }
 
 .slider-content{
-font-size:13px;
+font-size:16px;
 }
 
 .form-submit{

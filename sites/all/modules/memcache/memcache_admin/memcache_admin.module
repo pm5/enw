@@ -51,7 +51,7 @@ function memcache_admin_menu() {
     'access arguments' => array('access memcache statistics'),
     'weight' => 1,
   );
-  $memcache_servers = variable_get('memcache_servers', array('127.0.0.1:11211' => 'default'));
+  $memcache_servers = variable_get('memcache_servers', array('10.1.0.110:11211' => 'default'));
   $clusters = array();
   foreach ($memcache_servers as $server => $cluster) {
     $clusters[$cluster]['servers'][] = $server;
@@ -245,7 +245,7 @@ function memcache_admin_stats($bin = 'cache') {
 
   $stats = dmemcache_stats($bin, 'default', TRUE);
 
-  $memcache_servers = variable_get('memcache_servers', array('127.0.0.1:11211' => 'default'));
+  $memcache_servers = variable_get('memcache_servers', array('10.1.0.110:11211' => 'default'));
 
   if (is_array($stats[$bin]) && count($stats[$bin])) {
     $stats = $stats[$bin];
