@@ -1,0 +1,109 @@
+
+/* Quicktabs - Enw theme style
+ * http://drupal.org/project/enw
+ */
+
+.quicktabs_main.quicktabs-style-enw {
+  border: 1px solid #eee;
+  clear: both;
+  padding: 10px 5px 0 5px;
+  position: relative;
+  top: -0.1em;
+  background: #fff;
+}
+
+ul.quicktabs-tabs.quicktabs-style-enw {
+  margin: 0;
+  padding: 0;
+  width: 650px;
+  background:#dfd5b0;
+  -webkit-border-top-left-radius: 10px;
+-webkit-border-top-right-radius: 10px;
+-moz-border-radius-topleft: 10px;
+-moz-border-radius-topright: 10px;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+margin-top:20px;
+}
+
+ul.quicktabs-tabs.quicktabs-style-enw li {
+  float: left;
+  font-weight: normal;
+  list-style: none;
+  margin: 0.3em 0 0 0;
+  #height: 2.65em;
+  min-height: 2.95em;
+  padding: 0;
+}
+
+ul.quicktabs-tabs.quicktabs-style-enw li.active {
+  margin: -0.2em 0 0 0;
+}
+
+ul.quicktabs-tabs.quicktabs-style-enw li a,
+ul.quicktabs-tabs.quicktabs-style-enw li a:visited {
+  float: left;
+  display: block;
+  #height: 2.65em;
+  #min-height: 2.95em;
+  line-height: 2.3em;
+  padding: 0 8px;
+  text-decoration: none;
+  #border-right: 1px solid #eee;
+  border-top: 1px solid #eee;
+  font-size: 20px;
+  #background: #fff url('images/bg-shade-light.png') repeat-x bottom left;
+  color: #777;
+  position: relative;
+}
+
+ul.quicktabs-tabs.quicktabs-style-enw li a:hover,
+ul.quicktabs-tabs.quicktabs-style-enw li.active a:hover {
+  text-decoration: none;
+  #border-color: #B3B3B3;
+  #background: #B3B3B3 url('images/bg-shade-medium.png') repeat-x bottom left;
+  #background:rgb(252, 161, 132);
+  color: #333;
+}
+
+ul.quicktabs-tabs.quicktabs-style-enw li.active a,
+ul.quicktabs-tabs.quicktabs-style-enw li.active a:visited {
+  #height: 3.05em;
+  #min-height: 3.35em;
+  #line-height: 3.35em;
+  font-weight: bold;
+  font-family:細明體;
+  #border: 1px solid #eee;
+  #background: #858585 url('images/bg-shade-dark.png') repeat-x bottom left;
+  #border-color: #555;
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+  top: -0.025em;
+  #background:rgb(250, 145, 119);
+
+}
+
+ul.quicktabs-tabs.quicktabs-style-enw li:first-child a {
+  border-left: solid 1px #eee;
+  padding:0px 15px;
+
+}
+
+ul.quicktabs-tabs.quicktabs-style-enw li.active a {
+  #border-left: solid 1px #777;
+}
+
+ul.quicktabs-tabs.quicktabs-style-enw li a:focus,
+ul.quicktabs-tabs.quicktabs-style-enw li a:active {
+  outline: none;
+  
+}
+
+/* Opera */
+@media all and (min-width: 0px) {
+  body .quicktabs_main.quicktabs-style-enw {
+    top: -0.2em;
+	display:none;
+  }
+}
