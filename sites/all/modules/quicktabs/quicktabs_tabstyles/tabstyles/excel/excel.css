@@ -39,7 +39,7 @@ ul.quicktabs-tabs.quicktabs-style-excel li:hover {
 }
 
 ul.quicktabs-tabs.quicktabs-style-excel li a:hover {
-  color: #333;
+  color: #000;
   /*background: transparent url(images/tab-right-sep.png) no-repeat right -76px;*/
 }
 
