@@ -178,10 +178,6 @@
             <?php print render($page['tabs']); ?>
         <?php endif; ?>
         
-        <?php if ($is_front): ?>
-            <h2 class="front-title">本月主題文章</h2>
-        <?php endif; ?>
-
         <?php print render($page['content_top']); ?>
         <?php print render($page['content']); ?>
         <?php print render($page['content_bottom']); ?>

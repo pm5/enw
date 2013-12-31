@@ -101,9 +101,11 @@ ul.quicktabs-tabs.quicktabs-style-enw li a:active {
 }
 
 /* Opera */
+/* disable - do not know why this fix is for but it hides quicktabs
 @media all and (min-width: 0px) {
   body .quicktabs_main.quicktabs-style-enw {
     top: -0.2em;
 	display:none;
   }
 }
+*/
