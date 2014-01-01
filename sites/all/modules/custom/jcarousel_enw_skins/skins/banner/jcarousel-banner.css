@@ -1,0 +1,147 @@
+
+/**
+ * A carousel skin for banner carousels.
+ */
+
+.jcarousel-skin-banner {
+  text-align: center;
+}
+
+.jcarousel-skin-banner .jcarousel-container-horizontal {
+  width: 860px; /* width */
+  height: 82px; /* height */
+  padding: 20px 40px;
+  margin: auto;
+}
+
+.jcarousel-skin-banner .jcarousel-container-vertical {
+  width: 102px;
+  height: 440px;
+  padding: 40px 20px;
+  margin: auto;
+}
+
+.jcarousel-skin-banner .jcarousel-clip-horizontal {
+  width: 860; /* width */
+  overflow: hidden;
+}
+
+.jcarousel-skin-banner .jcarousel-clip-vertical {
+  height: 440px;
+  overflow: hidden;
+}
+
+.jcarousel-skin-banner .jcarousel-item {
+  padding: 0;
+  width: 270px; /* width */
+  height: 80; /* height */
+  overflow: hidden;
+  border: 1px solid #CCC;
+  list-style: none;
+  background: #fff none;
+}
+
+.jcarousel-skin-banner .jcarousel-item-horizontal {
+  margin: 0 4px;
+}
+
+.jcarousel-skin-banner .jcarousel-item-vertical {
+  margin: 4px 0;
+}
+
+.jcarousel-skin-banner .jcarousel-item-placeholder {
+  background: #fff url(throbber.gif) no-repeat center center;
+  color: #000;
+}
+
+/**
+ * Buttons
+ */
+.jcarousel-skin-banner .jcarousel-next,
+.jcarousel-skin-banner .jcarousel-prev {
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-image: url(arrows.png);
+}
+
+.jcarousel-skin-banner .jcarousel-next-disabled,
+.jcarousel-skin-banner .jcarousel-prev-disabled {
+  display: none;
+}
+
+/**
+ * Horizontal Buttons
+ */
+.jcarousel-skin-banner .jcarousel-prev-horizontal {
+  position: absolute;
+  top: 45px; /* height */
+  left: 10px;
+  background-position: 0 0;
+}
+.jcarousel-skin-banner .jcarousel-prev-horizontal:hover {
+  background-position: -32px 0;
+}
+.jcarousel-skin-banner .jcarousel-prev-horizontal:active {
+  background-position: -64px 0;
+}
+
+.jcarousel-skin-banner .jcarousel-next-horizontal {
+  position: absolute;
+  top: 45px; /* height */
+  right: 10px;
+  background-position: 0 -32px;
+}
+.jcarousel-skin-banner .jcarousel-next-horizontal:hover {
+  background-position: -32px -32px;
+}
+.jcarousel-skin-banner .jcarousel-next-horizontal:active {
+  background-position: -64px -32px;
+}
+
+/**
+ * Vertical Buttons
+ */
+.jcarousel-skin-banner .jcarousel-prev-vertical {
+  position: absolute;
+  top: 10px;
+  left: 55px;
+  background-position: 0 -64px;
+}
+.jcarousel-skin-banner .jcarousel-prev-vertical:hover {
+  background-position: -32px -64px;
+}
+.jcarousel-skin-banner .jcarousel-prev-vertical:active {
+  background-position: -64px -64px;
+}
+
+.jcarousel-skin-banner .jcarousel-next-vertical {
+  position: absolute;
+  bottom: 10px;
+  left: 55px;
+  background-position: 0 -96px;
+}
+.jcarousel-skin-banner .jcarousel-next-vertical:hover {
+  background-position: -32px -96px;
+}
+.jcarousel-skin-banner .jcarousel-next-vertical:active {
+  background-position: -64px -96px;
+}
+
+.jcarousel-skin-banner .jcarousel-navigation {
+  margin: 0;
+  padding: 0;
+}
+
+.jcarousel-skin-banner .jcarousel-navigation li {
+  display: inline;
+  margin: 0 2px 0 0;
+  padding: 0;
+  background: none;
+}
+
+.jcarousel-skin-banner .jcarousel-navigation li.active a {
+  font-weight: bold;
+  text-decoration: none;
+}
+

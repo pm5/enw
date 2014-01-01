@@ -1,0 +1,15 @@
+<?php
+
+function jcarousel_enw_skins_jcarousel_skin_info()
+{
+  $skins['frontpage'] = array(
+    'title' => 'frontpage',
+    'file' => 'skins/frontpage/jcarousel-frontpage.css',
+  );
+  $skins['banner'] = array(
+    'title' => 'Banner',
+    'file' => 'skins/banner/jcarousel-banner.css',
+  );
+
+  return $skins;
+}
