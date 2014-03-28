@@ -116,10 +116,20 @@ function theme721_preprocess_html(&$vars) {
   }
 }
 
+function _theme721_preprocess_movies_page(&$vars) {
+  drupal_add_js(libraries_get_path('flexslider') . '/jquery.flexslider-min.js');
+  drupal_add_css(libraries_get_path('flexslider') . '/flexslider.css');
+  drupal_add_js(drupal_get_path('theme', 'theme721') . '/js/movies-slider.js');
+}
+
 /**
  * Implements template_preprocess_page().
  */
 function theme721_preprocess_page(&$vars) {
+
+  if (arg(0) === 'movies') {
+    _theme721_preprocess_movies_page($vars);
+  }
   
   if (isset($vars['node_title'])) {
     $vars['title'] = $vars['node_title'];
