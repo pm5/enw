@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ENW Movies feature.
+ */
+
+include_once 'enw_movies.features.inc';
