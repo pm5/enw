@@ -66,6 +66,34 @@ function enw_movies_views_default_views() {
 
   /* Display: 影片 */
   $handler = $view->new_display('panel_pane', '影片', 'theater_pane');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* 欄位: 內容: vvid */
+  $handler->display->display_options['fields']['field_vvid']['id'] = 'field_vvid';
+  $handler->display->display_options['fields']['field_vvid']['table'] = 'field_data_field_vvid';
+  $handler->display->display_options['fields']['field_vvid']['field'] = 'field_vvid';
+  $handler->display->display_options['fields']['field_vvid']['label'] = '';
+  $handler->display->display_options['fields']['field_vvid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_vvid']['click_sort_column'] = 'video_url';
+  $handler->display->display_options['fields']['field_vvid']['settings'] = array(
+    'video_style' => 'normal',
+  );
+  /* 欄位: 內容: 標題 */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* 欄位: 內容: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '200',
+  );
   $handler->display->display_options['pane_category']['name'] = '環境通訊網';
   $handler->display->display_options['pane_category']['weight'] = '0';
 
