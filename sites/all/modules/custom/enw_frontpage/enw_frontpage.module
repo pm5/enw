@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ENW Frontpage feature.
+ */
+
+include_once 'enw_frontpage.features.inc';
