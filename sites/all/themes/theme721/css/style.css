@@ -1038,15 +1038,20 @@ ul.contextual-links li a:hover {}
 	background: none;
 	border-radius:0;
 	border: 0;
+  margin: 0;
 }
 
-.flexslider .views-field-body-1 {
+.flexslider .views-field-field-slide-image {
+  width: 660px;
+}
+
+.flexslider .views-field-slide-text {
 	position: absolute;
 /*	background: url(../images/bg-caption1.png) no-repeat right 0;*/
 	width: 320px;
 	background:#776e4f;
 	color:#fff;
-	height: 424px;
+	height: 390px;
 	top: 0;
 	left: 660px;
 	padding: 0;
@@ -1103,41 +1108,50 @@ ul.contextual-links li a:hover {}
 	box-shadow: 2px 2px 2px rgba(0,0,0, .6);
 	-webkit-border-radius: 10px;
 }
-	.flexslider .slider-link a:hover {
-		/*--background: url(../images/bg-more.gif) bottom repeat-x;--*/
-		background:rgb(233, 220, 63);
-		
-	}
+
+.flexslider .slider-link a:hover {
+  /*--background: url(../images/bg-more.gif) bottom repeat-x;--*/
+  background:rgb(233, 220, 63);
+  
+}
 
 .flex-control-nav {
 	#background: url(../images/bg-controls.png) top repeat-x;
-    background:#d3ac32;
+  background:#d3ac32;
 	border-top: 1px solid #ffffff;
 	width: 320px;
 	right: 0;
 	text-align: left;
 	bottom: 0px;
+  z-index: 2;
 }
+
 .flex-control-nav li{
 	margin: 0;
 }
-	.flex-control-nav li a {
-		background: url(../images/bg-control-li.png) right 1px no-repeat;
-		text-indent: 0;
-		width: 35px;
-		height: 30px;
-		font-family: 'Open Sans', sans-serif;
-		font-size: 15px;
-		color: #fff361;
-		font-weight: bold;
-		text-align: center;
-		padding-top: 7px;
-	}
-    .flex-control-nav li a:hover, .flex-control-nav li a.active {
-			background: url(../images/bg-control-li.png) right 1px no-repeat;
-			color:#ffffff;
-		}
-		
+
+.flex-control-nav li a {
+  background: url(../images/bg-control-li.png) right 1px no-repeat;
+  text-indent: 0;
+  width: 35px;
+  height: 30px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  color: #fff361;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 7px;
+}
+
+.flex-control-paging li a {
+  border-radius: 0;
+}
+
+.flex-control-nav li a:hover, .flex-control-nav li a.active {
+  background: url(../images/bg-control-li.png) right 1px no-repeat;
+  color:#ffffff;
+}
+  
 		
 /********************/
 
