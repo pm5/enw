@@ -21,5 +21,6 @@ features[field][] = node-monthly_topic-body
 features[field][] = node-monthly_topic-field_doll
 features[field][] = node-monthly_topic-field_topic_month
 features[node][] = monthly_topic
+features[page_manager_handlers][] = node_view_panel_context
 features[page_manager_pages][] = monthly_topic
 features[views_view][] = monthly_topic
