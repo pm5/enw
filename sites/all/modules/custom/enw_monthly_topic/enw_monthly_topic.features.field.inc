@@ -50,7 +50,7 @@ function enw_monthly_topic_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 0,
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -119,14 +119,14 @@ function enw_monthly_topic_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => '',
+            'image_style' => 'monthly_topic',
           ),
           'type' => 'image',
-          'weight' => 1,
+          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -154,7 +154,7 @@ function enw_monthly_topic_field_default_fields() {
         'active' => 1,
         'module' => 'image',
         'settings' => array(
-          'preview_image_style' => 'month_topic_thumbnail',
+          'preview_image_style' => 'monthly_topic_thumbnail',
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
@@ -200,16 +200,9 @@ function enw_monthly_topic_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'date',
-          'settings' => array(
-            'format_type' => 'long',
-            'fromto' => 'both',
-            'multiple_from' => '',
-            'multiple_number' => '',
-            'multiple_to' => '',
-          ),
-          'type' => 'date_default',
-          'weight' => 2,
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'above',
