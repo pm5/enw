@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ENW Monthly Topic feature.
+ */
+
+include_once 'enw_monthly_topic.features.inc';
