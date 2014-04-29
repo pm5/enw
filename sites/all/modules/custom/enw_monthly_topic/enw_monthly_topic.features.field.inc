@@ -123,7 +123,7 @@ function enw_monthly_topic_field_default_fields() {
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => 'monthly_topic',
+            'image_style' => 'monthly_topic_medium',
           ),
           'type' => 'image',
           'weight' => '0',
@@ -154,7 +154,7 @@ function enw_monthly_topic_field_default_fields() {
         'active' => 1,
         'module' => 'image',
         'settings' => array(
-          'preview_image_style' => 'monthly_topic_thumbnail',
+          'preview_image_style' => 'monthly_topic_medium',
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
@@ -186,6 +186,7 @@ function enw_monthly_topic_field_default_fields() {
           'second' => 0,
           'year' => 'year',
         ),
+        'repeat' => 0,
         'timezone_db' => '',
         'todate' => '',
         'tz_handling' => 'none',
@@ -226,10 +227,12 @@ function enw_monthly_topic_field_default_fields() {
         'active' => 1,
         'module' => 'date',
         'settings' => array(
+          'display_all_day' => 0,
           'increment' => '15',
           'input_format' => 'Y-m-d H:i:s',
           'input_format_custom' => '',
           'label_position' => 'above',
+          'repeat_collapsed' => 0,
           'text_parts' => array(),
           'year_range' => '-1:+1',
         ),
