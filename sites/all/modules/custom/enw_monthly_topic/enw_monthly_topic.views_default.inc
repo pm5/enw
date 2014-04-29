@@ -81,7 +81,7 @@ function enw_monthly_topic_views_default_views() {
   $handler->display->display_options['row_options']['view_mode'] = 'full';
   $handler->display->display_options['row_options']['links'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['path'] = 'monthly-topic';
+  $handler->display->display_options['path'] = 'monthly-topics';
   $handler->display->display_options['menu']['title'] = '環境節日';
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['name'] = 'menu-secondary-menu';
