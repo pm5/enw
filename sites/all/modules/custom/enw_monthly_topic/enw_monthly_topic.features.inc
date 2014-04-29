@@ -26,6 +26,61 @@ function enw_monthly_topic_views_api() {
 }
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function enw_monthly_topic_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: monthly_topic_medium.
+  $styles['monthly_topic_medium'] = array(
+    'name' => 'monthly_topic_medium',
+    'label' => '環境節日中圖',
+    'effects' => array(
+      15 => array(
+        'label' => '縮放和裁剪',
+        'help' => '比例縮放將會保持原始圖片的寬高比，然後裁切最大邊。這通常對建立不拉伸的完美的方形縮略圖是最有用的。',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => '388',
+          'height' => '295',
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
+  // Exported image style: monthly_topic_thumbnail.
+  $styles['monthly_topic_thumbnail'] = array(
+    'name' => 'monthly_topic_thumbnail',
+    'label' => '環境節日縮圖',
+    'effects' => array(
+      14 => array(
+        'label' => '縮放和裁剪',
+        'help' => '比例縮放將會保持原始圖片的寬高比，然後裁切最大邊。這通常對建立不拉伸的完美的方形縮略圖是最有用的。',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => '120',
+          'height' => '96',
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_node_info().
  */
 function enw_monthly_topic_node_info() {
