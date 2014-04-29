@@ -22,8 +22,8 @@ function enw_sidebars_default_fe_block_settings() {
     'pages' => 'video-main
 month_topic
 month_topic/*
-monthly-topic
-monthly-topic/*
+monthly-topics
+monthly-topics/*
 video-list
 video-list/*
 video/*',
@@ -62,8 +62,8 @@ video/*',
     'pages' => 'video-main
 month_topic
 month_topic/*
-monthly-topic
-monthly-topic/*
+monthly-topics
+monthly-topics/*
 video-list
 video-list/*
 video/*',
@@ -103,8 +103,8 @@ video/*',
 month_topic
 video-list/*
 month_topic/*
-monthly-topic
-monthly-topic/*
+monthly-topics
+monthly-topics/*
 video-list',
     'roles' => array(),
     'themes' => array(

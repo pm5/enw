@@ -2,6 +2,7 @@ name = ENW Sidebars
 description = 側欄內容
 core = 7.x
 package = 環境通訊網
+php = 5.2.4
 version = 7.x-1.0-beta1
 project = enw_sidebars
 dependencies[] = fb_likebox
