@@ -148,7 +148,7 @@ function enw_monthly_topic_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_monthly_topic_pattern';
-  $strongarm->value = 'monthly-topic/[node:field-topic-month:custom:Y]/[node:field-topic-month:custom:m]';
+  $strongarm->value = 'monthly-topics/[node:field-topic-month:custom:Y]/[node:field-topic-month:custom:m]';
   $export['pathauto_node_monthly_topic_pattern'] = $strongarm;
 
   return $export;
