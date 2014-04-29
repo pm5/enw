@@ -1,0 +1,14 @@
+name = ENW Sidebars
+description = 側欄內容
+core = 7.x
+package = 環境通訊網
+version = 7.x-1.0-beta1
+project = enw_sidebars
+dependencies[] = fb_likebox
+dependencies[] = fe_block
+dependencies[] = views
+dependencies[] = visitors
+features[fe_block_settings][] = fb_likebox-0
+features[fe_block_settings][] = views-latest_news-block
+features[fe_block_settings][] = visitors-0
+features[features_api][] = api:1
