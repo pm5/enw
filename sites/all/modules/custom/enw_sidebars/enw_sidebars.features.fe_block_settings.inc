@@ -12,6 +12,45 @@ function enw_sidebars_default_fe_block_settings() {
 
   $export['version'] = '2.0';
 
+  $export['block-banner'] = array(
+    'cache' => -1,
+    'css_class' => 'banner-block',
+    'custom' => '0',
+    'machine_name' => 'banner',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => 'video-main
+month_topic/*
+month_topic
+monthly-topics
+monthly-topics/*
+video-list
+video-list/*',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => '0',
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => '0',
+      ),
+      'theme721' => array(
+        'region' => 'sidebar_second',
+        'status' => '1',
+        'theme' => 'theme721',
+        'weight' => '-37',
+      ),
+    ),
+    'title' => '廣宣特區',
+    'visibility' => '0',
+  );
+
   $export['fb_likebox-0'] = array(
     'cache' => -1,
     'css_class' => '',
@@ -90,6 +129,78 @@ video/*',
     ),
     'title' => '最新新聞',
     'visibility' => '0',
+  );
+
+  $export['views-most_recommended-block_1'] = array(
+    'cache' => -1,
+    'css_class' => 'recommand-block',
+    'custom' => '0',
+    'delta' => 'most_recommended-block_1',
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => 'video-main
+month_topic/*
+month_topic
+monthly-topics
+monthly-topics/*
+video-list
+video-list/*',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => '0',
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => '0',
+      ),
+      'theme721' => array(
+        'region' => 'sidebar_second',
+        'status' => '1',
+        'theme' => 'theme721',
+        'weight' => '-38',
+      ),
+    ),
+    'title' => '本月主打影片',
+    'visibility' => '0',
+  );
+
+  $export['views-videolist-block_1'] = array(
+    'cache' => -1,
+    'css_class' => 'videolist-block',
+    'custom' => '0',
+    'delta' => 'videolist-block_1',
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => 'video/*',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => '0',
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => '0',
+      ),
+      'theme721' => array(
+        'region' => 'sidebar_second',
+        'status' => '1',
+        'theme' => 'theme721',
+        'weight' => '-39',
+      ),
+    ),
+    'title' => '影片列表',
+    'visibility' => '1',
   );
 
   $export['visitors-0'] = array(
