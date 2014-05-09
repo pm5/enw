@@ -117,7 +117,10 @@ function enw_monthly_topic_default_page_manager_pages() {
   $page->admin_title = '環境節日';
   $page->admin_description = '「環境節日」專頁。';
   $page->path = 'monthly-topics';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array(
     'type' => 'normal',
     'title' => '環境節日',
