@@ -16,7 +16,10 @@ function enw_movies_default_page_manager_pages() {
   $page->admin_title = '環境影展';
   $page->admin_description = '「環境影展」landing page。';
   $page->path = 'movies';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(
