@@ -9,6 +9,14 @@
  */
 function enw_frontpage_ctools_plugin_api() {
   list($module, $api) = func_get_args();
+  if ($module == "page_manager" && $api == "pages_default") {
+    return array("version" => "1");
+  }
+  list($module, $api) = func_get_args();
+  if ($module == "quicktabs" && $api == "quicktabs") {
+    return array("version" => "1");
+  }
+  list($module, $api) = func_get_args();
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -44,6 +52,29 @@ function enw_frontpage_image_default_styles() {
         'data' => array(
           'width' => '660',
           'height' => '390',
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
+  // Exported image style: frontpage_promotion_medium.
+  $styles['frontpage_promotion_medium'] = array(
+    'name' => 'frontpage_promotion_medium',
+    'label' => '首頁推薦中圖',
+    'effects' => array(
+      10 => array(
+        'label' => '縮放和裁剪',
+        'help' => '比例縮放將會保持原始圖片的寬高比，然後裁切最大邊。這通常對建立不拉伸的完美的方形縮略圖是最有用的。',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => '160',
+          'height' => '240',
         ),
         'weight' => '1',
       ),
