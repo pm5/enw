@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the enw_press_release feature.
+ */
+
+include_once 'enw_press_release.features.inc';
