@@ -1,5 +1,5 @@
 name = ENW Movies
-description = 「環境影展」專頁
+description = 「環境影展」相關功能。
 core = 7.x
 package = 環境通訊網
 php = 5.2.4
