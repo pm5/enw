@@ -105,7 +105,9 @@ border-radius: 10px;
 float:right;
 }
 
-ul.quicktabs-tabs.quicktabs-style-sky li:first-child a{
+/* quicktabs */
+ul.quicktabs-tabs.quicktabs-style-sky li:first-child a,
+ul.quicktabs-tabs.quicktabs-style-enw li:first-child a{
 background:url(../images/activitytittle.png) left no-repeat;
 padding: 0px 65px;
 font-size:25px;

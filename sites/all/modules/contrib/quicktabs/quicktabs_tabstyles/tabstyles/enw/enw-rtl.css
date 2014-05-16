@@ -1,0 +1,9 @@
+
+ul.quicktabs-tabs.quicktabs-style-enw li {
+  float: right;
+}
+
+ul.quicktabs-tabs.quicktabs-style-enw li a,
+ul.quicktabs-tabs.quicktabs-style-enw li a:visited {
+  float: right;
+}
