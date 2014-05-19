@@ -46,11 +46,10 @@ function enw_monthly_topic_views_default_views() {
     'image_style' => 'monthly_topic_thumbnail',
     'image_link' => 'content',
   );
-  /* Sort criterion: 內容: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Sort criterion: 內容: 節日月份 (field_topic_month) */
+  $handler->display->display_options['sorts']['field_topic_month_value']['id'] = 'field_topic_month_value';
+  $handler->display->display_options['sorts']['field_topic_month_value']['table'] = 'field_data_field_topic_month';
+  $handler->display->display_options['sorts']['field_topic_month_value']['field'] = 'field_topic_month_value';
   /* Filter criterion: 內容: 已發表 */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -120,6 +119,12 @@ function enw_monthly_topic_views_default_views() {
   $handler->display->display_options['row_options']['view_mode'] = 'full';
   $handler->display->display_options['row_options']['links'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: 內容: 節日月份 (field_topic_month) */
+  $handler->display->display_options['sorts']['field_topic_month_value']['id'] = 'field_topic_month_value';
+  $handler->display->display_options['sorts']['field_topic_month_value']['table'] = 'field_data_field_topic_month';
+  $handler->display->display_options['sorts']['field_topic_month_value']['field'] = 'field_topic_month_value';
+  $handler->display->display_options['sorts']['field_topic_month_value']['order'] = 'DESC';
   $handler->display->display_options['pane_category']['name'] = '環境通訊網';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 0;
