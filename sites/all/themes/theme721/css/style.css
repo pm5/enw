@@ -39,9 +39,8 @@ a:hover {
 .section-1 .col2 { float:right; width: 600px;}
 
 .section-2 {
-	height:50px;
 	background: url(../images/bg-row3.png) top repeat-x;
-	padding:5px 0px;
+	padding:5px 0px 10px;
 }
 
 .section-3 {
@@ -263,25 +262,35 @@ a:hover {
 
 /*** MAIN ***/
 #main-wrapper { background:#fff;}
-#main-wrapper #main { margin:0 auto; overflow:hidden;}
+#main-wrapper #main {
+margin:0 auto;
+background: #fefdd6;
+overflow:hidden;
+}
 .section .region { width:100%;}
 
 #sidebar-first { width:320px; float:left;}
 #sidebar-first .section { padding:0px 20px 0px 20px;}
 
-#content { padding:0px 0px 0px 0px; overflow:hidden; }
-#content .section { width:100%;}
+#content {
+  overflow:hidden;
+}
+#content .section {
+  padding: 10px;
+}
 
-#sidebar-second { float:right; width:320px;margin-top:0px; }
-#sidebar-second .section { padding:0px 0px 0px 0px;}
+#sidebar-second {
+  float:right;
+  width:320px;
+  margin-top:0px;
+}
+#sidebar-second .section {
+  padding: 10px;
+}
 
 .region-content {
 	overflow:hidden;
-	#padding: 0 20px;
-	padding:10px 20px 30px 10px;
 	width: auto !important;
-	background:rgb(238, 231, 200);
-	margin:0px 10px 0px 0px;
 }
 
 
@@ -617,7 +626,10 @@ article.node footer .field-name-field-tags .field-item {
 
 /*****************Default Block Style*******************/
 .page-page-404 #search-block-form {width:400px;}
-.panel-separator {display:none;}
+.panel-separator {
+  display: block;
+  height: 10px;
+}
 .panel-pane.error-page {margin-bottom:30px;}
 .panel-pane.error-page .pane-content {overflow:hidden;}
 .panel-pane.error-page .pane-content span.err {
@@ -680,7 +692,7 @@ section.block {
 	}
 
 	section.block .content{
-		padding: 0px 5px 0px;
+		padding: 0px 10px;
 	}
 		section.block .content li { 
 			background:url(../images/a1.gif) no-repeat 0 9px;
@@ -1222,13 +1234,12 @@ ul.contextual-links li a:hover {}
 	margin-bottom: 0;
 	#background: url(../images/pink.png);
 	background:#776e4f;
--webkit-border-top-left-radius: 10px;
--webkit-border-top-right-radius: 10px;
--moz-border-radius-topleft: 10px;
--moz-border-radius-topright: 10px;
-border-top-left-radius: 10px;
-border-top-right-radius: 10px;
-margin-top:20px;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-topright: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 #block-views-latest-news-block h2{
 background: url(../images/bg-4.png)top repeat-x;
@@ -1472,9 +1483,3 @@ div.more-link.field-items a{
 color:#fff!important;
 
 }
-
-.section{
-margin: 10px!important;
-}
-
-
