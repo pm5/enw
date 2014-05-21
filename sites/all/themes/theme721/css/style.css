@@ -273,7 +273,10 @@ a:hover {
 #content .section { width:100%;}
 
 #sidebar-second { float:right; width:320px;margin-top:0px; }
-#sidebar-second .section { padding:0px 0px 0px 0px;}
+#sidebar-second .section {
+  padding:0px 0px 0px 0px;
+  background: #776e4f;
+}
 
 .region-content {
 	overflow:hidden;
