@@ -267,7 +267,10 @@ margin:0 auto;
 background: #fefdd6;
 overflow:hidden;
 }
-.section .region { width:100%;}
+.section .region {
+  width:100%;
+  background: #efe6c8;
+}
 
 #sidebar-first { width:320px; float:left;}
 #sidebar-first .section { padding:0px 20px 0px 20px;}
@@ -442,7 +445,6 @@ article.comment span.new { position:absolute; top:0; right:0;}
 /*Node heading*/
 #content h1.title, h2.front-title {
 	background: url(../images/activitytittle.png) left no-repeat rgb(223, 213, 176);
-	
 	font-size:25px;
 	color:#333;
 	font-weight:bold;
@@ -451,7 +453,6 @@ article.comment span.new { position:absolute; top:0; right:0;}
 	padding: 10px 65px;
 	margin-bottom: 0px;
 	text-transform: uppercase;
-	margin-top:20px;
 }
 h2, h3 {
 	font-size:25px;
