@@ -110,7 +110,6 @@ ul.quicktabs-tabs.quicktabs-style-sky li:first-child a,
 ul.quicktabs-tabs.quicktabs-style-enw li:first-child a{
 background:url(../images/activitytittle.png) left no-repeat;
 padding: 0px 65px;
-font-size:25px;
 border-left: 0px;
 
 }
@@ -120,15 +119,8 @@ width:100%;
 }
 
 div.pane-content{
-background: #776e4f;
-color: #fff;
--webkit-border-radius: 10px;
--moz-border-radius: 10px;
-border-radius: 10px;
-padding:10px;
 }
 div.pane-content a{
-color:#fff;
 }
 
 div.more-link{
