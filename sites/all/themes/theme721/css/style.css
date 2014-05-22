@@ -288,7 +288,8 @@ overflow:hidden;
   margin-top:0px;
 }
 #sidebar-second .section {
-  padding: 10px;
+  padding:0px 0px 0px 0px;
+  background: #776e4f;
 }
 
 .region-content {
