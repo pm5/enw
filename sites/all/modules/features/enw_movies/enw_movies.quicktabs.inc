@@ -16,7 +16,7 @@ function enw_movies_quicktabs_default_quicktabs() {
   $quicktabs->machine_name = 'video_list';
   $quicktabs->ajax = 0;
   $quicktabs->hide_empty_tabs = FALSE;
-  $quicktabs->default_tab = 999999;
+  $quicktabs->default_tab = 0;
   $quicktabs->title = '環境教育影片';
   $quicktabs->tabs = array(
     0 => array(
@@ -85,7 +85,7 @@ function enw_movies_quicktabs_default_quicktabs() {
     ),
   );
   $quicktabs->renderer = 'quicktabs';
-  $quicktabs->style = 'default';
+  $quicktabs->style = 'Enw';
   $quicktabs->options = array();
 
   // Translatables

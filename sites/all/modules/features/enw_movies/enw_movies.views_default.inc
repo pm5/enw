@@ -75,7 +75,7 @@ function enw_movies_views_default_views() {
   $handler->display->display_options['fields']['field_vvid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_vvid']['click_sort_column'] = 'video_url';
   $handler->display->display_options['fields']['field_vvid']['settings'] = array(
-    'video_style' => 'normal',
+    'video_style' => 'fullpage',
   );
   /* 欄位: 內容: 標題 */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -83,7 +83,6 @@ function enw_movies_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* 欄位: 內容: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
