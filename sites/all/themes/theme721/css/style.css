@@ -440,7 +440,11 @@ article.comment span.new { position:absolute; top:0; right:0;}
 /********************************************/
 
 /***********************Content Region*************************/
-#main-wrapper #main { margin:0 auto; overflow:hidden;}
+#main-wrapper #main {
+  margin:0 auto;
+  overflow:hidden;
+  background: #fefdd6;
+}
 .content-wrap { width:100%; overflow:hidden; padding-bottom:30px;}
 
 /*Node heading*/
