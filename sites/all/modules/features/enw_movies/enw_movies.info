@@ -49,6 +49,7 @@ features[variable][] = menu_parent_video
 features[variable][] = node_options_video
 features[variable][] = node_preview_video
 features[variable][] = node_submitted_video
+features[variable][] = pathauto_node_movie_pattern
 features[vef_video_styles][] = fullpage
 features[views_view][] = movie
 features[views_view][] = video_list
