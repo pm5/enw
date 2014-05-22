@@ -75,7 +75,7 @@ function enw_movies_views_default_views() {
   $handler->display->display_options['fields']['field_vvid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_vvid']['click_sort_column'] = 'video_url';
   $handler->display->display_options['fields']['field_vvid']['settings'] = array(
-    'video_style' => 'normal',
+    'video_style' => 'fullpage',
   );
   /* 欄位: 內容: 標題 */
   $handler->display->display_options['fields']['title']['id'] = 'title';
