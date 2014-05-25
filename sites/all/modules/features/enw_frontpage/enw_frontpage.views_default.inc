@@ -30,16 +30,11 @@ function enw_frontpage_views_default_views() {
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = '重設';
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '6';
-  $handler->display->display_options['style_plugin'] = 'jcarousel';
-  $handler->display->display_options['style_options']['wrap'] = '0';
-  $handler->display->display_options['style_options']['skin'] = 'frontpage';
-  $handler->display->display_options['style_options']['visible'] = '';
-  $handler->display->display_options['style_options']['auto'] = '0';
-  $handler->display->display_options['style_options']['autoPause'] = 1;
-  $handler->display->display_options['style_options']['easing'] = '';
-  $handler->display->display_options['style_options']['vertical'] = 0;
-  $handler->display->display_options['style_options']['ajax'] = 1;
+  $handler->display->display_options['pager']['options']['items_per_page'] = '12';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'flexslider';
+  $handler->display->display_options['style_options']['optionset'] = 'frontpage_promotion_carousel';
+  $handler->display->display_options['style_options']['captionfield'] = 'title';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* 欄位: 內容: 標題 */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -153,6 +148,27 @@ function enw_frontpage_views_default_views() {
 
   /* Display: Carousel: 本月主打影片 */
   $handler = $view->new_display('panel_pane', 'Carousel: 本月主打影片', 'video_carousel_pane');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* 欄位: 內容: 標題 */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* 欄位: 內容: 縮圖 */
+  $handler->display->display_options['fields']['field_thumbs']['id'] = 'field_thumbs';
+  $handler->display->display_options['fields']['field_thumbs']['table'] = 'field_data_field_thumbs';
+  $handler->display->display_options['fields']['field_thumbs']['field'] = 'field_thumbs';
+  $handler->display->display_options['fields']['field_thumbs']['label'] = '';
+  $handler->display->display_options['fields']['field_thumbs']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_thumbs']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_thumbs']['settings'] = array(
+    'image_style' => 'frontpage_promotion_medium',
+    'image_link' => 'content',
+  );
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: 內容: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
@@ -222,7 +238,7 @@ function enw_frontpage_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'flexslider';
-  $handler->display->display_options['style_options']['optionset'] = 'flexslider_default_slider';
+  $handler->display->display_options['style_options']['optionset'] = 'frontpage_slider';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['inline'] = array(
     'body_1' => 'body_1',
