@@ -7,6 +7,7 @@ version = 7.x-1.0-beta
 project = enw_events
 dependencies[] = ctools
 dependencies[] = date
+dependencies[] = enw_events_form
 dependencies[] = features
 dependencies[] = field_sql_storage
 dependencies[] = image
