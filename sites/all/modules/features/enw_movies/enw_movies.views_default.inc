@@ -30,9 +30,8 @@ function enw_movies_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = '重設';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
-  $handler->display->display_options['style_plugin'] = 'list';
-  $handler->display->display_options['style_options']['class'] = 'slides';
-  $handler->display->display_options['style_options']['wrapper_class'] = 'enw-movies-slideshow';
+  $handler->display->display_options['style_plugin'] = 'flexslider';
+  $handler->display->display_options['style_options']['optionset'] = 'movies_theater_w_thumbnail_slider';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* 欄位: 內容: vvid */
   $handler->display->display_options['fields']['field_vvid']['id'] = 'field_vvid';
@@ -99,9 +98,8 @@ function enw_movies_views_default_views() {
   /* Display: 導覽 */
   $handler = $view->new_display('panel_pane', '導覽', 'theater_slider_pane');
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'list';
-  $handler->display->display_options['style_options']['class'] = 'slides';
-  $handler->display->display_options['style_options']['wrapper_class'] = 'enw-movies-navigation';
+  $handler->display->display_options['style_plugin'] = 'flexslider';
+  $handler->display->display_options['style_options']['optionset'] = 'movies_thumbnail_slider';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -116,7 +114,7 @@ function enw_movies_views_default_views() {
   $handler->display->display_options['fields']['field_vvid']['click_sort_column'] = 'video_url';
   $handler->display->display_options['fields']['field_vvid']['type'] = 'video_embed_field_thumbnail';
   $handler->display->display_options['fields']['field_vvid']['settings'] = array(
-    'image_style' => 'medium',
+    'image_style' => 'enw_movies_thumbnail_slider',
     'image_link' => '',
   );
   $handler->display->display_options['pane_category']['name'] = '環境通訊網';
