@@ -40,11 +40,11 @@ function enw_events_form_form_views_exposed_form_alter(&$form, &$form_state, $fo
   }
   $form['date']['prev_date_nav'] = array(
     '#type' => 'markup',
-    '#markup' => '<span class="prev_date_nav"><a href="' . formulate_events_url($title, $date->modify('-1 day'), $domain) . '">' . t('前一天') . '</a></span>',
+    '#markup' => '<span class="prev_date_nav"><a href="' . formulate_events_url($title, date_sub($date, date_interval_create_from_date_string('1 day')), $domain) . '">' . t('前一天') . '</a></span>',
   );
   $form['date']['next_date_nav'] = array(
     '#type' => 'markup',
-    '#markup' => '<span class="next_date_nav"><a href="' . formulate_events_url($title, $date->modify('+2 day'), $domain) . '">' . t('後一天') . '</a></span>',
+    '#markup' => '<span class="next_date_nav"><a href="' . formulate_events_url($title, date_add($date, date_interval_create_from_date_string('1 day')), $domain) . '">' . t('後一天') . '</a></span>',
   );
 }
 

@@ -1,3 +1,7 @@
 name = ENW Events Custom Form
 description = 「環境教育活動」特殊搜尋表單。
 core = 7.x
+package = 環境通訊網
+php = 5.2.4
+version = 7.x-1.0-beta
+project = enw_events_form
