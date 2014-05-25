@@ -1048,23 +1048,23 @@ ul.contextual-links li a:hover {}
 
 
 /*******Slider********/
-.flex-nav-container {
+.view-slider .flex-nav-container {
 	margin: 0;
 }
 
-.flexslider {
+.view-slider .flexslider {
 	background: none;
 	border-radius:0;
 	border: 0;
   margin: 0;
 }
 
-.flexslider .views-field-field-slide-image {
+.view-slider .flexslider .views-field-field-slide-image {
   width: 660px;
+  float: left;
 }
 
-.flexslider .views-field-slide-text {
-	position: absolute;
+.view-slider .flexslider .views-field-slide-text {
 /*	background: url(../images/bg-caption1.png) no-repeat right 0;*/
 	width: 320px;
 	background:#776e4f;
@@ -1073,9 +1073,10 @@ ul.contextual-links li a:hover {}
 	top: 0;
 	left: 660px;
 	padding: 0;
+  float: right;
 }
 
-.flexslider .slider-date {
+.view-slider .flexslider .slider-date {
 	-background: url(../images/bg-date.gif) top repeat-x;
 	background: rgb(162, 182, 86);
 	font-size: 14px;
@@ -1099,13 +1100,13 @@ ul.contextual-links li a:hover {}
 	display: inline-block;
 }
 
-.flexslider .slider-content {
+.view-slider .flexslider .slider-content {
 	padding: 20px 30px 10px 38px;
 	line-height: 1.9em;
 	margin:-10px 0px;
 }
 
-.flexslider .slider-link a {
+.view-slider .flexslider .slider-link a {
 	-background: url(../images/bg-more.gif) top repeat-x;
 	background:#e7cb58;
 	border-top: 1px solid #e7cb58;
@@ -1127,13 +1128,13 @@ ul.contextual-links li a:hover {}
 	-webkit-border-radius: 10px;
 }
 
-.flexslider .slider-link a:hover {
+.view-slider .flexslider .slider-link a:hover {
   /*--background: url(../images/bg-more.gif) bottom repeat-x;--*/
   background:rgb(233, 220, 63);
   
 }
 
-.flex-control-nav {
+.view-slider .flex-control-nav {
 	#background: url(../images/bg-controls.png) top repeat-x;
   background:#d3ac32;
 	border-top: 1px solid #ffffff;
@@ -1144,11 +1145,11 @@ ul.contextual-links li a:hover {}
   z-index: 2;
 }
 
-.flex-control-nav li{
+.view-slider .flex-control-nav li{
 	margin: 0;
 }
 
-.flex-control-nav li a {
+.view-slider .flex-control-nav li a {
   background: url(../images/bg-control-li.png) right 1px no-repeat;
   text-indent: 0;
   width: 35px;
@@ -1161,11 +1162,11 @@ ul.contextual-links li a:hover {}
   padding-top: 7px;
 }
 
-.flex-control-paging li a {
+.view-slider .flex-control-paging li a {
   border-radius: 0;
 }
 
-.flex-control-nav li a:hover, .flex-control-nav li a.active {
+.view-slider .flex-control-nav li a:hover, .flex-control-nav li a.active {
   background: url(../images/bg-control-li.png) right 1px no-repeat;
   color:#ffffff;
 }
@@ -1488,4 +1489,8 @@ margin: 10px!important;
 div.more-link.field-items a{
 color:#fff!important;
 
+}
+
+.view-frontpage-promotion ul.slides li {
+  margin-left: 5px;
 }
