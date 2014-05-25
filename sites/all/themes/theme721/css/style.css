@@ -1061,10 +1061,10 @@ ul.contextual-links li a:hover {}
 
 .flexslider .views-field-field-slide-image {
   width: 660px;
+  float: left;
 }
 
 .flexslider .views-field-slide-text {
-	position: absolute;
 /*	background: url(../images/bg-caption1.png) no-repeat right 0;*/
 	width: 320px;
 	background:#776e4f;
@@ -1073,6 +1073,7 @@ ul.contextual-links li a:hover {}
 	top: 0;
 	left: 660px;
 	padding: 0;
+  float: right;
 }
 
 .flexslider .slider-date {
