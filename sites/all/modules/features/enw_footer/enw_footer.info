@@ -1,0 +1,12 @@
+name = enw_footers
+core = 7.x
+package = 環境通訊網
+php = 5.2.4
+dependencies[] = enw_sidebars
+dependencies[] = fe_block
+features[fe_block_boxes][] = footer_text
+features[fe_block_boxes][] = google_analytics
+features[fe_block_settings][] = block-banner
+features[fe_block_settings][] = block-footer_text
+features[fe_block_settings][] = block-google_analytics
+features[features_api][] = api:1

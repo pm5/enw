@@ -12,39 +12,6 @@ function enw_sidebars_default_fe_block_settings() {
 
   $export['version'] = '2.0';
 
-  $export['block-banner'] = array(
-    'cache' => -1,
-    'css_class' => 'banner-block',
-    'custom' => '0',
-    'machine_name' => 'banner',
-    'module' => 'block',
-    'node_types' => array(),
-    'pages' => 'video-main
-month_topic/*
-month_topic
-monthly-topics
-monthly-topics/*
-video-list
-video-list/*',
-    'roles' => array(),
-    'themes' => array(
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => '0',
-      ),
-      'theme721' => array(
-        'region' => 'sidebar_second',
-        'status' => '1',
-        'theme' => 'theme721',
-        'weight' => '-32',
-      ),
-    ),
-    'title' => '廣宣特區',
-    'visibility' => '0',
-  );
-
   $export['fb_likebox-0'] = array(
     'cache' => -1,
     'css_class' => '',
@@ -53,6 +20,8 @@ video-list/*',
     'module' => 'fb_likebox',
     'node_types' => array(),
     'pages' => 'video-main
+events
+events/*
 month_topic
 month_topic/*
 monthly-topics
@@ -87,6 +56,8 @@ video/*',
     'module' => 'views',
     'node_types' => array(),
     'pages' => 'video-main
+events
+events/*
 month_topic
 month_topic/*
 monthly-topics
@@ -136,8 +107,8 @@ video-list/*',
         'weight' => '0',
       ),
       'theme721' => array(
-        'region' => 'sidebar_second',
-        'status' => '1',
+        'region' => '',
+        'status' => 0,
         'theme' => 'theme721',
         'weight' => '-33',
       ),
@@ -183,6 +154,8 @@ video-list/*',
     'pages' => 'video_main
 month_topic
 video-list/*
+events
+events/*
 month_topic/*
 monthly-topics
 monthly-topics/*
