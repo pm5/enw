@@ -41,7 +41,7 @@ video-list/*',
         'weight' => '-36',
       ),
     ),
-    'title' => '廣宣特區',
+    'title' => '<none>',
     'visibility' => '0',
   );
 
