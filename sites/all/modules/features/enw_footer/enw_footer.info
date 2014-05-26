@@ -1,9 +1,12 @@
-name = enw_footers
+name = ENW Footers
+description = 頁尾內容。
 core = 7.x
 package = 環境通訊網
 php = 5.2.4
-dependencies[] = enw_sidebars
+version = 7.x-1.0-beta1
+project = enw_footers
 dependencies[] = fe_block
+features[fe_block_boxes][] = banner
 features[fe_block_boxes][] = footer_text
 features[fe_block_boxes][] = google_analytics
 features[fe_block_settings][] = block-banner

@@ -1,5 +1,5 @@
 name = ENW Sidebars
-description = 側欄內容
+description = 側欄內容。
 core = 7.x
 package = 環境通訊網
 php = 5.2.4
