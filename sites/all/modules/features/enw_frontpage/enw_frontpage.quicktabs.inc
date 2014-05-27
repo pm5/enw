@@ -68,7 +68,7 @@ function enw_frontpage_quicktabs_default_quicktabs() {
     1 => array(
       'vid' => 'frontpage_promotion',
       'display' => 'taxonomy_carousel_pane',
-      'args' => '126',
+      'args' => '127',
       'title' => '環境教育教案',
       'weight' => '-99',
       'type' => 'view',
