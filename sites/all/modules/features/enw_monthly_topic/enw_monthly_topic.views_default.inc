@@ -46,6 +46,19 @@ function enw_monthly_topic_views_default_views() {
     'image_style' => 'monthly_topic_thumbnail',
     'image_link' => 'content',
   );
+  /* 欄位: 內容: 節日月份 */
+  $handler->display->display_options['fields']['field_topic_month']['id'] = 'field_topic_month';
+  $handler->display->display_options['fields']['field_topic_month']['table'] = 'field_data_field_topic_month';
+  $handler->display->display_options['fields']['field_topic_month']['field'] = 'field_topic_month';
+  $handler->display->display_options['fields']['field_topic_month']['label'] = '';
+  $handler->display->display_options['fields']['field_topic_month']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_topic_month']['settings'] = array(
+    'format_type' => 'enw_events_month',
+    'fromto' => '',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
   /* Sort criterion: 內容: 節日月份 (field_topic_month) */
   $handler->display->display_options['sorts']['field_topic_month_value']['id'] = 'field_topic_month_value';
   $handler->display->display_options['sorts']['field_topic_month_value']['table'] = 'field_data_field_topic_month';
