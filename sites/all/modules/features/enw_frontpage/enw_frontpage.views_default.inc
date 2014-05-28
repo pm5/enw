@@ -189,6 +189,18 @@ function enw_frontpage_views_default_views() {
     'image_style' => 'frontpage_promotion_medium',
     'image_link' => 'content',
   );
+  /* 欄位: 內容: vvid */
+  $handler->display->display_options['fields']['field_vvid']['id'] = 'field_vvid';
+  $handler->display->display_options['fields']['field_vvid']['table'] = 'field_data_field_vvid';
+  $handler->display->display_options['fields']['field_vvid']['field'] = 'field_vvid';
+  $handler->display->display_options['fields']['field_vvid']['label'] = '';
+  $handler->display->display_options['fields']['field_vvid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_vvid']['click_sort_column'] = 'video_url';
+  $handler->display->display_options['fields']['field_vvid']['type'] = 'video_embed_field_thumbnail';
+  $handler->display->display_options['fields']['field_vvid']['settings'] = array(
+    'image_style' => 'frontpage_promotion_medium',
+    'image_link' => 'node',
+  );
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: 內容: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
@@ -221,6 +233,7 @@ function enw_frontpage_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
+    'movie' => 'movie',
     'video' => 'video',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
