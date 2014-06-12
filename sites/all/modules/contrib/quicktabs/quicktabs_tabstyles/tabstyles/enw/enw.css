@@ -8,7 +8,7 @@
   padding: 8px 0;
   position: relative;
   top: -0.1em;
-  background: #efe6c8;
+  background: url(../enw/images/grid.jpg);
 }
 
 .quicktabs_main.quicktabs-style-enw .item-list ul {
@@ -18,13 +18,8 @@
 ul.quicktabs-tabs.quicktabs-style-enw {
   margin: 0;
   padding: 0;
-  background:#dfd5b0;
-  -webkit-border-top-left-radius: 10px;
--webkit-border-top-right-radius: 10px;
--moz-border-radius-topleft: 10px;
--moz-border-radius-topright: 10px;
-border-top-left-radius: 10px;
-border-top-right-radius: 10px;
+  background: url(../enw/images/gridactive.jpg) ;
+
 }
 
 ul.quicktabs-tabs.quicktabs-style-enw li {
@@ -32,28 +27,30 @@ ul.quicktabs-tabs.quicktabs-style-enw li {
   font-weight: normal;
   list-style: none;
   margin: 0;
-
+border-right: 1px solid #eee;
   min-height: 2.95em;
-  padding: 0;
+  padding: 10px 7px 0px 7px;
+  background: #FFF;
+border-top: 5px solid #d3ac32;
 }
 
 ul.quicktabs-tabs.quicktabs-style-enw li.active {
+background: url(../enw/images/grid.jpg);
+border-top:5px solid #8BB338;
+
 }
 
 ul.quicktabs-tabs.quicktabs-style-enw li a,
 ul.quicktabs-tabs.quicktabs-style-enw li a:visited {
   float: left;
   display: block;
-
-
   line-height: 2.3em;
   padding: 0 8px;
   text-decoration: none;
-
-  font-size: 20px;
-
+  font-size: 16px;
   color: #777;
   position: relative;
+  font-family:微軟正黑體;
 }
 
 ul.quicktabs-tabs.quicktabs-style-enw li a:hover,
@@ -68,18 +65,12 @@ ul.quicktabs-tabs.quicktabs-style-enw li.active a:hover {
 ul.quicktabs-tabs.quicktabs-style-enw li.active a,
 ul.quicktabs-tabs.quicktabs-style-enw li.active a:visited {
 
-
-
   font-weight: bold;
-  font-family:細明體;
-
-
-
   color: #333;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
   top: -0.025em;
-
+font-family:微軟正黑體;
 
 }
 

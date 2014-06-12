@@ -84,7 +84,7 @@ a:hover {
 		padding:0;
 		text-align:center;
 	}
-		#superfish-1 a, #superfish-3 a {
+		#superfish-1 a {
 			border:0;
 			color:#000;
 			font-size:14px;
@@ -94,7 +94,25 @@ a:hover {
 			text-transform: uppercase;
 			font-family: 微軟正黑體, 細明體, 'Open Sans', sans-serif;
 		}
-		#superfish-3 a { padding:0 20px 0 0;}
+		#superfish-3 a {
+		border:0;
+			color:#000;
+			font-size:14px;
+			font-weight: bold;
+			padding:0 0 0 15px;
+			text-decoration:none;
+			text-transform: uppercase;
+			font-family: 微軟正黑體, 細明體, 'Open Sans', sans-serif;
+			border:1px dotted #333;
+		}
+		
+		
+		#superfish-3 a:hover {
+		color:#fff!important;
+		background:#8bb383;
+		}
+		
+		#superfish-3 a { padding:0 20px 0 20px;}
 
 		#superfish-1 > li > a:hover, #superfish-3 > li > a:hover, #superfish-1 > li > a.active, #superfish-3 > li > a.active, #superfish-1 > li > a.sfHover, #superfish-3 > li > a.sfHover{
 			color:#4d6940;
@@ -269,7 +287,7 @@ overflow:hidden;
 }
 .section .region {
   width:100%;
-  background: #efe6c8;
+  background: #FAFAE1;
 }
 
 #sidebar-first { width:320px; float:left;}
@@ -449,13 +467,13 @@ article.comment span.new { position:absolute; top:0; right:0;}
 
 /*Node heading*/
 #content h1.title, h2.front-title {
-	background: url(../images/activitytittle.png) left no-repeat rgb(223, 213, 176);
+    background: url(../images/activitytittle.png) left no-repeat ;
 	font-size:25px;
 	color:#333;
 	font-weight:bold;
 	line-height:normal;
-	font-family: 細明體, 'Open Sans', sans-serif;
-	padding: 10px 65px;
+	font-family: 微軟正黑體,細明體, 'Open Sans', sans-serif;
+	padding: 10px 68px;
 	margin-bottom: 0px;
 	text-transform: uppercase;
 }
@@ -834,7 +852,7 @@ section.block {
 	width: auto;
 	overflow: hidden;
 	margin: 40px 0px 0px;
-	padding: 0 0 15px 0;
+	padding: 0;
 }
 
 #block-block-5 .content{
@@ -1015,9 +1033,9 @@ h3.field-label { line-height:22px; padding-right:10px;}
 	overflow:hidden;
 }
 .content ul.pager li.pager-current { 
-	background:rgb(111, 101, 59);
+	background:#8BB338;
 	border-radius:2px;
-	border:1px solid #c6c6c6;
+	/*--border:1px solid #c6c6c6;--*/
 	color:#fff;
 	padding:9px 13px;
 	position:relative;
@@ -1025,7 +1043,7 @@ h3.field-label { line-height:22px; padding-right:10px;}
 	font-size:10px;
 	}
 	.content ul.pager li a{ 
-		background:rgb(160, 143, 75);
+		background:rgb(173, 173, 173);
 		border:1px solid #c6c6c6;
 		color:#fff; 
 		display:inline-block;
@@ -1037,7 +1055,7 @@ h3.field-label { line-height:22px; padding-right:10px;}
 		font-size:10px;
 	  }
 	.content ul.pager li a:hover {
-		background:rgb(160, 143, 75);
+		background:rgb(195, 195, 193);
 		color:#fff;
 	}
 /**********************/
@@ -1239,17 +1257,14 @@ ul.contextual-links li a:hover {}
 #block-views-latest-news-block {
 	padding-bottom: 5px;
 	margin-bottom: 0;
+	margin:5px 0px;
+	
 	#background: url(../images/pink.png);
 	background:#776e4f;
-  -webkit-border-top-left-radius: 10px;
-  -webkit-border-top-right-radius: 10px;
-  -moz-border-radius-topleft: 10px;
-  -moz-border-radius-topright: 10px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
 }
 #block-views-latest-news-block h2{
 background: url(../images/bg-4.png)top repeat-x;
+border-bottom:1px solid #fff;
 }
 
 .view-latest-news .views-row {
@@ -1289,6 +1304,7 @@ background: url(../images/bg-4.png)top repeat-x;
 	line-height: 1.8em !important;
 	font-family:微軟正黑體, 細明體;
 	#background: url(../images/bg-line2.gif) bottom repeat-x;
+	background:none;
 }
 
     .view-latest-news .views-field-title a {
@@ -1303,26 +1319,19 @@ background: url(../images/bg-4.png)top repeat-x;
 
 .view-latest-news .view-footer {
 	#padding-top: 15px;
+	border-top: 1px solid #fff;
+	background: url(../images/newarrow.png) left no-repeat;
+	padding:5px 45px;
 }
 	.view-latest-news .view-footer a{
-		color:#fff;
+		color:#BBE06F;
 		font-weight: bold;
 		font-size: 15px;
-		background: rgb(180, 160, 91);
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        border-radius: 10px;
-		padding:10px 100px;
-		margin:5px;
+		padding:5px 5px;
 		text-decoration: none;
 	}
 .view-latest-news .view-footer a:hover{
-background: rgb(175, 152, 68);
-border-top: 1px solid rgb(175, 152, 68);
-border-left: 1px solid rgb(175, 152, 68);
-border-bottom: 1px solid rgb(175, 152, 68);
-border-right: 1px solid rgb(175, 152, 68);
-padding:10px 100px;
+padding:5px 5px;
 margin:0px;
 }
 
@@ -1420,6 +1429,9 @@ h2.pane-title {
 	font-weight: bold;
 	font-family:微軟正黑體,細明體;
 	margin-bottom:20px;
+	margin-top: 20px;
+	padding: 5px 68px;
+background: url(../images/activitytittle.png) left no-repeat;
 }
 
 .pane-content .node-article .submitted {
@@ -1493,4 +1505,10 @@ color:#fff!important;
 
 .view-frontpage-promotion ul.slides li {
   margin-left: 5px;
+}
+
+#block-block-13{
+padding: 5px 15px;
+background:rgba(172, 164, 164, 0.25);
+border-top: 5px solid #C2A926;
 }

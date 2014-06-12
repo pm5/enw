@@ -108,8 +108,7 @@ float:right;
 /* quicktabs */
 ul.quicktabs-tabs.quicktabs-style-sky li:first-child a,
 ul.quicktabs-tabs.quicktabs-style-enw li:first-child a{
-background:url(../images/activitytittle.png) left no-repeat;
-padding: 0px 65px;
+/*---background:url(../images/activitytittle.png) left no-repeat;---*/
 border-left: 0px;
 
 }
@@ -313,3 +312,7 @@ margin: -20px 2px;
   background: rgb(37, 146, 197);
 }
 
+.field-content img{
+width:300px;
+height:auto;
+}

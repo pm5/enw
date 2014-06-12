@@ -409,3 +409,21 @@ svg:not(:root) { overflow: hidden; }
 .region region-tabs{
 background: rgb(206, 228, 120)!important;
 }
+/*----movies---*/
+.views-field-title{
+padding:5px 20px;
+}
+
+.field-content{
+font-size:16px;
+}
+
+.views-field-body{
+padding:5px 20px;
+border-top:3px dashed #919191;
+}
+
+.views-field-title a{
+color:#8BB338;
+font-size:20px;
+}
