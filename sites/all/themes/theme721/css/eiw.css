@@ -316,3 +316,8 @@ margin: -20px 2px;
 width:300px;
 height:auto;
 }
+
+.sharethis-wrapper div,
+.sharethis-wrapper span {
+  line-height: 1em;
+}
