@@ -48,25 +48,25 @@ color:#fff;
 }
 
 .panel-2col-stacked .panel-col-last .inside a{
-color:#fff;
-background:#776e4f;
+color:#008080;
+/*--background:#776e4f;--*/
 padding:6px 10px;
 -webkit-border-radius: 10px;
 -moz-border-radius: 10px;
 border-radius: 10px;
-font-size:13px;
-border:1px solid;
+font-size:15px;
+/*--border:1px solid;--*/
 }
 
 .panel-2col-stacked .panel-col-last .inside a:hover{
-color:#fff;
-background:rgb(177, 146, 38);
+color:#008080;
+/*--background:rgb(177, 146, 38);--*/
 padding:6px 10px;
 -webkit-border-radius: 10px;
 -moz-border-radius: 10px;
 border-radius: 10px;
-font-size:13px;
-border:1px solid;
+font-size:15px;
+/*--border:1px solid;--*/
 }
 
 .taxonomy-links:before {
