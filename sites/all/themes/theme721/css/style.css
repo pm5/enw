@@ -1512,3 +1512,11 @@ padding: 5px 15px;
 background:rgba(172, 164, 164, 0.25);
 border-top: 5px solid #C2A926;
 }
+
+.even:hover, tr.odd:hover{
+background:rgba(224, 224, 224, 0.29);
+}
+
+tr.even, tr.odd{
+border-bottom: 2px dotted #e0e0e0;
+}
