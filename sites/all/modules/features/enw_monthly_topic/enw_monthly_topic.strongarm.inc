@@ -62,6 +62,13 @@ function enw_monthly_topic_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_enw_events_month';
+  $strongarm->value = 'n 月';
+  $export['date_format_enw_events_month'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__monthly_topic';
   $strongarm->value = array(
     'view_modes' => array(

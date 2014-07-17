@@ -73,8 +73,8 @@ function enw_monthly_topic_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => '120',
-          'height' => '96',
+          'width' => '320',
+          'height' => '255',
         ),
         'weight' => '1',
       ),

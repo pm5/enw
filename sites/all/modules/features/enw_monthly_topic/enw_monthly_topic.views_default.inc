@@ -30,10 +30,10 @@ function enw_monthly_topic_views_default_views() {
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = '重設';
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '12';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'grid';
-  $handler->display->display_options['style_options']['columns'] = '5';
+  $handler->display->display_options['style_options']['columns'] = '3';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* 欄位: 內容: 公仔 */
   $handler->display->display_options['fields']['field_doll']['id'] = 'field_doll';
@@ -77,6 +77,12 @@ function enw_monthly_topic_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'monthly_topic' => 'monthly_topic',
   );
+  /* Filter criterion: 內容: 節日月份 (field_topic_month) */
+  $handler->display->display_options['filters']['field_topic_month_value']['id'] = 'field_topic_month_value';
+  $handler->display->display_options['filters']['field_topic_month_value']['table'] = 'field_data_field_topic_month';
+  $handler->display->display_options['filters']['field_topic_month_value']['field'] = 'field_topic_month_value';
+  $handler->display->display_options['filters']['field_topic_month_value']['granularity'] = 'year';
+  $handler->display->display_options['filters']['field_topic_month_value']['default_date'] = 'today';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
