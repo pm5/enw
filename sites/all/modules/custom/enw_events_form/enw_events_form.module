@@ -1,0 +1,52 @@
+<?php
+
+date_default_timezone_set('Asia/Taipei');
+
+function formulate_events_url($title, $date, $domain) {
+  $title = urlencode($title);
+  $date = $date->format('Y-m-d');
+  if (is_numeric($domain)) {
+    $domain = intval($domain);
+  } else {
+    $domain = 'All';
+  }
+  return "/events?title=$title&date[value][date]=$date&field_domain_tid=$domain";
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ * @see https://api.drupal.org/api/drupal/modules!system!system.api.php/function/hook_form_FORM_ID_alter/7
+ * @return array $ret
+ *  An array with the results of the calls to update_sql().
+ */
+function enw_events_form_form_views_exposed_form_alter(&$form, &$form_state, $form_id) {
+  //dpm($form_id);
+  //dpm($form);
+  //dpm($form_state);
+  $date = null;
+  $title = '';
+  $domain = 'All';
+  if (isset($form_state['input']['date']['value']['date'])) {
+    $date = date_create($form_state['input']['date']['value']['date']);
+  }
+  if (! $date) {
+    $date = date_create();
+  }
+  if (isset($form_state['input']['title'])) {
+    $title = $form_state['input']['title'];
+  }
+  if (isset($form_state['input']['field_domain_tid'])) {
+    $domain = $form_state['input']['field_domain_tid'];
+  }
+  $date->modify('-1 day');
+  $form['date']['prev_date_nav'] = array(
+    '#type' => 'markup',
+    '#markup' => '<span class="prev_date_nav"><a href="' . formulate_events_url($title, $date, $domain) . '">' . t('前一天') . '</a></span>',
+  );
+  $date->modify('+2 days');
+  $form['date']['next_date_nav'] = array(
+    '#type' => 'markup',
+    '#markup' => '<span class="next_date_nav"><a href="' . formulate_events_url($title, $date, $domain) . '">' . t('後一天') . '</a></span>',
+  );
+}
+

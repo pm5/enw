@@ -190,7 +190,7 @@ function enw_press_release_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'event_info' => 'event_info',
+    'enw_press_release' => 'enw_press_release',
   );
   /* Filter criterion: 內容: 活動時間 -  start date (field_event_date) */
   $handler->display->display_options['filters']['field_event_date_value']['id'] = 'field_event_date_value';

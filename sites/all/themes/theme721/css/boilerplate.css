@@ -409,3 +409,67 @@ svg:not(:root) { overflow: hidden; }
 .region region-tabs{
 background: rgb(206, 228, 120)!important;
 }
+/*----movies---*/
+.views-field-title{
+padding:5px 20px;
+}
+
+.field-content{
+font-size:16px;
+}
+
+.views-field-body{
+padding:5px 20px;
+border-top:3px dashed #919191;
+}
+
+.views-field-title a{
+color:#8BB338;
+font-size:20px;
+}
+
+.field-type-text-with-summary{
+color:#333;
+padding: 0px 20px;
+margin:20px 0px;
+}
+.panel-col-last{
+color:#333;
+border: 5px solid #00BB7F;
+padding: 10px 20px 10px 20px;
+margin: 0px 0px 0px -80px;
+}
+.views-field-field-topic-month{
+margin: -100px 0px 70px 200px;
+}
+
+.views-field-field-topic-month .date-display-single{
+background: #00BB7F;
+color: #fff;
+padding: 30px;
+-webkit-border-radius: 100%;
+-moz-border-radius: 100%;
+border-radius: 100%;
+font-size:20px;
+}
+
+.prev_date_nav, .next_date_nav{
+padding: 5px 10px 5px;
+margin: 5px 10px 0px 0px;
+border: 1px solid #817575;
+background: #A3CF92;
+}
+
+.prev_date_nav:hover, .next_date_nav:hover{
+background:#CCBE58;
+}
+
+.view-enw-events{
+padding:10px;
+background: url(../images/grid.jpg);
+}
+
+.views-field-colorbox{
+padding:0px 20px;
+border-left: 1px dotted;
+}

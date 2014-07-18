@@ -1,0 +1,11 @@
+name = ENW Footers
+description = 頁尾內容。
+core = 7.x
+package = 環境通訊網
+php = 5.2.4
+version = 7.x-1.0-beta3
+project = enw_footer
+dependencies[] = fe_block
+features[fe_block_boxes][] = banner
+features[fe_block_settings][] = block-banner
+features[features_api][] = api:1

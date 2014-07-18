@@ -12,45 +12,6 @@ function enw_sidebars_default_fe_block_settings() {
 
   $export['version'] = '2.0';
 
-  $export['block-banner'] = array(
-    'cache' => -1,
-    'css_class' => 'banner-block',
-    'custom' => '0',
-    'machine_name' => 'banner',
-    'module' => 'block',
-    'node_types' => array(),
-    'pages' => 'video-main
-month_topic/*
-month_topic
-monthly-topics
-monthly-topics/*
-video-list
-video-list/*',
-    'roles' => array(),
-    'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => '0',
-      ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => '0',
-      ),
-      'theme721' => array(
-        'region' => 'sidebar_second',
-        'status' => '1',
-        'theme' => 'theme721',
-        'weight' => '-37',
-      ),
-    ),
-    'title' => '廣宣特區',
-    'visibility' => '0',
-  );
-
   $export['fb_likebox-0'] = array(
     'cache' => -1,
     'css_class' => '',
@@ -59,6 +20,8 @@ video-list/*',
     'module' => 'fb_likebox',
     'node_types' => array(),
     'pages' => 'video-main
+events
+events/*
 month_topic
 month_topic/*
 monthly-topics
@@ -68,12 +31,6 @@ video-list/*
 video/*',
     'roles' => array(),
     'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => '0',
-      ),
       'seven' => array(
         'region' => '',
         'status' => 0,
@@ -84,7 +41,7 @@ video/*',
         'region' => 'sidebar_second',
         'status' => '1',
         'theme' => 'theme721',
-        'weight' => '-36',
+        'weight' => '-32',
       ),
     ),
     'title' => '<none>',
@@ -99,6 +56,8 @@ video/*',
     'module' => 'views',
     'node_types' => array(),
     'pages' => 'video-main
+events
+events/*
 month_topic
 month_topic/*
 monthly-topics
@@ -108,12 +67,6 @@ video-list/*
 video/*',
     'roles' => array(),
     'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => '0',
-      ),
       'seven' => array(
         'region' => '',
         'status' => 0,
@@ -124,7 +77,7 @@ video/*',
         'region' => 'sidebar_second',
         'status' => '1',
         'theme' => 'theme721',
-        'weight' => '-40',
+        'weight' => '-34',
       ),
     ),
     'title' => '最新新聞',
@@ -147,12 +100,6 @@ video-list
 video-list/*',
     'roles' => array(),
     'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => '0',
-      ),
       'seven' => array(
         'region' => '',
         'status' => 0,
@@ -160,10 +107,10 @@ video-list/*',
         'weight' => '0',
       ),
       'theme721' => array(
-        'region' => 'sidebar_second',
-        'status' => '1',
+        'region' => '',
+        'status' => 0,
         'theme' => 'theme721',
-        'weight' => '-38',
+        'weight' => '-33',
       ),
     ),
     'title' => '本月主打影片',
@@ -180,12 +127,6 @@ video-list/*',
     'pages' => 'video/*',
     'roles' => array(),
     'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => '0',
-      ),
       'seven' => array(
         'region' => '',
         'status' => 0,
@@ -196,7 +137,7 @@ video-list/*',
         'region' => 'sidebar_second',
         'status' => '1',
         'theme' => 'theme721',
-        'weight' => '-39',
+        'weight' => '-33',
       ),
     ),
     'title' => '影片列表',
@@ -213,18 +154,14 @@ video-list/*',
     'pages' => 'video_main
 month_topic
 video-list/*
+events
+events/*
 month_topic/*
 monthly-topics
 monthly-topics/*
 video-list',
     'roles' => array(),
     'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => '0',
-      ),
       'seven' => array(
         'region' => '',
         'status' => 0,
@@ -235,7 +172,7 @@ video-list',
         'region' => 'sidebar_second',
         'status' => '1',
         'theme' => 'theme721',
-        'weight' => '-35',
+        'weight' => '-31',
       ),
     ),
     'title' => '<none>',

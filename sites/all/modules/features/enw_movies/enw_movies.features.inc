@@ -9,6 +9,10 @@
  */
 function enw_movies_ctools_plugin_api() {
   list($module, $api) = func_get_args();
+  if ($module == "flexslider" && $api == "flexslider_default_preset") {
+    return array("version" => "1");
+  }
+  list($module, $api) = func_get_args();
   if ($module == "page_manager" && $api == "pages_default") {
     return array("version" => "1");
   }
@@ -18,6 +22,10 @@ function enw_movies_ctools_plugin_api() {
   }
   list($module, $api) = func_get_args();
   if ($module == "strongarm" && $api == "strongarm") {
+    return array("version" => "1");
+  }
+  list($module, $api) = func_get_args();
+  if ($module == "video_embed_field" && $api == "default_video_embed_styles") {
     return array("version" => "1");
   }
 }
@@ -34,6 +42,29 @@ function enw_movies_views_api() {
  */
 function enw_movies_image_default_styles() {
   $styles = array();
+
+  // Exported image style: enw_movies_thumbnail_slider.
+  $styles['enw_movies_thumbnail_slider'] = array(
+    'name' => 'enw_movies_thumbnail_slider',
+    'label' => '環境影展導覽',
+    'effects' => array(
+      13 => array(
+        'label' => '縮放和裁剪',
+        'help' => '比例縮放將會保持原始圖片的寬高比，然後裁切最大邊。這通常對建立不拉伸的完美的方形縮略圖是最有用的。',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => '220',
+          'height' => '125',
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
 
   // Exported image style: video_list_thumbnail.
   $styles['video_list_thumbnail'] = array(

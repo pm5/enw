@@ -1,5 +1,5 @@
 name = ENW Sidebars
-description = 側欄內容
+description = 側欄內容。
 core = 7.x
 package = 環境通訊網
 php = 5.2.4
@@ -9,8 +9,6 @@ dependencies[] = fb_likebox
 dependencies[] = fe_block
 dependencies[] = views
 dependencies[] = visitors
-features[fe_block_boxes][] = banner
-features[fe_block_settings][] = block-banner
 features[fe_block_settings][] = fb_likebox-0
 features[fe_block_settings][] = views-latest_news-block
 features[fe_block_settings][] = views-most_recommended-block_1

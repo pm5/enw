@@ -14,7 +14,7 @@ function enw_frontpage_quicktabs_default_quicktabs() {
   $quicktabs->disabled = FALSE; /* Edit this to true to make a default quicktabs disabled initially */
   $quicktabs->api_version = 1;
   $quicktabs->machine_name = 'quicktab1';
-  $quicktabs->ajax = 0;
+  $quicktabs->ajax = 1;
   $quicktabs->hide_empty_tabs = FALSE;
   $quicktabs->default_tab = 0;
   $quicktabs->title = '活動與採訪通告';
@@ -52,7 +52,7 @@ function enw_frontpage_quicktabs_default_quicktabs() {
   $quicktabs->disabled = FALSE; /* Edit this to true to make a default quicktabs disabled initially */
   $quicktabs->api_version = 1;
   $quicktabs->machine_name = 'quicktab3';
-  $quicktabs->ajax = 0;
+  $quicktabs->ajax = 1;
   $quicktabs->hide_empty_tabs = FALSE;
   $quicktabs->default_tab = 0;
   $quicktabs->title = '綠繪本與環境教案';
@@ -68,7 +68,7 @@ function enw_frontpage_quicktabs_default_quicktabs() {
     1 => array(
       'vid' => 'frontpage_promotion',
       'display' => 'taxonomy_carousel_pane',
-      'args' => '126',
+      'args' => '127',
       'title' => '環境教育教案',
       'weight' => '-99',
       'type' => 'view',
@@ -90,7 +90,7 @@ function enw_frontpage_quicktabs_default_quicktabs() {
   $quicktabs->disabled = FALSE; /* Edit this to true to make a default quicktabs disabled initially */
   $quicktabs->api_version = 1;
   $quicktabs->machine_name = 'quicktabs2';
-  $quicktabs->ajax = 0;
+  $quicktabs->ajax = 1;
   $quicktabs->hide_empty_tabs = FALSE;
   $quicktabs->default_tab = 0;
   $quicktabs->title = '本月主題文章與影片';

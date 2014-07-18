@@ -48,25 +48,25 @@ color:#fff;
 }
 
 .panel-2col-stacked .panel-col-last .inside a{
-color:#fff;
-background:#776e4f;
+color:#008080;
+/*--background:#776e4f;--*/
 padding:6px 10px;
 -webkit-border-radius: 10px;
 -moz-border-radius: 10px;
 border-radius: 10px;
-font-size:13px;
-border:1px solid;
+font-size:15px;
+/*--border:1px solid;--*/
 }
 
 .panel-2col-stacked .panel-col-last .inside a:hover{
-color:#fff;
-background:rgb(177, 146, 38);
+color:#008080;
+/*--background:rgb(177, 146, 38);--*/
 padding:6px 10px;
 -webkit-border-radius: 10px;
 -moz-border-radius: 10px;
 border-radius: 10px;
-font-size:13px;
-border:1px solid;
+font-size:15px;
+/*--border:1px solid;--*/
 }
 
 .taxonomy-links:before {
@@ -108,9 +108,7 @@ float:right;
 /* quicktabs */
 ul.quicktabs-tabs.quicktabs-style-sky li:first-child a,
 ul.quicktabs-tabs.quicktabs-style-enw li:first-child a{
-background:url(../images/activitytittle.png) left no-repeat;
-padding: 0px 65px;
-font-size:25px;
+/*---background:url(../images/activitytittle.png) left no-repeat;---*/
 border-left: 0px;
 
 }
@@ -120,15 +118,8 @@ width:100%;
 }
 
 div.pane-content{
-background: #776e4f;
-color: #fff;
--webkit-border-radius: 10px;
--moz-border-radius: 10px;
-border-radius: 10px;
-padding:10px;
 }
 div.pane-content a{
-color:#fff;
 }
 
 div.more-link{
@@ -321,3 +312,12 @@ margin: -20px 2px;
   background: rgb(37, 146, 197);
 }
 
+.field-content img{
+width:300px;
+height:auto;
+}
+
+.sharethis-wrapper div,
+.sharethis-wrapper span {
+  line-height: 1em;
+}
