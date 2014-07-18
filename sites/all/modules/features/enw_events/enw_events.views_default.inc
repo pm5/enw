@@ -187,7 +187,7 @@ function enw_events_views_default_views() {
   $handler->display->display_options['filters']['between_date_filter']['default_date'] = 'today';
   $handler->display->display_options['filters']['between_date_filter']['start_date_field'] = 'field_data_field_event_date.field_event_date_value';
   $handler->display->display_options['filters']['between_date_filter']['end_date_field'] = 'field_data_field_event_date.field_event_date_value2';
-  /* Filter criterion: 內容: 領域 (field_domain) */
+  /* Filter criterion: 內容: 環境教育專業領域 (field_domain) */
   $handler->display->display_options['filters']['field_domain_tid']['id'] = 'field_domain_tid';
   $handler->display->display_options['filters']['field_domain_tid']['table'] = 'field_data_field_domain';
   $handler->display->display_options['filters']['field_domain_tid']['field'] = 'field_domain_tid';
