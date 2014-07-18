@@ -430,6 +430,8 @@ font-size:20px;
 
 .field-type-text-with-summary{
 color:#333;
+padding: 0px 20px;
+margin:20px 0px;
 }
 .panel-col-last{
 color:#333;
