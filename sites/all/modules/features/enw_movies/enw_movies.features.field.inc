@@ -182,6 +182,7 @@ function enw_movies_field_default_fields() {
           'module' => 'video_embed_field',
           'settings' => array(
             'description' => 1,
+            'description_position' => 'bottom',
             'video_style' => 'normal',
           ),
           'type' => 'video_embed_field',
@@ -200,6 +201,7 @@ function enw_movies_field_default_fields() {
       'required' => 1,
       'settings' => array(
         'description_field' => 0,
+        'description_length' => 128,
         'user_register_form' => FALSE,
       ),
       'widget' => array(

@@ -163,12 +163,26 @@ function enw_movies_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'grid';
   $handler->display->display_options['style_options']['columns'] = '3';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* 欄位: 內容: vvid */
+  $handler->display->display_options['fields']['field_vvid']['id'] = 'field_vvid';
+  $handler->display->display_options['fields']['field_vvid']['table'] = 'field_data_field_vvid';
+  $handler->display->display_options['fields']['field_vvid']['field'] = 'field_vvid';
+  $handler->display->display_options['fields']['field_vvid']['label'] = '';
+  $handler->display->display_options['fields']['field_vvid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_vvid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_vvid']['click_sort_column'] = 'video_url';
+  $handler->display->display_options['fields']['field_vvid']['type'] = 'video_embed_field_thumbnail';
+  $handler->display->display_options['fields']['field_vvid']['settings'] = array(
+    'image_style' => 'enw_movies_thumbnail_video_list',
+    'image_link' => 'content',
+  );
   /* 欄位: 內容: Video link */
   $handler->display->display_options['fields']['field_video_link']['id'] = 'field_video_link';
   $handler->display->display_options['fields']['field_video_link']['table'] = 'field_data_field_video_link';
   $handler->display->display_options['fields']['field_video_link']['field'] = 'field_video_link';
   $handler->display->display_options['fields']['field_video_link']['label'] = '';
   $handler->display->display_options['fields']['field_video_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_video_link']['empty'] = '[field_vvid]';
   $handler->display->display_options['fields']['field_video_link']['click_sort_column'] = 'input';
   $handler->display->display_options['fields']['field_video_link']['type'] = 'youtube_thumbnail';
   $handler->display->display_options['fields']['field_video_link']['settings'] = array(
@@ -197,6 +211,10 @@ function enw_movies_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Sort criterion: 內容: 類型 */
+  $handler->display->display_options['sorts']['type']['id'] = 'type';
+  $handler->display->display_options['sorts']['type']['table'] = 'node';
+  $handler->display->display_options['sorts']['type']['field'] = 'type';
   /* Contextual filter: 內容: Has taxonomy term ID (with depth) */
   $handler->display->display_options['arguments']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
   $handler->display->display_options['arguments']['term_node_tid_depth']['table'] = 'node';
@@ -221,6 +239,7 @@ function enw_movies_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
+    'movie' => 'movie',
     'video' => 'video',
   );
 
@@ -241,8 +260,8 @@ function enw_movies_views_default_views() {
   $handler->display->display_options['fields']['field_vvid']['click_sort_column'] = 'video_url';
   $handler->display->display_options['fields']['field_vvid']['type'] = 'video_embed_field_thumbnail';
   $handler->display->display_options['fields']['field_vvid']['settings'] = array(
-    'image_style' => 'video_list_thumbnail',
-    'image_link' => 'node',
+    'image_style' => 'enw_movies_thumbnail_slider',
+    'image_link' => 'content',
   );
   /* 欄位: 內容: 標題 */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -278,8 +297,8 @@ function enw_movies_views_default_views() {
     'movie' => 'movie',
   );
   $handler->display->display_options['displays'] = array(
-    'default' => 'default',
-    'block_1' => 'block_1',
+    'default' => 0,
+    'block_1' => 0,
   );
   $translatables['video_list'] = array(
     t('Master'),
@@ -296,6 +315,7 @@ function enw_movies_views_default_views() {
     t('‹ 上一頁'),
     t('下一頁 ›'),
     t('最後一頁 »'),
+    t('[field_vvid]'),
     t('所有'),
     t('%1'),
     t('Block'),
