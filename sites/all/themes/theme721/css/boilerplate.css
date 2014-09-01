@@ -10,7 +10,7 @@ b, i,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure, 
+article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
     margin:0;
@@ -73,7 +73,7 @@ ins {
 /* change colours to suit your needs */
 mark {
     background-color:#46a7e2;
-    color:#000; 
+    color:#000;
     font-style:italic;
     font-weight:bold;
 }
@@ -98,7 +98,7 @@ table {
 hr {
     display:block;
     height:1px;
-    border:0;   
+    border:0;
     border-top:1px solid #cccccc;
     margin:1em 0;
     padding:0;
@@ -121,7 +121,7 @@ hr {
 /* =============================================================================
    Forms from normalize
    ========================================================================== */
-   
+
 /*
  * Corrects margin displayed oddly in IE6/7
  */
@@ -173,8 +173,8 @@ table input {
  */
 
 button,
-html input[type="button"], 
-input[type="reset"], 
+html input[type="button"],
+input[type="reset"],
 input[type="submit"] {
     cursor: pointer; /* 1 */
     -webkit-appearance: button; /* 2 */
@@ -235,27 +235,27 @@ select:focus, input:focus, textarea:focus { outline:none;}
 
 
 
-/* normalize monospace sizing 
+/* normalize monospace sizing
  * en.wikipedia.org/wiki/MediaWiki_talk:Common.css/Archive_11#Teletype_style_fix_for_Chrome
  */
 pre, code, kbd, samp { font-family: monospace, sans-serif; }
- 
 
-/* 
- * minimal base styles 
+
+/*
+ * minimal base styles
  */
 
 
-body, select, input, textarea { 
-  /* #444 looks better than black */ 
-  color: #444; 
+body, select, input, textarea {
+  /* #444 looks better than black */
+  color: #444;
 }
 
 h1,h2,h3,h4,h5,h6 { font-weight: normal; }
 h1 {
   font-size:36px;
   line-height:1em;
-  margin-bottom:.5em; 
+  margin-bottom:.5em;
 }
 
 h2 {
@@ -270,13 +270,13 @@ h3 {
 h4 {
   font-size:15px;
   line-height: 1.25em;
-  margin-bottom: 1.25em; 
+  margin-bottom: 1.25em;
 }
 
 h5 {
   font-size:12px;
   font-weight:bold;
-  margin-bottom:1.5em; 
+  margin-bottom:1.5em;
 }
 
 h6 {
@@ -286,7 +286,7 @@ h6 {
   margin-bottom:1.8em;
 }
 
- 
+
 /* Accessible focus treatment */
 a:hover, a:active { outline:none; }
 
@@ -304,14 +304,14 @@ td, td img { vertical-align:top; }
 sub { vertical-align:sub; font-size:smaller; }
 sup { vertical-align:super; font-size:smaller; }
 
-pre { 
-  padding:15px; 
+pre {
+  padding:15px;
   white-space:pre; /* CSS2 */
   white-space:pre-wrap; /* CSS 2.1 */
   white-space:pre-line; /* CSS 3 (and 2.1 as well, actually) */
   word-wrap:break-word; /* IE */
 }
- 
+
 legend { *margin-left:-7px; }
 
 input[type="radio"] { vertical-align:text-bottom; }
@@ -341,29 +341,29 @@ table button, table input { *overflow: auto; }
 
 /* colors for form validity */
 input:valid, textarea:valid   {  }
-input:invalid, textarea:invalid { 
+input:invalid, textarea:invalid {
       border-radius:1px;
       box-shadow:0px 0px 5px red;
 }
-.no-boxshadow input:invalid, 
+.no-boxshadow input:invalid,
 .no-boxshadow textarea:invalid { background-color:#f0dddd; }
 
 
 /* These selection declarations have to be separate.*/
 ::-moz-selection{ background:#46a7e2; color:#fff; text-shadow:none; }
-::selection { background:#46a7e2; color:#fff; text-shadow:none; } 
+::selection { background:#46a7e2; color:#fff; text-shadow:none; }
 
 /*  j.mp/webkit-tap-highlight-color */
-a:link { -webkit-tap-highlight-color: #46a7e2; } 
+a:link { -webkit-tap-highlight-color: #46a7e2; }
 
-/* make buttons play nice in IE:    
+/* make buttons play nice in IE:
 button {  width: auto; overflow: visible; }
- 
+
 /* bicubic resizing for non-native sized IMG */
 img { -ms-interpolation-mode: bicubic; }
 
 /*
- * Correct overflow not hidden in IE9 
+ * Correct overflow not hidden in IE9
  */
 
 svg:not(:root) { overflow: hidden; }
@@ -373,8 +373,8 @@ svg:not(:root) { overflow: hidden; }
   position: absolute;
 }
 
-/* 
- * Non-semantic helper classes 
+/*
+ * Non-semantic helper classes
  */
 
 /* for image replacement */
@@ -398,7 +398,7 @@ svg:not(:root) { overflow: hidden; }
 .clearfix:after { clear:both;}
 .clearfix { zoom:1; }
 
-#cboxTitle { 
+#cboxTitle {
   background: #fff;
   opacity: 0.8;
   -moz-opacity: 0.8;
@@ -434,6 +434,11 @@ padding: 0px 20px;
 margin:20px 0px;
 }
 .panel-col-last{
+color:#333;
+padding: 10px 20px 10px 20px;
+margin: 0px 0px 0px -80px;
+}
+body.monthly-topics .panel-col-last{
 color:#333;
 border: 5px solid #00BB7F;
 padding: 10px 20px 10px 20px;
