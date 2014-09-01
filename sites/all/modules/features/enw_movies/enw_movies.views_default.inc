@@ -173,7 +173,7 @@ function enw_movies_views_default_views() {
   $handler->display->display_options['fields']['field_vvid']['click_sort_column'] = 'video_url';
   $handler->display->display_options['fields']['field_vvid']['type'] = 'video_embed_field_thumbnail';
   $handler->display->display_options['fields']['field_vvid']['settings'] = array(
-    'image_style' => 'enw_movies_thumbnail_video_list',
+    'image_style' => 'video_list_thumbnail',
     'image_link' => 'content',
   );
   /* 欄位: 內容: Video link */
