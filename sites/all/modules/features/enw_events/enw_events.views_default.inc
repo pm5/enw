@@ -39,7 +39,7 @@ function enw_events_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
     'field_event_date' => 'field_event_date',
-    'field_domain' => 'field_domain',
+    'field_event_date_1' => 'field_event_date_1',
     'title' => 'title',
     'body' => 'body',
     'colorbox' => 'colorbox',
@@ -53,7 +53,9 @@ function enw_events_views_default_views() {
       'separator' => '',
       'empty_column' => 0,
     ),
-    'field_domain' => array(
+    'field_event_date_1' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
@@ -83,6 +85,7 @@ function enw_events_views_default_views() {
   $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
   $handler->display->display_options['fields']['field_event_date']['label'] = '';
+  $handler->display->display_options['fields']['field_event_date']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_event_date']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_event_date']['settings'] = array(
     'format_type' => 'short',
@@ -90,7 +93,24 @@ function enw_events_views_default_views() {
     'multiple_number' => '',
     'multiple_from' => '',
     'multiple_to' => '',
-    'show_repeat_rule' => 'show',
+  );
+  /* 欄位: 內容: 活動結束時間 */
+  $handler->display->display_options['fields']['field_event_date_1']['id'] = 'field_event_date_1';
+  $handler->display->display_options['fields']['field_event_date_1']['table'] = 'field_data_field_event_date';
+  $handler->display->display_options['fields']['field_event_date_1']['field'] = 'field_event_date';
+  $handler->display->display_options['fields']['field_event_date_1']['ui_name'] = '內容: 活動結束時間';
+  $handler->display->display_options['fields']['field_event_date_1']['label'] = '';
+  $handler->display->display_options['fields']['field_event_date_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_event_date_1']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_event_date_1']['alter']['text'] = '（[field_event_date_1] 截止）';
+  $handler->display->display_options['fields']['field_event_date_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_event_date_1']['empty'] = 'hello';
+  $handler->display->display_options['fields']['field_event_date_1']['settings'] = array(
+    'format_type' => 'short_month_day',
+    'fromto' => 'value2',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
   );
   /* 欄位: 內容: 標題 */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -98,6 +118,8 @@ function enw_events_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['text'] = '[title][field_event_date_1]';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
@@ -116,8 +138,7 @@ function enw_events_views_default_views() {
   $handler->display->display_options['fields']['colorbox']['label'] = '';
   $handler->display->display_options['fields']['colorbox']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['colorbox']['trigger_field'] = 'title';
-  $handler->display->display_options['fields']['colorbox']['popup'] = '[field_domain]
-[field_event_date]
+  $handler->display->display_options['fields']['colorbox']['popup'] = '[field_event_date]
 [title]
 [body]';
   $handler->display->display_options['fields']['colorbox']['gid'] = 1;
@@ -340,6 +361,9 @@ function enw_events_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
+    t('（[field_event_date_1] 截止）'),
+    t('hello'),
+    t('[title][field_event_date_1]'),
     t('活動名稱'),
     t('活動日期'),
     t('Between Dates (node)'),
