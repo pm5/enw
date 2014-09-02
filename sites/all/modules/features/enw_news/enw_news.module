@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the enw_news feature.
+ */
+
+include_once 'enw_news.features.inc';
