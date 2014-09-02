@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the enw_video_terms feature.
+ */
+
+include_once 'enw_video_terms.features.inc';
