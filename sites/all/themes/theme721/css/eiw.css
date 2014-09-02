@@ -3,11 +3,11 @@
 }
 div.node-readmore {
         color: #fff;
-       
-    
+
+
 }
         div.node-readmore a:hover {
-              
+
         }
 
 section.recommand-block {
@@ -23,7 +23,7 @@ section.banner-block {
   background-origin: padding-box;
   color: white;
   padding-top: 5px;
- 
+
 }
 
 section.videolist-block{
@@ -95,7 +95,7 @@ padding: 0px 0px;
 margin: 0px 0px 0px 0px;
 }
 .month_topic_block td, td img{
-padding: 0px 10px 15px;
+padding: 0px 3px 15px;
 -webkit-border-radius: 10px;
 -moz-border-radius: 10px;
 border-radius: 10px;
@@ -129,7 +129,7 @@ float: right;
 -webkit-border-radius: 10px;
 -moz-border-radius: 10px;
 border-radius: 10px;
-margin: -5px 20px; 
+margin: -5px 20px;
 padding: 2px 10px;
 }
 
