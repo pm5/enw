@@ -259,10 +259,10 @@ function enw_frontpage_views_default_views() {
 
   $view = new view();
   $view->name = 'slider';
-  $view->description = '';
+  $view->description = '首頁上方的大圖輪播。';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'Slider';
+  $view->human_name = '首頁輪播';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
@@ -380,6 +380,9 @@ function enw_frontpage_views_default_views() {
   $handler->display->display_options['sorts']['changed']['table'] = 'node';
   $handler->display->display_options['sorts']['changed']['field'] = 'changed';
   $handler->display->display_options['sorts']['changed']['order'] = 'DESC';
+
+  /* Display: Content pane */
+  $handler = $view->new_display('panel_pane', 'Content pane', 'pane');
   $translatables['slider'] = array(
     t('Master'),
     t('more'),
@@ -395,6 +398,8 @@ function enw_frontpage_views_default_views() {
 <div class="slider-content">[body]</div>
 <div class="slider-link">[view_node]</div>'),
     t('Block'),
+    t('Content pane'),
+    t('View panes'),
   );
   $export['slider'] = $view;
 
