@@ -12,7 +12,7 @@ function enw_video_terms_views_default_views() {
 
   $view = new view();
   $view->name = 'video_term';
-  $view->description = '';
+  $view->description = '首頁下方的影片八大分類圖型選單。';
   $view->tag = 'default';
   $view->base_table = 'taxonomy_term_data';
   $view->human_name = '影片分類';
