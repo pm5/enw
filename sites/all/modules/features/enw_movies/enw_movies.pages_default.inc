@@ -59,7 +59,15 @@ function enw_movies_default_page_manager_pages() {
     $pane->type = 'views_panes';
     $pane->subtype = 'movie-theater_pane';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'ruleset:tw_user_only',
+          'settings' => NULL,
+          'not' => FALSE,
+        ),
+      ),
+    );
     $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array();
@@ -78,7 +86,15 @@ function enw_movies_default_page_manager_pages() {
     $pane->type = 'views_panes';
     $pane->subtype = 'movie-theater_slider_pane';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'ruleset:tw_user_only',
+          'settings' => NULL,
+          'not' => FALSE,
+        ),
+      ),
+    );
     $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array();
