@@ -62,6 +62,11 @@ function enw_movies_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'movie' => 'movie',
   );
+  /* Filter criterion: 內容: 首頁推薦 */
+  $handler->display->display_options['filters']['promote']['id'] = 'promote';
+  $handler->display->display_options['filters']['promote']['table'] = 'node';
+  $handler->display->display_options['filters']['promote']['field'] = 'promote';
+  $handler->display->display_options['filters']['promote']['value'] = '1';
 
   /* Display: 影片 */
   $handler = $view->new_display('panel_pane', '影片', 'theater_pane');
