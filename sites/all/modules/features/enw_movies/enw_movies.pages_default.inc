@@ -5,6 +5,42 @@
  */
 
 /**
+ * Implements hook_default_page_manager_handlers().
+ */
+function enw_movies_default_page_manager_handlers() {
+  $export = array();
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'node_view_http_response';
+  $handler->task = 'node_view';
+  $handler->subtask = '';
+  $handler->handler = 'http_response';
+  $handler->weight = 2;
+  $handler->conf = array(
+    'title' => 'Panel: 環境影展',
+    'contexts' => array(),
+    'relationships' => array(),
+    'code' => '403',
+    'destination' => '',
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'ruleset:tw_user_only',
+          'settings' => NULL,
+          'not' => TRUE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+  $export['node_view_http_response'] = $handler;
+
+  return $export;
+}
+
+/**
  * Implements hook_default_page_manager_pages().
  */
 function enw_movies_default_page_manager_pages() {
