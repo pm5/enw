@@ -41,6 +41,7 @@ features[image][] = enw_movies_thumbnail_slider
 features[image][] = video_list_thumbnail
 features[node][] = movie
 features[node][] = video
+features[page_manager_handlers][] = node_view_http_response
 features[page_manager_pages][] = movies
 features[quicktabs][] = video_list
 features[taxonomy][] = information
