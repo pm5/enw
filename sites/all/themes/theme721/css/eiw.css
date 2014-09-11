@@ -30,10 +30,6 @@ section.videolist-block{
 background:url(../images/vedioh2.png) no-repeat #776e4f;
 }
 
-section.videolist-block, td img{
-padding: 0px 15px 20px 0px;
-
-}
 
 div.recommended {
   background: #000;
@@ -95,10 +91,13 @@ padding: 0px 0px;
 margin: 0px 0px 0px 0px;
 }
 .month_topic_block td, td img{
-padding: 0px 3px 15px;
+padding: 0px 10px 15px;
 -webkit-border-radius: 10px;
 -moz-border-radius: 10px;
 border-radius: 10px;
+}
+.video-sidebar-block td img {
+padding: 0px 3px 15px;
 }
 
 .group-right.field field-name-node-link field-type-ds field-label-hidden{
