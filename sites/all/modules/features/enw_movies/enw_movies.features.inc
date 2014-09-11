@@ -9,6 +9,10 @@
  */
 function enw_movies_ctools_plugin_api() {
   list($module, $api) = func_get_args();
+  if ($module == "ctools_access_ruleset" && $api == "ctools_rulesets") {
+    return array("version" => "1");
+  }
+  list($module, $api) = func_get_args();
   if ($module == "flexslider" && $api == "flexslider_default_preset") {
     return array("version" => "1");
   }
