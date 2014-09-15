@@ -1,7 +1,10 @@
-name = enw_seo
+name = ENW SEO
+description = SEO 設定
 core = 7.x
-package = Features
+package = 環境通訊網
 php = 5.2.4
+version = 7.x-1.0-beta
+project = enw_seo
 dependencies[] = ctools
 dependencies[] = metatag
 dependencies[] = strongarm
