@@ -1,6 +1,10 @@
-name = enw_settings
+name = ENW Settings
+description = 網站設定。
 core = 7.x
-package = Features
+package = 環境通訊網
+php = 5.2.4
+version = 7.x-1.0-beta
+project = enw_settings
 dependencies[] = ctools
 dependencies[] = strongarm
 features[ctools][] = strongarm:strongarm:1
