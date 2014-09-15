@@ -170,7 +170,7 @@ function enw_settings_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'sharethis_location';
-  $strongarm->value = 'block';
+  $strongarm->value = 'content';
   $export['sharethis_location'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -227,7 +227,6 @@ function enw_settings_strongarm() {
     'page' => 'page',
     'movie' => 'movie',
     'video' => 'video',
-    'month_topic' => 'month_topic',
     'event_info' => 'event_info',
     'monthly_topic' => 'monthly_topic',
     'book' => 0,
@@ -243,6 +242,7 @@ function enw_settings_strongarm() {
     'slider' => 0,
     'webform' => 0,
     'enw_press_release' => 0,
+    'month_topic' => 0,
   );
   $export['sharethis_node_types'] = $strongarm;
 
@@ -341,7 +341,7 @@ function enw_settings_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'sharethis_publisherID';
-  $strongarm->value = 'dr-a339a84f-25a-8ce1-156e-6619a6b5f9a';
+  $strongarm->value = 'dr-edbe2ffb-db6d-7e42-df8c-973681d63ed2';
   $export['sharethis_publisherID'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -436,7 +436,7 @@ function enw_settings_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'sharethis_weight';
-  $strongarm->value = '-10';
+  $strongarm->value = '-25';
   $export['sharethis_weight'] = $strongarm;
 
   $strongarm = new stdClass();
