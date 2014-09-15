@@ -18,6 +18,7 @@ function video_embed_field_video_embed_handler_info() {
     'title' => 'Youtube',
     'function' => 'video_embed_field_handle_youtube',
     'thumbnail_function' => 'video_embed_field_handle_youtube_thumbnail',
+    'thumbnail_default' => drupal_get_path('module', 'video_embed_field') . '/img/youtube.jpg',
     'data_function' => 'video_embed_field_handle_youtube_data',
     'form' => 'video_embed_field_handler_youtube_form',
     'form_validate' => 'video_embed_field_handler_youtube_form_validate',
@@ -44,6 +45,7 @@ function video_embed_field_video_embed_handler_info() {
     'title' => 'Vimeo',
     'function' => 'video_embed_field_handle_vimeo',
     'thumbnail_function' => 'video_embed_field_handle_vimeo_thumbnail',
+    'thumbnail_default' => drupal_get_path('module', 'video_embed_field') . '/img/vimeo.jpg',
     'data_function' => 'video_embed_field_handle_vimeo_data',
     'form' => 'video_embed_field_handler_vimeo_form',
     'form_validate' => 'video_embed_field_handler_vimeo_form_validate',
@@ -485,11 +487,12 @@ function video_embed_field_handle_vimeo_thumbnail($url) {
   $info = array(
     'id' => $id,
   );
-
-  $response = drupal_http_request('http://vimeo.com/api/oembed.json?url=http%3A//vimeo.com/'. $id);
+  $response = drupal_http_request('http://vimeo.com/api/v2/video/' . $id . '.php');
   if (!isset($response->error)) {
-    $video = json_decode($response->data, TRUE);
-    $image_url = $video['thumbnail_url'];
+    $response = unserialize($response->data);
+    $video = current($response);
+
+    $image_url = $video['thumbnail_large'];
     $info['url'] = $image_url;
   }
   return $info;

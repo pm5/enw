@@ -38,7 +38,6 @@ tr.odd {
   background-color: #eee;
   border-bottom: 1px solid #ccc;
   padding: 0.1em 0.6em;
-  background: url(../enw/images/grid.jpg);
 }
 
 /**
@@ -62,11 +61,8 @@ td.active {
   padding: 0;
 }
 .item-list ul li {
-  /*--margin: 0 0 0.25em 1.5em; /* LTR */
-  padding: 18px 0px 18px 95px;
-  background: url(/sites/all/themes/theme721/images/count.png) left no-repeat;
-  color: #2E8D90;
-font-weight: bold;
+  margin: 0 0 0.25em 1.5em; /* LTR */
+  padding: 0;
 }
 
 /**
