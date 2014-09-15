@@ -46,7 +46,7 @@ function enw_frontpage_flexslider_default_presets() {
     'slideshow' => 0,
     'slideshowSpeed' => '7000',
     'directionNav' => 0,
-    'controlNav' => '0',
+    'controlNav' => '1',
     'prevText' => 'Previous',
     'nextText' => 'Next',
     'pausePlay' => 0,
