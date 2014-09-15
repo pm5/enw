@@ -17,20 +17,7 @@ function enw_frontpage_default_page_manager_pages() {
   $page->admin_description = '';
   $page->path = 'front';
   $page->access = array(
-    'plugins' => array(
-      1 => array(
-        'name' => 'role',
-        'settings' => array(
-          'rids' => array(
-            0 => 3,
-            1 => 4,
-            2 => 5,
-          ),
-        ),
-        'context' => 'logged-in-user',
-        'not' => FALSE,
-      ),
-    ),
+    'plugins' => array(),
     'logic' => 'and',
   );
   $page->menu = array();
