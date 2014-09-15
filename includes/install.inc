@@ -204,9 +204,7 @@ function drupal_install_profile_distribution_name() {
   else {
     $profile = drupal_get_profile();
     $info = system_get_info('module', $profile);
- //   return $info['distribution_name'];
-	if ( ! array_key_exists('distribution_name', $info)) $info['distribution_name'] = 'Drupal';
-return $info['distribution_name'];
+    return $info['distribution_name'];
   }
 }
 
@@ -1136,7 +1134,6 @@ function st($string, array $args = array(), array $options = array()) {
     }
   }
 
-  require_once DRUPAL_ROOT . '/includes/theme.inc';
   // Transform arguments before inserting them
   foreach ($args as $key => $value) {
     switch ($key[0]) {

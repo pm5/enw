@@ -56,8 +56,8 @@ div.date-views-pager div.next-year {
   width: 100%;
 }
 .date-nav div.date-heading h3 {
-  #margin: 0;
-  padding: 50px 0px 10px;
+  margin: 0;
+  padding: 0;
 }
 
 .date-nav-wrapper .clear-block {
@@ -71,13 +71,13 @@ div.date-views-pager div.next-year {
 }
 
 .date-nav-wrapper .date-nav {
-  #background-color: transparent;
-  #border: 0px;
-  #height: 30px;
-  #height: auto;
-  #min-height: 30px;
-  #position: relative;
-  #margin-bottom: 10px;
+  background-color: transparent;
+  border: 0px;
+  height: 30px;
+  height: auto;
+  min-height: 30px;
+  position: relative;
+  margin-bottom: 10px;
 }
 
 .date-nav-wrapper .date-prev a,

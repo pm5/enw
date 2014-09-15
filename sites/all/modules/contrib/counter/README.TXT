@@ -13,7 +13,7 @@ To make Counter module start counting then you need to:
 
 1. Enable the Counter block, or
 2. If you want to count but don't want to show the Counter block then
-   - go to COonfiguration-Counter-Basic Counter
+   - go to Configuration-Counter-Basic Counter
    - set Show Site Counter Result for Administer group only = TRUE
    
 THEMING
@@ -24,3 +24,7 @@ to your style.css theme:
   #counter li {
     color: red;    
   }
+
+VIEWS
+-----
+Counter table exposed to Views. Just create a new Views and select Counter as data source.
