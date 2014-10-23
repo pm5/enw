@@ -431,8 +431,17 @@ function video_embed_field_handler_youtube_form_validate($element, &$form_state,
 function _video_embed_field_get_vimeo_id($url) {
   $pos = strripos($url, '/');
   if ($pos != FALSE) {
-    $pos += 1;
-    return (int) substr($url, $pos);
+    $matches = "";
+    $vid_id = "";
+    preg_match_all('!\d+!', $url, $matches);
+    foreach($matches as $i => $row) {
+      foreach($row as $b => $digits ) {
+        if(strlen($digits) >= 8) {
+          $vid_id = $digits;
+        }
+      }
+    }
+    return (int) $vid_id;
   }
   return FALSE;
 }
@@ -487,13 +496,12 @@ function video_embed_field_handle_vimeo_thumbnail($url) {
   $info = array(
     'id' => $id,
   );
-  $response = drupal_http_request('http://vimeo.com/api/v2/video/' . $id . '.php');
+  $response = drupal_http_request('http://vimeo.com/api/oembed.json?url=http://vimeo.com/' . $id);
   if (!isset($response->error)) {
-    $response = unserialize($response->data);
-    $video = current($response);
-
-    $image_url = $video['thumbnail_large'];
-    $info['url'] = $image_url;
+    $video = json_decode($response->data, TRUE);
+    if (isset($video['thumbnail_url'])) {
+      $info['url'] = $video['thumbnail_url'];
+    }
   }
   return $info;
 }
