@@ -30,6 +30,10 @@ section.videolist-block{
 background:url(../images/vedioh2.png) no-repeat #776e4f;
 }
 
+section.videolist-block, td img{
+padding: 0px 15px 20px 0px;
+
+}
 
 div.recommended {
   background: #000;
