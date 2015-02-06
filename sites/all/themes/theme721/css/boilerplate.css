@@ -445,7 +445,8 @@ padding: 10px 20px 10px 20px;
 margin: 0px 0px 0px -80px;
 }
 .views-field-field-topic-month{
-margin: -100px 0px 70px 200px;
+margin: 145px 0px 70px 200px;
+position: absolute;
 }
 
 .views-field-field-topic-month .date-display-single{
