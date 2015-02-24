@@ -14,6 +14,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
   config.vm.network :forwarded_port, guest: 8080, host: 8080
   config.vm.network :forwarded_port, guest: 8022, host: 8022
+  config.vm.network :forwarded_port, guest: 8306, host: 8306
   config.vm.network :private_network, ip: "192.168.10.2"    # for NFS
   config.vm.synced_folder ".", "/vagrant", :nfs => true
   config.vm.provision :docker do |d|
