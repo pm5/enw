@@ -89,6 +89,9 @@ function enw_events_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -99,7 +102,14 @@ function enw_events_strongarm() {
           'weight' => '5',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'social_share' => array(
+          'default' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__event_info'] = $strongarm;

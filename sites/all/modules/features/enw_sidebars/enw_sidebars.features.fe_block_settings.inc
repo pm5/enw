@@ -19,18 +19,19 @@ function enw_sidebars_default_fe_block_settings() {
     'delta' => '0',
     'module' => 'fb_likebox',
     'node_types' => array(),
-    'pages' => 'video-main
-events
+    'pages' => 'events
 events/*
-month_topic
-month_topic/*
 monthly-topics
 monthly-topics/*
-video-list
-video-list/*
 video/*',
     'roles' => array(),
     'themes' => array(
+      'enwmobile' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'enwmobile',
+        'weight' => '-27',
+      ),
       'seven' => array(
         'region' => '',
         'status' => 0,
@@ -38,10 +39,10 @@ video/*',
         'weight' => '0',
       ),
       'theme721' => array(
-        'region' => 'sidebar_second',
-        'status' => '1',
+        'region' => '',
+        'status' => 0,
         'theme' => 'theme721',
-        'weight' => '-32',
+        'weight' => '-27',
       ),
     ),
     'title' => '<none>',
@@ -67,6 +68,12 @@ video-list/*
 video/*',
     'roles' => array(),
     'themes' => array(
+      'enwmobile' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'enwmobile',
+        'weight' => '-30',
+      ),
       'seven' => array(
         'region' => '',
         'status' => 0,
@@ -74,10 +81,10 @@ video/*',
         'weight' => '0',
       ),
       'theme721' => array(
-        'region' => 'sidebar_second',
-        'status' => '1',
+        'region' => '',
+        'status' => 0,
         'theme' => 'theme721',
-        'weight' => '-34',
+        'weight' => '-31',
       ),
     ),
     'title' => '最新新聞',
@@ -86,7 +93,7 @@ video/*',
 
   $export['views-most_recommended-block_1'] = array(
     'cache' => -1,
-    'css_class' => 'recommand-block',
+    'css_class' => '',
     'custom' => '0',
     'delta' => 'most_recommended-block_1',
     'module' => 'views',
@@ -100,6 +107,12 @@ video-list
 video-list/*',
     'roles' => array(),
     'themes' => array(
+      'enwmobile' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'enwmobile',
+        'weight' => '-28',
+      ),
       'seven' => array(
         'region' => '',
         'status' => 0,
@@ -110,7 +123,7 @@ video-list/*',
         'region' => '',
         'status' => 0,
         'theme' => 'theme721',
-        'weight' => '-33',
+        'weight' => '-28',
       ),
     ),
     'title' => '本月主打影片',
@@ -119,7 +132,7 @@ video-list/*',
 
   $export['views-videolist-block_1'] = array(
     'cache' => -1,
-    'css_class' => 'videolist-block',
+    'css_class' => '',
     'custom' => '0',
     'delta' => 'videolist-block_1',
     'module' => 'views',
@@ -127,6 +140,12 @@ video-list/*',
     'pages' => 'video/*',
     'roles' => array(),
     'themes' => array(
+      'enwmobile' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'enwmobile',
+        'weight' => '-30',
+      ),
       'seven' => array(
         'region' => '',
         'status' => 0,
@@ -134,10 +153,10 @@ video-list/*',
         'weight' => '0',
       ),
       'theme721' => array(
-        'region' => 'sidebar_second',
-        'status' => '1',
+        'region' => '',
+        'status' => 0,
         'theme' => 'theme721',
-        'weight' => '-33',
+        'weight' => '-31',
       ),
     ),
     'title' => '影片列表',
@@ -146,7 +165,7 @@ video-list/*',
 
   $export['visitors-0'] = array(
     'cache' => -1,
-    'css_class' => 'vistors-block',
+    'css_class' => '',
     'custom' => '0',
     'delta' => '0',
     'module' => 'visitors',
@@ -162,6 +181,12 @@ monthly-topics/*
 video-list',
     'roles' => array(),
     'themes' => array(
+      'enwmobile' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'enwmobile',
+        'weight' => '-26',
+      ),
       'seven' => array(
         'region' => '',
         'status' => 0,
@@ -169,10 +194,10 @@ video-list',
         'weight' => '0',
       ),
       'theme721' => array(
-        'region' => 'sidebar_second',
-        'status' => '1',
+        'region' => '',
+        'status' => 0,
         'theme' => 'theme721',
-        'weight' => '-31',
+        'weight' => '-26',
       ),
     ),
     'title' => '<none>',

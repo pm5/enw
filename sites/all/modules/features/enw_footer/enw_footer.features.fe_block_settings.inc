@@ -14,7 +14,7 @@ function enw_footer_default_fe_block_settings() {
 
   $export['block-banner'] = array(
     'cache' => -1,
-    'css_class' => 'banner-block',
+    'css_class' => '',
     'custom' => '0',
     'machine_name' => 'banner',
     'module' => 'block',
@@ -28,6 +28,12 @@ video-list
 video-list/*',
     'roles' => array(),
     'themes' => array(
+      'enwmobile' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'enwmobile',
+        'weight' => '-28',
+      ),
       'seven' => array(
         'region' => '',
         'status' => 0,
@@ -35,8 +41,8 @@ video-list/*',
         'weight' => '0',
       ),
       'theme721' => array(
-        'region' => 'footer',
-        'status' => '1',
+        'region' => '',
+        'status' => 0,
         'theme' => 'theme721',
         'weight' => '-28',
       ),

@@ -56,17 +56,9 @@ function enw_videolist_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
+  $handler->display->display_options['fields']['title']['element_class'] = 'video-sidebar';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* 欄位: 內容: Body */
-  $handler->display->display_options['fields']['body']['id'] = 'body';
-  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
-  $handler->display->display_options['fields']['body']['field'] = 'body';
-  $handler->display->display_options['fields']['body']['label'] = '';
-  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
-  $handler->display->display_options['fields']['body']['settings'] = array(
-    'trim_length' => '150',
-  );
   /* 欄位: 內容: Video link */
   $handler->display->display_options['fields']['field_video_link']['id'] = 'field_video_link';
   $handler->display->display_options['fields']['field_video_link']['table'] = 'field_data_field_video_link';
@@ -133,40 +125,6 @@ function enw_videolist_views_default_views() {
     'field_video_link' => 'left_below',
   );
   $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* 欄位: 內容: 標題 */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
-  $handler->display->display_options['fields']['title']['element_class'] = 'video-sidebar';
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* 欄位: 內容: Body */
-  $handler->display->display_options['fields']['body']['id'] = 'body';
-  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
-  $handler->display->display_options['fields']['body']['field'] = 'body';
-  $handler->display->display_options['fields']['body']['label'] = '';
-  $handler->display->display_options['fields']['body']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
-  $handler->display->display_options['fields']['body']['settings'] = array(
-    'trim_length' => '150',
-  );
-  /* 欄位: 內容: Video link */
-  $handler->display->display_options['fields']['field_video_link']['id'] = 'field_video_link';
-  $handler->display->display_options['fields']['field_video_link']['table'] = 'field_data_field_video_link';
-  $handler->display->display_options['fields']['field_video_link']['field'] = 'field_video_link';
-  $handler->display->display_options['fields']['field_video_link']['label'] = '';
-  $handler->display->display_options['fields']['field_video_link']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_video_link']['click_sort_column'] = 'input';
-  $handler->display->display_options['fields']['field_video_link']['type'] = 'youtube_thumbnail';
-  $handler->display->display_options['fields']['field_video_link']['settings'] = array(
-    'image_style' => 'video_list_thumbnail',
-    'image_link' => 'content',
-  );
   $translatables['videolist'] = array(
     t('Master'),
     t('影片列表'),

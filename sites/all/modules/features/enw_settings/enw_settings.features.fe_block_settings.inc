@@ -22,6 +22,12 @@ function enw_settings_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
+      'enwmobile' => array(
+        'region' => 'content',
+        'status' => '1',
+        'theme' => 'enwmobile',
+        'weight' => '-28',
+      ),
       'seven' => array(
         'region' => '',
         'status' => 0,
@@ -32,7 +38,7 @@ function enw_settings_default_fe_block_settings() {
         'region' => '',
         'status' => 0,
         'theme' => 'theme721',
-        'weight' => '0',
+        'weight' => '-28',
       ),
     ),
     'title' => '',
