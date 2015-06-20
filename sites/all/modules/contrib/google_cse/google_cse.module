@@ -29,7 +29,7 @@ function google_cse_conditions_callback($keys) {
  */
 function google_cse_search_execute($keys = NULL, $conditions = NULL) {
   if ($keys && !isset($_GET['query'])) {
-    drupal_goto('search/google/'. $keys, array('query' => google_cse_build_query($keys)), 301);
+    drupal_goto('search/google/' . $keys, array('query' => google_cse_build_query($keys)), 301);
   }
   elseif (variable_get('google_cse_use_adv', 0)) {
     // Firstly, load the needed modules.
@@ -59,14 +59,20 @@ function google_cse_build_query($keys, $sitesearch = NULL, $here = TRUE) {
  * Implements hook_search_page().
  */
 function google_cse_search_page($results) {
-  $output['prefix']['#markup'] = '<ol class="search-results">';
 
-  if(!variable_get('google_cse_use_adv', 0)) {
+  if (!variable_get('google_cse_use_adv', 0)) {
     $output['#theme'] = 'google_cse_results';
 
     return $output;
-  }else {
+  }
+  else {
     if ($results) {
+      $current_page = $_GET["page"];
+      $number_results = 'Results ' . ($current_page * 10) + 1 . ' to ' . ($current_page * 10 + 10)
+        . ' of ' . $GLOBALS['pager_total_items'][0] . ' matches';
+
+      $output['prefix']['#markup'] = $number_results . '<ol class="search-results">';
+
       foreach ($results as $entry) {
         $output[] = array(
           '#theme' => 'search_result',
@@ -122,9 +128,7 @@ function google_cse_theme($existing, $type, $theme, $path) {
       'file' => 'google_cse.theme.inc',
       'template' => 'google_cse_adv/templates/google_cse_adv_results',
     ),
-    /**
-     * Shows a message when the search does not return any result
-     */
+    // Shows a message when the search does not return any result.
     'google_cse_search_noresults' => array(
       'variables' => array(),
     ),
@@ -132,7 +136,7 @@ function google_cse_theme($existing, $type, $theme, $path) {
 }
 
 /**
- * Implements hook_block().
+ * Implements hook_block_info().
  */
 function google_cse_block_info() {
   return array(
@@ -142,6 +146,9 @@ function google_cse_block_info() {
   );
 }
 
+/**
+ * Implements hook_block_view().
+ */
 function google_cse_block_view($delta = '') {
   if (user_access('search Google CSE')) {
     switch ($delta) {
@@ -187,11 +194,17 @@ function google_cse_advanced_settings() {
     $settings['hl'] = $language->language;
   }
   if (variable_get('google_cse_locale_lr', '')) {
-    $settings['lr'] = 'lang_'. $language->language;
+    $settings['lr'] = 'lang_' . $language->language;
   }
   return $settings;
 }
 
+/**
+ * Get the relevant language to use for the search.
+ *
+ * @return string
+ *   The language.
+ */
 function google_cse_language() {
   global $language;
   return variable_get('google_cse_locale_hl', '') ? $language->language : variable_get('google_cse_hl', '');
@@ -201,12 +214,14 @@ function google_cse_language() {
  * Implements hook_init().
  */
 function google_cse_init() {
-  drupal_add_js(array('googleCSE' => array(
-    'cx' => variable_get('google_cse_cx', ''),
-    'language' => google_cse_language(),
-    'resultsWidth' => intval(variable_get('google_cse_results_width', 600)),
-    'domain' => variable_get('google_cse_domain', 'www.google.com'),
-  )), 'setting');
+  drupal_add_js(array(
+    'googleCSE' => array(
+      'cx' => variable_get('google_cse_cx', ''),
+      'language' => google_cse_language(),
+      'resultsWidth' => intval(variable_get('google_cse_results_width', 600)),
+      'domain' => variable_get('google_cse_domain', 'www.google.com'),
+    ),
+  ), 'setting');
 }
 
 /**
@@ -236,7 +251,8 @@ function google_cse_sitesearch_options() {
       $options[''] = ($var = variable_get('google_cse_sitesearch_option', '')) ? $var : t('Search the web');
       foreach ($sites as $site) {
         $site = preg_split('/[\s]+/', trim($site), 2, PREG_SPLIT_NO_EMPTY);
-          // Select options will be HTML-escaped and radio options will be XSS-filtered.
+        // Select options will be HTML-escaped.
+        // Radio options will be XSS-filtered.
         $options[$site[0]] = isset($site[1]) ? $site[1] : t('Search %sitesearch', array('%sitesearch' => $site[0]));
       }
     }
@@ -279,7 +295,11 @@ function google_cse_form_search_form_alter(&$form, &$form_state, $form_id) {
 function google_cse_search_form_submit($form, &$form_state) {
   $keys = $form_state['values']['processed_keys'];
   $sitesearch = isset($form_state['values']['sitesearch']) ? $form_state['values']['sitesearch'] : NULL;
-  $form_state['redirect'] = array($form_state['redirect'], array('query' => google_cse_build_query($keys, $sitesearch)), 301);
+  $form_state['redirect'] = array(
+    $form_state['redirect'],
+    array('query' => google_cse_build_query($keys, $sitesearch)),
+    301,
+  );
 }
 
 /**
@@ -300,18 +320,22 @@ function google_cse_form_search_block_form_alter(&$form, &$form_state, $form_id)
 function google_cse_search_block_form_submit($form, &$form_state) {
   $keys = trim($form_state['values'][$form['form_id']['#value']]);
   $sitesearch = isset($form_state['values']['sitesearch']) ? $form_state['values']['sitesearch'] : NULL;
-  $form_state['redirect'] = array($form_state['redirect'], array('query' => google_cse_build_query($keys, $sitesearch)), 301);
+  $form_state['redirect'] = array(
+    $form_state['redirect'],
+    array('query' => google_cse_build_query($keys, $sitesearch)),
+    301,
+  );
 }
 
 
-/*
- * Implements hook_proxy_settings_info()
+/**
+ * Implements hook_proxy_settings_info().
  */
 function google_cse_proxy_settings_info() {
-  return array('google_cse_adv' =>
-    array(
+  return array(
+    'google_cse_adv' => array(
       'name' => 'Google Custom Search Engine',
-    )
+    ),
   );
 }
 

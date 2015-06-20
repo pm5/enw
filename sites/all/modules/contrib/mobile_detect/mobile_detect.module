@@ -96,16 +96,21 @@ function mobile_detect_get_object() {
 
 function mobile_detect_check_type($type) {
   $detect = mobile_detect_get_object();
-  $rules = $detect->getRules();
+  $rules = array('Mobile', 'Tablet', 'Handheld') + $detect->getRules();
   $name = preg_replace('/^is/', '', $type);
 
-  if ($name != 'Mobile' && $name != 'Tablet' && !in_array($name, $rules)) {
+  if (!in_array($name, $rules)) {
     watchdog('mobile_detect', 'Illegal access rule: %type',
       array('%type' => $type), WATCHDOG_ERROR);
     return FALSE;   
   }
 
-  return $detect->{$type}();
+  if ($type == 'isHandheld') {
+    return $detect->isMobile() && !$detect->isTablet();
+  }
+  else {
+    return $detect->{$type}();
+  }
 }
 
 /**
@@ -196,17 +201,21 @@ function _mobile_detect_simple_debug() {
   $true = t('true');
   $false = t('false');
   
-  $detect = mobile_detect_get_object();
-  
   $output = array();
   
   $output[] = '<dl>';
   
   $output[] = '<dt>' . t('isMobile') . '</dt>';
-  $output[] = '<dd>' . ($detect->isMobile() ? $true : $false) . '</dd>';
+  $output[] = '<dd>' . (mobile_detect_check_type('isMobile') ? $true : $false) . '</dd>';
   
   $output[] = '<dt>' . t('isTablet') . '</dt>';
-  $output[] = '<dd>' . ($detect->isTablet() ? $true : $false) . '</dd>';
+  $output[] = '<dd>' . (mobile_detect_check_type('isTablet') ? $true : $false) . '</dd>';
+
+  $output[] = '<dt>' . t('isHandheld') . '</dt>';
+  $output[] = '<dd>' . (mobile_detect_check_type('isHandheld') ? $true : $false) . '</dd>';
+
+  $output[] = '<dt>' . t('Request Time') . '</dt>';
+  $output[] = '<dd>' . REQUEST_TIME . '</dd>';
 
   $output[] = '</dl>';
   
@@ -227,18 +236,24 @@ function _mobile_detect_full_debug() {
   $output[] = '<dl>';
 
   $output[] = '<dt>' . t('isMobile') . '</dt>';
-  $output[] = '<dd>' . ($detect->isMobile() ? $true : $false) . '</dd>';
-  
+  $output[] = '<dd>' . (mobile_detect_check_type('isMobile') ? $true : $false) . '</dd>';
+
   $output[] = '<dt>' . t('isTablet') . '</dt>';
-  $output[] = '<dd>' . ($detect->isTablet() ? $true : $false) . '</dd>';
+  $output[] = '<dd>' . (mobile_detect_check_type('isTablet') ? $true : $false) . '</dd>';
+
+  $output[] = '<dt>' . t('isHandheld') . '</dt>';
+  $output[] = '<dd>' . (mobile_detect_check_type('isHandheld') ? $true : $false) . '</dd>';
   
   foreach ($detect->getRules() as $name => $unused) {
     $predicate = 'is' . $name;
     
     $output[] = '<dt>' . t('is@name', array('@name' => $name)) . '</dt>';
-    $output[] = '<dd>' . ($detect->{$predicate}() ? $true : $false) . '</dd>';
+    $output[] = '<dd>' . (mobile_detect_check_type($predicate) ? $true : $false) . '</dd>';
   }
-  
+
+  $output[] = '<dt>' . t('Request Time') . '</dt>';
+  $output[] = '<dd>' . REQUEST_TIME . '</dd>';
+
   $output[] = '</dl>';
   
   return join('', $output);

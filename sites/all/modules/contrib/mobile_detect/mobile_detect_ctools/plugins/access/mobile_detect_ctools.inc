@@ -27,6 +27,7 @@ function mobile_detect_ctools_access_settings($form, &$form_state, $conf) {
     '#options' => array(
       'isMobile' => t('Mobile'),
       'isTablet' => t('Tablet'),
+      'isHandheld' => t('Handheld'),
     ),
     '#description' => t('Mobile device type.'),
     '#default_value' => $conf['type'],

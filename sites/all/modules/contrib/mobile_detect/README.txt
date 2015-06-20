@@ -44,9 +44,10 @@ server.
 
 There is also a drush command for downloading the library
 
- - 'drush dl-mobile-detect' will download Mobile_Detect.php from the HEAD of the GitHub repository.
- - 'drush dl-mobile-detect --git' will clone Mobile_Detect.php from the HEAD of the GitHub repository, or pull it if
-   you had previously cloned it.
+ - 'drush dl-mobile-detect' will download Mobile_Detect.php from the HEAD of the
+   GitHub repository.
+ - 'drush dl-mobile-detect --git' will clone Mobile_Detect.php from the HEAD of
+   the GitHub repository, or pull it if you had previously cloned it.
 
 Usage
 -----
@@ -54,9 +55,9 @@ Usage
 The base module just provides a factory method for creating a singleton 
 of the mobile detection class, for use in themes and other modules: 
 
-  $detect = mobile_detect_get_object();
-  $is_tablet = $detect->isTablet();
-  $is_mobile = $detect->isMobile();
+    $detect = mobile_detect_get_object();
+    $is_tablet = $detect->isTablet();
+    $is_mobile = $detect->isMobile();
 
 See the documentation for the Mobile_Detect library for more information.
 
@@ -73,7 +74,20 @@ Note that the Mobile_Detect considers tablet devices as also being
 mobile devices. When you have both tablet and mobile device selection in 
 use, it is best to place the tablet rules first. For example, when using 
 with for Panel page selection rules, place the Table variant before the 
-Mobile variant. 
+Mobile variant.
+
+Drupal Page Cache Support
+-------------------------
+
+Experimental support is provided for working with the Drupal page cache.  To
+use this, enable the mobile_detect_caching module.  And then add
+
+    $conf['cache_backends'][] = 'sites/all/modules/mobile_detect/mobile_detect_caching/mobile_detect_caching.inc';
+
+To your settings.php file.  You may need to adjust the path if you installed
+the module in a different location.
+
+Problems should be reported on https://www.drupal.org/node/1889824
 
 Problems, Bugs, Suggestions, Etc.
 ---------------------------------
