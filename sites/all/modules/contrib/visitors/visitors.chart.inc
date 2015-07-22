@@ -7,8 +7,9 @@
  * Draw chart for the visitors module.
  */
 
-require_once VISITORS_MODULE_CHART_DIR . '/pData.inc';
-require_once VISITORS_MODULE_CHART_DIR . '/pChart.inc';
+require_once VISITORS_MODULE_CHART_DIR . '/pDraw.class.php';
+require_once VISITORS_MODULE_CHART_DIR . '/pImage.class.php';
+require_once VISITORS_MODULE_CHART_DIR . '/pData.class.php';
 
 /**
  * Get chart width.
@@ -41,47 +42,68 @@ function visitors_get_chart_height() {
  *   array x-axis params
  */
 function visitors_chart($values, $x_array = NULL) {
-  // Dataset definition
-  $data_set = new pData;
-  $data_set->AddPoint($values, 'Serie1');
-
-  if ($x_array !== NULL) {
-    $data_set->AddPoint($x_array, 'Serie2');
-    $data_set->SetAbsciseLabelSerie('Serie2');
-  }
-
-  $data_set->AddSerie('Serie1');
-  $data_set->SetSerieName('', 'Serie1');
-
-  $data = $data_set->GetData();
-  $data_description = $data_set->GetDataDescription();
-
-  // Initialise the chart
   $width  = visitors_get_chart_width();
   $height = visitors_get_chart_height();
 
-  $pchart = new pChart($width, $height);
-  $pchart->setFontProperties(dirname(__FILE__) . '/fonts/tahoma.ttf', 8);
-  $pchart->setGraphArea(50, 30, $width - 20, $height - 30);
-  $pchart->drawFilledRoundedRectangle(7, 7, $width - 7, $height - 7,
-    5, 240, 240, 240);
-  $pchart->drawRoundedRectangle(5, 5, $width - 5, $height - 5,
-    5, 230, 230, 230);
-  $pchart->drawGraphArea(255, 255, 255, TRUE);
-  $pchart->setFixedScale(0, 0, 0, 0, 0, 0, 0);
-  $pchart->drawScale($data, $data_description,
-    SCALE_ADDALLSTART0, 150, 150, 150, TRUE, 0, 0, TRUE
+  // Dataset definition
+  $MyData = new pData;
+  $MyData->addPoints($values,'serie1');
+
+  if ($x_array !== NULL) {
+    $MyData->addPoints($x_array,'serie2');
+    $MyData->setAbscissa('serie2');
+  }
+
+  $myPicture = new pImage($width,$height,$MyData);
+
+  $myPicture->setFontProperties(array(
+    'FontName' => dirname(__FILE__) . '/pChart/fonts/calibri.ttf',
+    'FontSize' => 10
+  ));
+
+  /* Draw the scale  */
+  $myPicture->setGraphArea(50, 30, $width - 20, $height - 30);
+  $myPicture->drawRoundedFilledRectangle(
+    7, 7, $width - 7, $height - 7, 5,
+    array('R' => 245, 'G' => 245, 'B' => 240)
   );
-  $pchart->drawGrid(4, TRUE, 230, 230, 230, 50);
 
-  // Draw the 0 line
-  $pchart->drawTreshold(0, 143, 55, 72, TRUE, TRUE);
+  $myPicture->drawRoundedRectangle(
+    5, 5, $width - 5, $height - 5, 5,
+    array('R' => 230,'G' => 230,'B' => 230)
+  );
 
-  // Draw the bar chart
-  $pchart->drawBarGraph($data, $data_description, TRUE);
+ $myPicture->drawScale(array(
+    'Mode' => SCALE_MODE_START0,
+    'CycleBackground' => TRUE,
+    'DrawSubTicks' => TRUE,
+    'GridR' => 200,
+    'GridG' => 200,
+    'GridB' => 200)
+  );
 
-  // Finish the chart
-  $pchart->Stroke();
+  /* Turn on shadow computing */
+  $myPicture->setShadow(
+    FALSE,
+    array('X' => 1,'Y' => 1,'R' => 0,'G' => 0,'B' => 0,'Alpha' => 10)
+  );
+
+  /* Draw the chart */
+  $settings = array(
+    'Gradient' => TRUE,
+    'DisplayPos' => LABEL_POS_INSIDE,
+    'DisplayValues' => FALSE,
+    'DisplayR' => 255,
+    'DisplayG' => 255,
+    'DisplayB' => 255,
+    'DisplayShadow' => TRUE,
+    'Surrounding' => 10
+  );
+
+  $myPicture->drawBarChart($settings);
+
+  /* Render the picture (choose the best way) */
+  $myPicture->autoOutput();
   exit();
 }
 

@@ -57,7 +57,7 @@ function visitors_block_show_total_visitors(&$list_items) {
     $start_count = variable_get('visitors_start_count_total_visitors', 0);
     $query = 'SELECT COUNT(*) FROM {visitors}';
     $count = db_query($query)->fetchField() + $start_count;
-    $list_items[] = sprintf('%s: %d', t('瀏覽人數'), $count);
+    $list_items[] = sprintf('%s: %d', t('Total Visitors'), $count);
   }
 }
 

@@ -15,7 +15,7 @@
   border: none;
   padding: 0;
   margin: 0;
-  width: 98%;
+  width: 100%;
 }
 
 /**
@@ -131,7 +131,6 @@
   border-width: 0 0 1px 1px;
   clear: both;
   width: 1.5em;
-  color:#fff;
 }
 
 /**
@@ -318,10 +317,10 @@ table.calendar-legend tr.even .stripe {
   text-decoration: none;
 }
 .calendar-calendar th.days {
-  background-color:rgb(14, 78, 138);
-  color: #fff;
+  background-color: #eee;
+  color: #777;
   font-weight: bold;
-  border: 1px solid #fff;
+  border: 1px solid #ccc;
 }
 .calendar-calendar td.empty {
   background: #ccc;
@@ -515,8 +514,7 @@ table.calendar-legend tr.even .stripe {
 .calendar-calendar .month-view .full td.single-day .calendar-empty,
 .calendar-calendar .month-view .full td.single-day.empty,
 .calendar-calendar .month-view .full td.date-box.empty {
-  background:rgb(160, 170, 142);
-  
+  background: #F4F4F4;
 }
 
 .calendar-calendar .month-view .full td.single-day .inner div,
@@ -550,18 +548,18 @@ table.calendar-legend tr.even .stripe {
 .calendar-calendar .month-view .full tr.odd td.today,
 .calendar-calendar .month-view .full tr.even td.today {
   background: none;
-  border-left: 2px solid rgb(37, 146, 197);
-  border-right: 2px solid rgb(37, 146, 197);
+  border-left: 2px solid #7C7F12;
+  border-right: 2px solid #7C7F12;
 }
 
 .calendar-calendar .month-view .full td.date-box.today {
   border-width: 2px 2px 0px 2px;
   border-style: solid;
-  border-color: rgb(37, 146, 197);
+  border-color: #7C7F12;
 }
 
 .calendar-calendar .month-view .full tr td.single-day.today {
-  border-bottom: 2px solid rgb(37, 146, 197);
+  border-bottom: 2px solid #7C7F12;
 }
 
 .calendar-calendar .month-view .full tr td.multi-day.starts-today {
@@ -614,8 +612,8 @@ table.calendar-legend tr.even .stripe {
 .calendar-calendar .month-view .full td.multi-day div.monthview,
 .calendar-calendar .week-view .full td.multi-day div.weekview,
 .calendar-calendar .day-view .full td.multi-day div.dayview {
-  background: rgb(37, 146, 197);
-  height: 2.4em;
+  background: #74a5d7;
+  height: 1.9em;
   overflow: hidden;
   margin: 0px auto;
   color: #ffffff;
@@ -707,7 +705,7 @@ table.calendar-legend tr.even .stripe {
   right: -1px;
   width: 10px;
   text-align: left;
-  background: rgb(37, 146, 197);
+  background: #74a5d7;
   -moz-border-radius: 0px 5px 5px 0px;
   border-radius: 0px 5px 5px 0px;
   height: 1.9em;
@@ -755,21 +753,20 @@ table.calendar-legend tr.even .stripe {
 }
 
 .view .date-nav-wrapper .date-nav {
-  #background-color: transparent;
-  #border: 0px;
-  #height: 30px;
-  #height: auto;
-  #min-height: 30px;
-  #position: relative;
-  #margin-bottom: 10px;
-  margin: -30px;
+  background-color: transparent;
+  border: 0px;
+  height: 30px;
+  height: auto;
+  min-height: 30px;
+  position: relative;
+  margin-bottom: 10px;
 }
 
 .view .date-nav-wrapper .date-prev a,
 .view .date-nav-wrapper .date-next a {
   text-decoration: none;
-  color: #fff;
-  font-size: 20px;
+  color: inherit;
+  font-size: 12px;
 }
 
 .view .date-nav-wrapper.date-nav a:hover {
@@ -777,20 +774,19 @@ table.calendar-legend tr.even .stripe {
 }
 
 .view .date-nav-wrapper .date-prev {
-  -moz-border-radius: 15px 10px 10px 15px;
-  border-radius: 15px 10px 10px 15px;
-  background: none repeat scroll 0 0 rgb(14, 78, 138);
+  -moz-border-radius: 5px 0 0 5px;
+  border-radius: 5px 0 0 5px;
+  background: none repeat scroll 0 0 #dfdfdf;
   float: none;
-  padding: 20px 10px;
+  padding: 5px 0;
   position: absolute;
-  #right: 60px;
-  #left: auto;
+  right: 60px;
+  left: auto;
   text-align: right;
   top: 0px;
   width: auto;
   z-index: 1;
   font-size: 12px;
-  margin: 0px;
 }
 
 .block-views .view .date-nav-wrapper .date-prev {
@@ -812,25 +808,23 @@ table.calendar-legend tr.even .stripe {
 }
 
 .view .date-nav-wrapper .date-heading h3 {
-  #line-height: 30px;
-  font-size: 30px;
-  margin-left:40px;
+  line-height: 30px;
+  font-size: 1.7em;
 }
 
 .view .date-nav-wrapper .date-next {
-  -moz-border-radius: 10px 15px 15px 10px;
-  border-radius: 10px 15px 15px 10px;
-  background: none repeat scroll 0 0 rgb(14, 78, 138);
+  -moz-border-radius: 0px 5px 5px 0px;
+  border-radius: 0px 5px 5px 0px;
+  background: none repeat scroll 0 0 #dfdfdf;
   float: none;
-  padding: 20px 10px;
+  padding: 5px 0;
   position: absolute;
-  #right: 0px;
+  right: 0px;
   text-align: right;
   top: 0px;
   width: auto;
   z-index: 1;
   font-size: 12px;
-  margin: 0px 13px;
 }
 
 .view .date-nav-wrapper .date-next a {

@@ -12,7 +12,6 @@ dependencies[] = features
 dependencies[] = flexslider
 dependencies[] = page_manager
 dependencies[] = quicktabs
-dependencies[] = smart_ip
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = video_embed_field

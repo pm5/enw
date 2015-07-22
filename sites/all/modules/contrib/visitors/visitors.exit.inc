@@ -90,8 +90,15 @@ function visitors_get_path() {
  *   string referer, or empty string if referer does not exist
  */
 function visitors_get_referer() {
-  return
-    isset($_SERVER['HTTP_REFERER']) ? urldecode($_SERVER['HTTP_REFERER']) : '';
+  $referer = '';
+
+  if (isset($_SERVER['HTTP_REFERER'])) {
+    if (preg_match('/^(?:[;\/?:@&=+$,]|(?:[^\W_]|[-_.!~*\()\[\] ])|(?:%[\da-fA-F]{2}))*$/', $_SERVER['HTTP_REFERER'])) {
+      $referer = rawurldecode($_SERVER['HTTP_REFERER']);
+    }
+  }
+
+  return $referer;
 }
 
 /**
