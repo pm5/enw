@@ -4,6 +4,7 @@
   tasks:
     - name: ensure apt cache is the latest
       apt: update_cache=yes upgrade=yes
+
     - name: ensure packages are the latest
       apt: name={{ item }} state=latest
       with_items:
@@ -18,18 +19,21 @@
         - php5-pgsql
         - curl
         - unzip
+
     - name: ensure Apache site config is the latest
       copy: >
         src=site.conf
-        dest=/etc/apache2/sites-available/000-default.conf
+        dest=/etc/apache2/sites-available/default
       register: siteconf
+
     - name: ensure Apache is restarted
       service: name=apache2 state=restarted
       when: siteconf.changed
+
     - name: ensure Drupal settings is the latest
       copy: >
         src=settings.php
-        dest=/var/www/html/sites/default/settings.php
+        dest=/var/www/sites/default/settings.php
 
 - hosts: db
   sudo: yes

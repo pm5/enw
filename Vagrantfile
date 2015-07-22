@@ -4,7 +4,7 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "debian/jessie64"
+  config.vm.box = "debian/wheezy64"
 
   config.vm.define "web", primary: true do |web|
     web.vm.provider :virtualbox do |vb|
@@ -16,7 +16,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
     web.vm.network :forwarded_port, guest: 80, host: 8080
     web.vm.network :private_network, ip: "192.168.10.2"    # for NFS
-    web.vm.synced_folder ".", "/var/www/html", :nfs => true
+    web.vm.synced_folder ".", "/var/www", :nfs => true
   end
 
   config.vm.define "db" do |db|
