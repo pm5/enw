@@ -4,37 +4,39 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "ubuntu/trusty64"
-  config.vm.provider :virtualbox do |vb|
-    vb.customize [
-      "modifyvm", :id,
-      "--name", "TEIA_ENW_dev",
-      "--memory", "1024"
-    ]
+  config.vm.box = "debian/jessie64"
+
+  config.vm.define "web", primary: true do |web|
+    web.vm.provider :virtualbox do |vb|
+      vb.customize [
+        "modifyvm", :id,
+        "--name", "TEIA_ENW_web",
+        "--memory", "1024"
+      ]
+    end
+    web.vm.network :forwarded_port, guest: 80, host: 8080
+    web.vm.network :private_network, ip: "192.168.10.2"    # for NFS
+    web.vm.synced_folder ".", "/var/www/html", :nfs => true
   end
-  config.vm.network :forwarded_port, guest: 8080, host: 8080
-  config.vm.network :forwarded_port, guest: 8022, host: 8022
-  config.vm.network :forwarded_port, guest: 8306, host: 8306
-  config.vm.network :private_network, ip: "192.168.10.2"    # for NFS
-  config.vm.synced_folder ".", "/vagrant", :nfs => true
-  config.vm.provision :docker do |d|
-    d.pull_images "pomin5/drupal7-nginx"
-    d.run "drupal7_db",
-      image: "mysql",
-      args: "-v /var/lib/mysql\\
-        -p 8306:3306 \\
-        -e MYSQL_ROOT_PASSWORD=foobar \\
-        -e MYSQL_USER=app \\
-        -e MYSQL_PASSWORD=foobar \\
-        -e MYSQL_DATABASE=app \\
-        "
-    d.run "drupal7_app",
-      image: "pomin5/drupal7-nginx",
-      args: "-p 8080:80 -p 8022:22 -p 8020:20 -p 8021:21 \\
-        --link drupal7_db:db \\
-        -e ENABLE_FTP=1 \\
-        -e ENABLE_MY_KEY=1 \\
-        -v /vagrant:/var/www \\
-        -v /vagrant/.run/log:/var/log"
+
+  config.vm.define "db" do |db|
+    db.vm.provider :virtualbox do |vb|
+      vb.customize [
+        "modifyvm", :id,
+        "--name", "TEIA_ENW_db",
+      ]
+    end
+    db.vm.network :private_network, ip: "192.168.10.3"
+    db.vm.network :forwarded_port, guest: 3306, host: 3306
+  end
+
+  config.vm.provision :ansible do |ansible|
+    ansible.playbook = "provisioning/playbook.yml"
+    ansible.groups = {
+      "webservers" => ["web"],
+      "dbservers" => ["db"],
+      "all:children" => ["web", "db"]
+    }
+    ansible.host_key_checking = false
   end
 end
