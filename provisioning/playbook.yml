@@ -19,6 +19,7 @@
         - php5-pgsql
         - curl
         - unzip
+        - drush
 
     - name: ensure Apache site config is the latest
       copy: >
