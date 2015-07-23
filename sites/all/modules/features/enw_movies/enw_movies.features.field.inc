@@ -200,6 +200,11 @@ function enw_movies_field_default_fields() {
       'label' => '影片內嵌連結',
       'required' => 1,
       'settings' => array(
+        'allowed_providers' => array(
+          0 => 'facebook',
+          1 => 'youtube',
+          2 => 'vimeo',
+        ),
         'description_field' => 0,
         'description_length' => 128,
         'user_register_form' => FALSE,
@@ -339,7 +344,7 @@ function enw_movies_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '3',
+          'weight' => '2',
         ),
         'ical' => array(
           'label' => 'above',
@@ -410,7 +415,7 @@ function enw_movies_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '2',
+          'weight' => '5',
         ),
         'ical' => array(
           'label' => 'above',
@@ -429,6 +434,7 @@ function enw_movies_field_default_fields() {
             'colorbox_image_style' => '',
             'colorbox_multivalue_index' => NULL,
             'colorbox_node_style' => '220x174',
+            'colorbox_node_style_first' => '',
           ),
           'type' => 'colorbox',
           'weight' => '0',
@@ -492,8 +498,13 @@ function enw_movies_field_default_fields() {
           'label' => 'hidden',
           'module' => 'youtube',
           'settings' => array(
+            'youtube_autohide' => FALSE,
             'youtube_autoplay' => 0,
+            'youtube_controls' => FALSE,
             'youtube_height' => '450',
+            'youtube_iv_load_policy' => FALSE,
+            'youtube_loop' => FALSE,
+            'youtube_showinfo' => FALSE,
             'youtube_size' => 'custom',
             'youtube_width' => '600',
           ),
@@ -575,7 +586,7 @@ function enw_movies_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '4',
+          'weight' => '3',
         ),
         'ical' => array(
           'label' => 'above',

@@ -122,7 +122,14 @@ function enw_movies_strongarm() {
           'weight' => '30',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'social_share' => array(
+          'default' => array(
+            'weight' => '4',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__video'] = $strongarm;

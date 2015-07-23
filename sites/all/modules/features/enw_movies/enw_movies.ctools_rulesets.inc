@@ -14,7 +14,7 @@ function enw_movies_default_ctools_access_ruleset() {
   $ruleset->disabled = FALSE; /* Edit this to true to make a default ruleset disabled initially */
   $ruleset->api_version = 1;
   $ruleset->name = 'tw_user_only';
-  $ruleset->admin_title = '限台灣來源使用者';
+  $ruleset->admin_title = '台灣來源使用者';
   $ruleset->admin_description = '';
   $ruleset->requiredcontexts = array();
   $ruleset->contexts = array();
@@ -24,8 +24,9 @@ function enw_movies_default_ctools_access_ruleset() {
       0 => array(
         'name' => 'php',
         'settings' => array(
-          'description' => '限台灣來源使用者',
-          'php' => 'return token_replace(\'[smart_ip:country_code]\') === \'TW\';',
+          'description' => '台灣來源使用者',
+          'php' => 'return TRUE;
+return token_replace(\'[smart_ip:country_code]\') === \'TW\';',
         ),
         'not' => FALSE,
       ),

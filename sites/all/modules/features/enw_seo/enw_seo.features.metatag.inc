@@ -275,6 +275,9 @@ function enw_seo_metatag_export_default() {
       'title' => array(
         'value' => '[user:name] | [site:name]',
       ),
+      'image' => array(
+        'value' => '[user:picture:url]',
+      ),
       'dcterms.creator' => array(
         'value' => '[user:name]',
       ),

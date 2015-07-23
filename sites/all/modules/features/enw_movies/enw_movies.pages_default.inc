@@ -17,9 +17,9 @@ function enw_movies_default_page_manager_handlers() {
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'http_response';
-  $handler->weight = 2;
+  $handler->weight = -28;
   $handler->conf = array(
-    'title' => 'Panel: 環境影展',
+    'title' => 'HTTP 403: 環境影展',
     'contexts' => array(),
     'relationships' => array(),
     'code' => '403',
@@ -29,7 +29,17 @@ function enw_movies_default_page_manager_handlers() {
         0 => array(
           'name' => 'ruleset:tw_user_only',
           'settings' => NULL,
-          'not' => TRUE,
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'node_type',
+          'settings' => array(
+            'type' => array(
+              'movie' => 'movie',
+            ),
+          ),
+          'context' => 'argument_entity_id:node_1',
+          'not' => FALSE,
         ),
       ),
       'logic' => 'and',
@@ -87,10 +97,11 @@ function enw_movies_default_page_manager_pages() {
   $display->panel_settings = array();
   $display->cache = array();
   $display->title = '環境影展';
+  $display->uuid = '21c150cd-44c6-4035-b81f-f1f711025bb3';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-1';
+    $pane->pid = 'new-c8d577b5-1a31-42df-83fe-67ebabd399b8';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
     $pane->subtype = 'movie-theater_pane';
@@ -114,10 +125,11 @@ function enw_movies_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['middle'][0] = 'new-1';
+    $pane->uuid = 'c8d577b5-1a31-42df-83fe-67ebabd399b8';
+    $display->content['new-c8d577b5-1a31-42df-83fe-67ebabd399b8'] = $pane;
+    $display->panels['middle'][0] = 'new-c8d577b5-1a31-42df-83fe-67ebabd399b8';
     $pane = new stdClass();
-    $pane->pid = 'new-2';
+    $pane->pid = 'new-8131f5f6-42e7-48bb-bede-9a57fcafe92f';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
     $pane->subtype = 'movie-theater_slider_pane';
@@ -141,10 +153,11 @@ function enw_movies_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['middle'][1] = 'new-2';
+    $pane->uuid = '8131f5f6-42e7-48bb-bede-9a57fcafe92f';
+    $display->content['new-8131f5f6-42e7-48bb-bede-9a57fcafe92f'] = $pane;
+    $display->panels['middle'][1] = 'new-8131f5f6-42e7-48bb-bede-9a57fcafe92f';
     $pane = new stdClass();
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-2326c2ca-da5a-4459-aa8a-f87e2702b36a';
     $pane->panel = 'middle';
     $pane->type = 'block';
     $pane->subtype = 'quicktabs-video_list';
@@ -160,8 +173,9 @@ function enw_movies_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['middle'][2] = 'new-3';
+    $pane->uuid = '2326c2ca-da5a-4459-aa8a-f87e2702b36a';
+    $display->content['new-2326c2ca-da5a-4459-aa8a-f87e2702b36a'] = $pane;
+    $display->panels['middle'][2] = 'new-2326c2ca-da5a-4459-aa8a-f87e2702b36a';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

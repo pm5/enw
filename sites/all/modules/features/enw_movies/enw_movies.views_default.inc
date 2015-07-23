@@ -143,7 +143,7 @@ function enw_movies_views_default_views() {
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = '環境教育影片列表';
+  $view->human_name = '環境教育影片';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
