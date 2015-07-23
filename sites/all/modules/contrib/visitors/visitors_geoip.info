@@ -6,9 +6,9 @@ dependencies[] = visitors
 files[] = visitors_geoip.module
 files[] = visitors_geoip.requirements.inc
 
-; Information added by drupal.org packaging script on 2013-01-12
-version = "7.x-1.4"
+; Information added by Drupal.org packaging script on 2014-04-26
+version = "7.x-1.9"
 core = "7.x"
 project = "visitors"
-datestamp = "1358007514"
+datestamp = "1398491030"
 

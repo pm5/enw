@@ -1,3 +1,27 @@
+Visitors 7.x-1.9, 2014-04-26
+-----------------------
+- Fixed bug report #2250223: Incorrent date range filter condition: ignored
+  first and last seconds.
+
+Visitors 7.x-1.8, 2014-04-12
+-----------------------
+- Fixed feature request #2239121: Remove the "pChart/examples" folder.
+- Fixed bug report #2239125: Ordinate starts with negative value.
+
+Visitors 7.x-1.7, 2014-04-11
+-----------------------
+- Updated pChart 1.13 => 2.1.4.
+
+Visitors 7.x-1.6, 2014-03-15
+-----------------------
+- Fixed bug report #2218475: Incorrect node visitors report. Displayed visitors
+  for another node.
+
+Visitors 7.x-1.5, 2014-03-07
+-----------------------
+- Fixed bug report #2156003: PDOException in visitors_exit() (line 196) - cause
+  might be HTTP_REFERER.
+
 Visitors 7.x-1.4, 2013-01-12
 -----------------------
 - Fixed bug report #1273280: Displaying visitors block to my dashboard without

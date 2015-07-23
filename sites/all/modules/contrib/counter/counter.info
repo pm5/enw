@@ -1,18 +1,19 @@
 name = Counter
 description = "This module used for displaying a Site Counter, Node Count, Unique Visitor and Client IP."
-stylesheets[all][] = counter.css
 
 ; Information added by drupal.org packaging script on 2009-03-27
 package = "Statistics"
-version = "7.x-1.0-alpha7"
-; configure = admin/config/counter
+version = "7.x-1.0-beta3"
+configure = admin/config/counter
 core = "7.x"
 project = "counter"
 datestamp = "1238152822"
 
-; Information added by drupal.org packaging script on 2013-04-30
-version = "7.x-1.0-alpha7"
+stylesheets[all][] = counter.css
+files[] = counter.views.inc
+; Information added by Drupal.org packaging script on 2014-07-13
+version = "7.x-1.0-beta3"
 core = "7.x"
 project = "counter"
-datestamp = "1367349311"
+datestamp = "1405250032"
 

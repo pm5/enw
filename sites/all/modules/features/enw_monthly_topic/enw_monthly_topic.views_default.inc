@@ -35,17 +35,6 @@ function enw_monthly_topic_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'grid';
   $handler->display->display_options['style_options']['columns'] = '3';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* 欄位: 內容: 公仔 */
-  $handler->display->display_options['fields']['field_doll']['id'] = 'field_doll';
-  $handler->display->display_options['fields']['field_doll']['table'] = 'field_data_field_doll';
-  $handler->display->display_options['fields']['field_doll']['field'] = 'field_doll';
-  $handler->display->display_options['fields']['field_doll']['label'] = '';
-  $handler->display->display_options['fields']['field_doll']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_doll']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_doll']['settings'] = array(
-    'image_style' => 'monthly_topic_thumbnail',
-    'image_link' => 'content',
-  );
   /* 欄位: 內容: 節日月份 */
   $handler->display->display_options['fields']['field_topic_month']['id'] = 'field_topic_month';
   $handler->display->display_options['fields']['field_topic_month']['table'] = 'field_data_field_topic_month';
@@ -58,6 +47,17 @@ function enw_monthly_topic_views_default_views() {
     'multiple_number' => '',
     'multiple_from' => '',
     'multiple_to' => '',
+  );
+  /* 欄位: 內容: 公仔 */
+  $handler->display->display_options['fields']['field_doll']['id'] = 'field_doll';
+  $handler->display->display_options['fields']['field_doll']['table'] = 'field_data_field_doll';
+  $handler->display->display_options['fields']['field_doll']['field'] = 'field_doll';
+  $handler->display->display_options['fields']['field_doll']['label'] = '';
+  $handler->display->display_options['fields']['field_doll']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_doll']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_doll']['settings'] = array(
+    'image_style' => 'monthly_topic_thumbnail',
+    'image_link' => 'content',
   );
   /* Sort criterion: 內容: 節日月份 (field_topic_month) */
   $handler->display->display_options['sorts']['field_topic_month_value']['id'] = 'field_topic_month_value';

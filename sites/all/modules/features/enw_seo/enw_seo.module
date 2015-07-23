@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the enw_seo feature.
+ */
+
+include_once 'enw_seo.features.inc';

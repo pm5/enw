@@ -169,7 +169,7 @@ function enw_events_views_default_views() {
   $handler->display->display_options['filters']['title']['group'] = 1;
   $handler->display->display_options['filters']['title']['exposed'] = TRUE;
   $handler->display->display_options['filters']['title']['expose']['operator_id'] = 'title_op';
-  $handler->display->display_options['filters']['title']['expose']['label'] = '活動名稱';
+  $handler->display->display_options['filters']['title']['expose']['label'] = '標題';
   $handler->display->display_options['filters']['title']['expose']['operator'] = 'title_op';
   $handler->display->display_options['filters']['title']['expose']['identifier'] = 'title';
   $handler->display->display_options['filters']['title']['expose']['remember_roles'] = array(
@@ -186,9 +186,9 @@ function enw_events_views_default_views() {
   $handler->display->display_options['filters']['between_date_filter']['group'] = 1;
   $handler->display->display_options['filters']['between_date_filter']['exposed'] = TRUE;
   $handler->display->display_options['filters']['between_date_filter']['expose']['operator_id'] = 'between_date_filter_op';
-  $handler->display->display_options['filters']['between_date_filter']['expose']['label'] = '活動日期';
+  $handler->display->display_options['filters']['between_date_filter']['expose']['label'] = '日期';
   $handler->display->display_options['filters']['between_date_filter']['expose']['operator'] = 'between_date_filter_op';
-  $handler->display->display_options['filters']['between_date_filter']['expose']['identifier'] = 'date';
+  $handler->display->display_options['filters']['between_date_filter']['expose']['identifier'] = 'between_date_filter';
   $handler->display->display_options['filters']['between_date_filter']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
@@ -212,7 +212,6 @@ function enw_events_views_default_views() {
   $handler->display->display_options['filters']['field_domain_tid']['id'] = 'field_domain_tid';
   $handler->display->display_options['filters']['field_domain_tid']['table'] = 'field_data_field_domain';
   $handler->display->display_options['filters']['field_domain_tid']['field'] = 'field_domain_tid';
-  $handler->display->display_options['filters']['field_domain_tid']['value'] = '';
   $handler->display->display_options['filters']['field_domain_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_domain_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_domain_tid']['expose']['operator_id'] = 'field_domain_tid_op';
@@ -227,66 +226,14 @@ function enw_events_views_default_views() {
     4 => 0,
     5 => 0,
   );
-  $handler->display->display_options['filters']['field_domain_tid']['is_grouped'] = TRUE;
-  $handler->display->display_options['filters']['field_domain_tid']['group_info']['label'] = '環境教育八大領域';
+  $handler->display->display_options['filters']['field_domain_tid']['group_info']['label'] = '領域 (field_domain)';
   $handler->display->display_options['filters']['field_domain_tid']['group_info']['identifier'] = 'field_domain_tid';
-  $handler->display->display_options['filters']['field_domain_tid']['group_info']['widget'] = 'radios';
-  $handler->display->display_options['filters']['field_domain_tid']['group_info']['remember'] = 1;
   $handler->display->display_options['filters']['field_domain_tid']['group_info']['group_items'] = array(
     1 => array(
-      'title' => '學校及社會環境教育',
-      'operator' => 'or',
-      'value' => array(
-        86 => '86',
-      ),
-    ),
-    2 => array(
-      'title' => '氣候變遷',
-      'operator' => 'or',
-      'value' => array(
-        87 => '87',
-      ),
-    ),
-    3 => array(
-      'title' => '災害防救',
-      'operator' => 'or',
-      'value' => array(
-        88 => '88',
-      ),
-    ),
-    4 => array(
       'title' => '自然保育',
       'operator' => 'or',
       'value' => array(
         89 => '89',
-      ),
-    ),
-    5 => array(
-      'title' => '公害防治',
-      'operator' => 'or',
-      'value' => array(
-        90 => '90',
-      ),
-    ),
-    6 => array(
-      'title' => '環境及資源管理',
-      'operator' => 'or',
-      'value' => array(
-        91 => '91',
-      ),
-    ),
-    7 => array(
-      'title' => '文化保存',
-      'operator' => 'or',
-      'value' => array(
-        92 => '92',
-      ),
-    ),
-    8 => array(
-      'title' => '社區參與',
-      'operator' => 'or',
-      'value' => array(
-        93 => '93',
       ),
     ),
   );
@@ -310,6 +257,11 @@ function enw_events_views_default_views() {
   $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ 上一頁';
   $handler->display->display_options['pager']['options']['tags']['next'] = '下一頁 ›';
   $handler->display->display_options['pager']['options']['tags']['last'] = '最後一頁 »';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: 內容: 活動時間 - end date (field_event_date:value2) */
+  $handler->display->display_options['sorts']['field_event_date_value2']['id'] = 'field_event_date_value2';
+  $handler->display->display_options['sorts']['field_event_date_value2']['table'] = 'field_data_field_event_date';
+  $handler->display->display_options['sorts']['field_event_date_value2']['field'] = 'field_event_date_value2';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: 內容: 已發表 */
@@ -326,32 +278,13 @@ function enw_events_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'event_info' => 'event_info',
   );
-  /* Filter criterion: 內容: 活動時間 -  start date (field_event_date) */
-  $handler->display->display_options['filters']['field_event_date_value']['id'] = 'field_event_date_value';
-  $handler->display->display_options['filters']['field_event_date_value']['table'] = 'field_data_field_event_date';
-  $handler->display->display_options['filters']['field_event_date_value']['field'] = 'field_event_date_value';
-  $handler->display->display_options['filters']['field_event_date_value']['operator'] = '>=';
-  $handler->display->display_options['filters']['field_event_date_value']['expose']['operator_id'] = 'field_event_date_value_op';
-  $handler->display->display_options['filters']['field_event_date_value']['expose']['label'] = '活動時間 -  start date (field_event_date)';
-  $handler->display->display_options['filters']['field_event_date_value']['expose']['operator'] = 'field_event_date_value_op';
-  $handler->display->display_options['filters']['field_event_date_value']['expose']['identifier'] = 'field_event_date_value';
-  $handler->display->display_options['filters']['field_event_date_value']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-    4 => 0,
-    5 => 0,
-  );
-  $handler->display->display_options['filters']['field_event_date_value']['group_info']['label'] = '活動時間 -  start date (field_event_date)';
-  $handler->display->display_options['filters']['field_event_date_value']['group_info']['identifier'] = 'field_event_date_value';
-  $handler->display->display_options['filters']['field_event_date_value']['group_info']['remember'] = FALSE;
-  $handler->display->display_options['filters']['field_event_date_value']['group_info']['group_items'] = array(
-    1 => array(),
-    2 => array(),
-    3 => array(),
-  );
-  $handler->display->display_options['filters']['field_event_date_value']['form_type'] = 'date_popup';
-  $handler->display->display_options['filters']['field_event_date_value']['default_date'] = 'now';
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: 內容: 活動時間 - end date (field_event_date:value2) */
+  $handler->display->display_options['filters']['field_event_date_value2']['id'] = 'field_event_date_value2';
+  $handler->display->display_options['filters']['field_event_date_value2']['table'] = 'field_data_field_event_date';
+  $handler->display->display_options['filters']['field_event_date_value2']['field'] = 'field_event_date_value2';
+  $handler->display->display_options['filters']['field_event_date_value2']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_event_date_value2']['default_date'] = 'today';
   $translatables['enw_events'] = array(
     t('Master'),
     t('活動行事曆'),
@@ -364,11 +297,11 @@ function enw_events_views_default_views() {
     t('（[field_event_date_1] 截止）'),
     t('hello'),
     t('[title][field_event_date_1]'),
-    t('活動名稱'),
-    t('活動日期'),
+    t('標題'),
+    t('日期'),
     t('Between Dates (node)'),
     t('領域'),
-    t('環境教育八大領域'),
+    t('領域 (field_domain)'),
     t('Page'),
     t('Block: Latest'),
     t('Items per page'),
@@ -378,7 +311,6 @@ function enw_events_views_default_views() {
     t('‹ 上一頁'),
     t('下一頁 ›'),
     t('最後一頁 »'),
-    t('活動時間 -  start date (field_event_date)'),
   );
   $export['enw_events'] = $view;
 

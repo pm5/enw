@@ -13,9 +13,9 @@ files[] = includes/menu_node_views_field_description.inc
 files[] = includes/menu_node_views_field_menu_name.inc
 
 
-; Information added by drupal.org packaging script on 2013-07-24
+; Information added by  packaging script on 2013-12-01
 version = "7.x-1.x-dev"
 core = "7.x"
 project = "menu_node_views"
-datestamp = "1374687264"
+datestamp = "1385889205"
 
