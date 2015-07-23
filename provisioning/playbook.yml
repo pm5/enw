@@ -3,7 +3,7 @@
   sudo: yes
   tasks:
     - name: ensure apt cache is the latest
-      apt: update_cache=yes upgrade=yes
+      apt: update_cache=yes upgrade=yes cache_valid_time=3600
 
     - name: ensure packages are the latest
       apt: name={{ item }} state=latest
@@ -21,6 +21,15 @@
         - unzip
         - drush
 
+    - name: ensure Apache modules are enabled
+      apache2_module: name={{ item }}
+      with_items:
+        - rewrite
+        - expires
+        - auth_basic
+        - headers
+      register: apache2module
+
     - name: ensure Apache site config is the latest
       copy: >
         src=site.conf
@@ -29,7 +38,7 @@
 
     - name: ensure Apache is restarted
       service: name=apache2 state=restarted
-      when: siteconf.changed
+      when: apache2module.changed or siteconf.changed
 
     - name: ensure Drupal settings is the latest
       copy: >
@@ -40,7 +49,7 @@
   sudo: yes
   tasks:
     - name: ensure apt cache is the latest
-      apt: update_cache=yes upgrade=yes
+      apt: update_cache=yes upgrade=yes cache_valid_time=3600
 
     - name: ensure packages are the latest
       apt: name={{ item }} state=latest
@@ -69,13 +78,11 @@
         login_user=root
         login_password=""
         priv="drupal.*:ALL"
-        state=present
     - name: ensure Drupal database is present
       mysql_db: >
         name=drupal
         login_user=root
         login_password=""
-        state=present
       register: mysqldb
     - name: copy database dump file to remote host
       copy: src=database.mysql.gz dest=/tmp
