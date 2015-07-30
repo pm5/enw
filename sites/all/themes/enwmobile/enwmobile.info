@@ -30,6 +30,7 @@ scripts[] = js/jquery.loader.js
 regions[header] = Header
 regions[header_bottom] = Header Bottom
 regions[menu] = Menu
+regions[mobile_menu] = Mobile Menu
 regions[user_menu] = User Menu
 regions[help] = Help
 

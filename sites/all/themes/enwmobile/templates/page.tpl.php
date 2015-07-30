@@ -68,6 +68,11 @@
  * @see template_process()
  */
 ?>
+<?php if ($page['mobile_menu']): ?>
+  <nav id="mobile-menu">
+    <?php print render($page['mobile_menu']); ?>
+  </nav>
+<?php endif; ?>
 
 <div id="page-wrapper">
 

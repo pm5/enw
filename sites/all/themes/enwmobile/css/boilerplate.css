@@ -445,7 +445,14 @@ padding: 10px 20px 10px 20px;
 margin: 0px 0px 0px -80px;
 }
 .views-field-field-topic-month{
-margin: -100px 0px 70px 200px;
+margin: -100px 0px 70px 190px;
+}
+
+#aftermath {
+  margin-left: 95px;
+  display: flex;
+  max-width: 400px;
+  flex-flow: row wrap;
 }
 
 .views-field-field-topic-month .date-display-single{
@@ -456,6 +463,10 @@ padding: 30px;
 -moz-border-radius: 100%;
 border-radius: 100%;
 font-size:20px;
+}
+
+.view-monthly-topic .views-row {
+  border-bottom: none;
 }
 
 .prev_date_nav, .next_date_nav{
@@ -477,4 +488,21 @@ background: url(../images/grid.jpg);
 .views-field-colorbox{
 padding:0px 20px;
 border-left: 1px dotted;
+}
+
+.views-row{
+border-bottom:1px solid;
+}
+
+
+.ds-2col-fluid{
+margin:0px 0px 30px 0px!important;
+}
+
+.label a{
+font-size:18px!important;
+}
+
+.label{
+padding:10px 0px!important;
 }

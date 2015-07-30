@@ -324,3 +324,7 @@ height:auto;
 .sharethis-wrapper span {
   line-height: 1em;
 }
+
+#block-linebutton-linebutton {
+  float: right;
+}

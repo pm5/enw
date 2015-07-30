@@ -68,6 +68,11 @@
  * @see template_process()
  */
 ?>
+<?php if ($page['mobile_menu']): ?>
+  <nav id="mobile-menu">
+    <?php print render($page['mobile_menu']); ?>
+  </nav>
+<?php endif; ?>
 
 <div id="page-wrapper">
 
@@ -81,7 +86,7 @@
                         <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
                     </a>
                 <?php endif; ?>
-            
+
                 <?php if ($site_name || $site_slogan): ?>
                     <div id="name-and-slogan">
                       <?php if ($site_name): ?>
@@ -95,7 +100,7 @@
                           </h1>
                         <?php endif; ?>
                       <?php endif; ?>
-                    
+
                       <?php if ($site_slogan): ?>
                         <div id="site-slogan"><?php print $site_slogan; ?></div>
                       <?php endif; ?>
@@ -108,7 +113,7 @@
                 </div>
             <?php endif; ?>
         </div>
-        
+
         <?php if ($page['menu']): ?>
             <div class="section-2 clearfix">
                 <?php print render($page['menu']); ?>
@@ -122,11 +127,11 @@
         <?php endif; ?>
 
     </header><!-- /#header -->
- 
+
 
   <div id="main-wrapper">
     <div id="main" class="clearfix">
-    
+
     <?php if ($page['sidebar_first']): ?>
         <aside id="sidebar-first" class="column sidebar" role="complementary">
             <div class="section">
@@ -134,7 +139,7 @@
             </div><!-- /.section -->
         </aside><!-- /#sidebar-first -->
     <?php endif; ?>
-    
+
     <?php if ($page['sidebar_second']): ?>
         <aside id="sidebar-second" class="column sidebar" role="complementary">
             <div class="section">
@@ -142,34 +147,34 @@
             </div><!-- /.section -->
         </aside><!-- /#sidebar-second -->
     <?php endif; ?>
-          
+
       <div id="content" class="column" role="main">
         <div class="section">
-        
+
         <?php if ($breadcrumb): ?>
             <div id="breadcrumb" class="clearfix"><?php print $breadcrumb; ?></div>
         <?php endif; ?>
-        
+
         <?php if ($messages): ?>
             <div id="messages"><div class="section clearfix">
               <?php print $messages; ?>
             </div></div> <!-- /.section, /#messages -->
           <?php endif; ?>
-        
+
         <?php print render($title_prefix); ?>
-        
+
         <?php if ($title): ?>
           <h1 class="title" id="page-title"><?php print $title; ?></h1>
         <?php endif; ?>
-        
+
         <?php print render($title_suffix); ?>
-        
+
         <?php if ($tabs): ?>
           <div class="tabs"><?php print render($tabs); ?></div>
         <?php endif; ?>
-        
+
         <?php print render($page['help']); ?>
-        
+
         <?php if ($action_links): ?>
           <ul class="action-links"><?php print render($action_links); ?></ul>
         <?php endif; ?>
@@ -177,17 +182,17 @@
         <?php if ($page['tabs']): ?>
             <?php print render($page['tabs']); ?>
         <?php endif; ?>
-        
+
         <?php print render($page['content_top']); ?>
         <?php print render($page['content']); ?>
         <?php print render($page['content_bottom']); ?>
-        
+
         </div><!-- /.section -->
       </div><!-- /#content -->
 
     </div><!-- /#main -->
   </div><!-- /#main-wrapper -->
-  
+
 
     <footer id="footer" role="contentinfo">
         <div class="footer-wrapper clearfix">
