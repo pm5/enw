@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function bigslide_preprocess_html(&$variables) {
+  drupal_add_js("
+    jQuery('.menu-link').bigSlide({
+      menu: '#mobile-menu',
+      push: '.mobile-menu-push',
+      easyClose: true
+    });
+  ", array(
+    "type" => "inline",
+    "scope" => "footer",
+  ));
+  $variables['classes_array'][] = 'mobile-menu-push';
+}

@@ -1,0 +1,8 @@
+name = bigSlide
+description = Slide menu powered by <a href="http://ascott1.github.io/bigSlide.js/">bigSlide.js</a>.
+core = 7.x
+
+dependencies[] = jquery_update
+
+scripts[] = bigSlide.min.js
+stylesheets[all][] = bigslide.css
