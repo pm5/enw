@@ -48,4 +48,4 @@ features[variable][] = node_preview_slider
 features[variable][] = node_submitted_slider
 features[views_view][] = frontpage_promotion
 features[views_view][] = slider
-mtime = 1437628472
+mtime = 1438251170

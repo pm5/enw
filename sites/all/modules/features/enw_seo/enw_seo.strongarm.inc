@@ -105,14 +105,14 @@ function enw_seo_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'google_cse_results_display';
-  $strongarm->value = 'google';
+  $strongarm->value = 'here';
   $export['google_cse_results_display'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'google_cse_results_gadget';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['google_cse_results_gadget'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -147,7 +147,7 @@ function enw_seo_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'google_cse_results_width';
-  $strongarm->value = '960';
+  $strongarm->value = '600';
   $export['google_cse_results_width'] = $strongarm;
 
   $strongarm = new stdClass();

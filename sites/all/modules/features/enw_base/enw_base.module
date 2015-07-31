@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ENW Base feature.
+ */
+
+include_once 'enw_base.features.inc';
