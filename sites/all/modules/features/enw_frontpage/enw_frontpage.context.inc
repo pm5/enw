@@ -13,19 +13,13 @@ function enw_frontpage_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'front';
-  $context->description = '首頁';
+  $context->name = 'desktop_frontpage';
+  $context->description = '';
   $context->tag = 'desktop';
   $context->conditions = array(
     'cmd' => array(
       'values' => array(
-        2 => 2,
         3 => 3,
-      ),
-    ),
-    'path' => array(
-      'values' => array(
-        '<front>' => '<front>',
       ),
     ),
   );
@@ -46,14 +40,13 @@ function enw_frontpage_context_default_contexts() {
   // Translatables
   // Included for use with string extractors like potx.
   t('desktop');
-  t('首頁');
-  $export['front'] = $context;
+  $export['desktop_frontpage'] = $context;
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'mobile_front';
-  $context->description = '首頁';
+  $context->name = 'mobile_frontpage';
+  $context->description = '';
   $context->tag = 'mobile';
   $context->conditions = array(
     'cmd' => array(
@@ -61,25 +54,14 @@ function enw_frontpage_context_default_contexts() {
         1 => 1,
       ),
     ),
-    'path' => array(
-      'values' => array(
-        '<front>' => '<front>',
-      ),
-    ),
   );
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-slider-compact_block' => array(
+        'views-slider-block_1' => array(
           'module' => 'views',
-          'delta' => 'slider-compact_block',
+          'delta' => 'slider-block_1',
           'region' => 'header',
-          'weight' => '-9',
-        ),
-        'block-15' => array(
-          'module' => 'block',
-          'delta' => '15',
-          'region' => 'content',
           'weight' => '-10',
         ),
       ),
@@ -90,8 +72,7 @@ function enw_frontpage_context_default_contexts() {
   // Translatables
   // Included for use with string extractors like potx.
   t('mobile');
-  t('首頁');
-  $export['mobile_front'] = $context;
+  $export['mobile_frontpage'] = $context;
 
   return $export;
 }
