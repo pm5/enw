@@ -71,12 +71,6 @@ function enw_mobile_context_default_contexts() {
           'region' => 'menu',
           'weight' => '-10',
         ),
-        'enw_mobile-enw_mobile_dashboard' => array(
-          'module' => 'enw_mobile',
-          'delta' => 'enw_mobile_dashboard',
-          'region' => 'content',
-          'weight' => '-10',
-        ),
         'menu_block-1' => array(
           'module' => 'menu_block',
           'delta' => '1',
