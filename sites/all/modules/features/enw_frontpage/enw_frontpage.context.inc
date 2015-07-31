@@ -22,6 +22,11 @@ function enw_frontpage_context_default_contexts() {
         3 => 3,
       ),
     ),
+    'path' => array(
+      'values' => array(
+        '<front>' => '<front>',
+      ),
+    ),
   );
   $context->reactions = array(
     'block' => array(
@@ -54,13 +59,18 @@ function enw_frontpage_context_default_contexts() {
         1 => 1,
       ),
     ),
+    'path' => array(
+      'values' => array(
+        '<front>' => '<front>',
+      ),
+    ),
   );
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-slider-block_1' => array(
+        'views-slider-compact_block' => array(
           'module' => 'views',
-          'delta' => 'slider-block_1',
+          'delta' => 'slider-compact_block',
           'region' => 'header',
           'weight' => '-10',
         ),

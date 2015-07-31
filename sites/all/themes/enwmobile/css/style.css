@@ -1577,3 +1577,18 @@ line-height:50px!important;
     width: 100%;
   }
 }
+
+.view-display-id-compact_block li {
+  position: relative;
+}
+
+.view-display-id-compact_block .slider-title {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  width: 100%;
+}
+
+.view-display-id-compact_block .slider-title a {
+  font-size: 10px;
+}

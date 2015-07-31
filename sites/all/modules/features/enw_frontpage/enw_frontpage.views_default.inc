@@ -385,7 +385,7 @@ function enw_frontpage_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Content pane', 'pane');
 
   /* Display: Block: compact */
-  $handler = $view->new_display('block', 'Block: compact', 'block_1');
+  $handler = $view->new_display('block', 'Block: compact', 'compact_block');
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* 欄位: 內容: Upload slide */
   $handler->display->display_options['fields']['field_slide_image']['id'] = 'field_slide_image';
