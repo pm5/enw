@@ -1,0 +1,10 @@
+<?php
+
+function enw_mobile_views_views_query_alter(&$view, &$query) {
+  if ($view->name === 'taxonomy_term') {
+    $detect = mobile_detect_get_object();
+    if ($detect->isMobile()) {
+      $view->set_items_per_page(10);
+    }
+  }
+}

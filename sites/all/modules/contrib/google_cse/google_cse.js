@@ -20,14 +20,11 @@
         };
         q.onfocus = f;
         q.onblur = b;
-//      if (!/[&?]query=[^&]/.test(l.search)) {
         b();
-//      }
       }
     };
     googleCSEWatermark('#search-block-form.google-cse');
     googleCSEWatermark('#search-form.google-cse');
     googleCSEWatermark('#google-cse-results-searchbox-form');
   });
-
 })(jQuery);

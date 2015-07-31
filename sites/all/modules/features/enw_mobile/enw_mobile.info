@@ -1,0 +1,14 @@
+name = ENW Mobile
+description = 手機版網站。
+core = 7.x
+package = 環境通訊網
+php = 5.2.4
+dependencies[] = block
+dependencies[] = context
+dependencies[] = ctools
+dependencies[] = menu_block
+features[context][] = mobile_copyright
+features[context][] = mobile_menu
+features[ctools][] = context:context:3
+features[features_api][] = api:1
+mtime = 1438340931

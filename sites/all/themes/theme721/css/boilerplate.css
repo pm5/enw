@@ -459,6 +459,42 @@ border-radius: 100%;
 font-size:20px;
 }
 
+.view-monthly-topic td {
+position: relative;
+}
+
+.view-monthly-topic .views-field-colorbox {
+  padding: 0;
+  border: none;
+}
+
+.views-field-colorbox-doll {
+  text-align: center;
+}
+
+.views-field-colorbox-full-article {
+  float: right;
+}
+.views-field-colorbox-full-article a {
+  color: #008000;
+}
+
+#aftermath {
+  margin-left: 95px;
+  display: flex;
+  max-width: 400px;
+  flex-flow: row wrap;
+}
+
+#colorbox h3 {
+  font-size: 20px;
+}
+
+.views-field-field-topic-month {
+position: absolute;
+top: 0;
+}
+
 .prev_date_nav, .next_date_nav{
 padding: 5px 10px 5px;
 margin: 5px 10px 0px 0px;
@@ -478,4 +514,9 @@ background: url(../images/grid.jpg);
 .views-field-colorbox{
 padding:0px 20px;
 border-left: 1px dotted;
+}
+
+.views-row {
+margin:0px 0px 30px 0px!important;
+
 }
