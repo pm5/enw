@@ -1,0 +1,59 @@
+<?php
+
+/**
+ * Implements hook_block_info().
+ */
+function linebutton_block_info() {
+  $blocks = array();
+  $blocks['linebutton'] = array(
+    'info' => t('LINE it! button'),
+  );
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function linebutton_block_view($delta = '') {
+  if ($delta !== 'linebutton') { return array(); }
+  if (arg(0) !== 'node' || !is_numeric(arg(1))) { return array(); }
+  $nid = arg(1);
+  $node = node_load($nid);
+  $linkURL = 'http://line.me/R/msg/text/?' . $node->title . ' ' . url('node/' . $node->nid, array('absolute' => TRUE));
+  $linkIcon = '<img src="/' . drupal_get_path('module', 'linebutton') . '/linebutton_75x30_en.png" width="75" height="30" alt="LINE 分享" />';
+  return array(
+    'content' => array(
+      '#markup' => l($linkIcon, $linkURL, array('html' => TRUE)),
+    ),
+  );
+}
+
+/**
+ * Implements hook_block_save().
+ */
+function linebutton_block_save($delta = '', $edit = array()) {
+}
+
+/**
+ * Implements hook_block_configure().
+ */
+function linebutton_block_configure($delta = '') {
+}
+
+/**
+ * Implements hook_block_list_alter().
+ */
+function linebutton_block_list_alter(&$blocks) {
+}
+
+/**
+ * Implements hook_block_info_alter().
+ */
+function linebutton_block_info_alter(&$blocks, $theme, $code_blocks) {
+}
+
+/**
+ * Implements hook_block_view_alter().
+ */
+function linebutton_block_view_alter(&$data, $block) {
+}
