@@ -20,6 +20,7 @@
         - php5-sqlite
         - php5-mysql
         - php5-pgsql
+        - php5-memcache
         - curl
         - unzip
         - drush
@@ -86,6 +87,7 @@
         name=drupal
         login_user=root
         login_password=""
+      register: dbdb
 
     - name: copy database dump file to db server when it exists
       ignore_errors: yes
@@ -99,8 +101,20 @@
         login_password=""
         target=/tmp/database.mysql.gz
         state=import
-      when: dbfile and dbfile.changed
+      when: dbfile and dbdb.changed
       register: dbdata
+
+- hosts: db
+  sudo: yes
+  tasks:
+    - name: ensure memcached packages are the latest
+      apt: name=memcached state=latest
+
+- hosts: db
+  sudo: yes
+  tasks:
+    - name: ensure memcached listens to all
+      lineinfile: name=/etc/memcached.conf regexp=^-l state=absent
 
 - hosts: web
   tasks:
@@ -108,4 +122,5 @@
       copy: >
         src=settings.php
         dest=/var/www/sites/default/settings.php
-      when: hostvars.db.dbdata.changed
+        force=no
+      when: hostvars.db.dbdata
