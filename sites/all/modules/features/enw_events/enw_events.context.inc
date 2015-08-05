@@ -17,6 +17,12 @@ function enw_events_context_default_contexts() {
   $context->description = '「環境教育活動」側欄';
   $context->tag = 'desktop';
   $context->conditions = array(
+    'cmd' => array(
+      'values' => array(
+        2 => 2,
+        3 => 3,
+      ),
+    ),
     'path' => array(
       'values' => array(
         'events' => 'events',
@@ -40,7 +46,7 @@ function enw_events_context_default_contexts() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('theme');
+  t('desktop');
   t('「環境教育活動」側欄');
   $export['desktop_events'] = $context;
 

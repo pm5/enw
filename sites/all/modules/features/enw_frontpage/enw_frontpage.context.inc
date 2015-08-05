@@ -19,6 +19,7 @@ function enw_frontpage_context_default_contexts() {
   $context->conditions = array(
     'cmd' => array(
       'values' => array(
+        2 => 2,
         3 => 3,
       ),
     ),

@@ -9,4 +9,4 @@ dependencies[] = fe_block
 features[fe_block_boxes][] = banner
 features[fe_block_settings][] = block-banner
 features[features_api][] = api:1
-mtime = 1438251170
+mtime = 1438763951
