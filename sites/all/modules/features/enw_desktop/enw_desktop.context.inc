@@ -13,10 +13,60 @@ function enw_desktop_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'desktop_sidebar';
+  $context->description = '全站: 側欄';
+  $context->tag = 'desktop';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        '~events' => '~events',
+        '~events/*' => '~events/*',
+        '~monthly-topics' => '~monthly-topics',
+        '~monthly-topics/*' => '~monthly-topics/*',
+        '~movies' => '~movies',
+        '~video/*' => '~video/*',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-latest_news-block' => array(
+          'module' => 'views',
+          'delta' => 'latest_news-block',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+        'fb_likebox-0' => array(
+          'module' => 'fb_likebox',
+          'delta' => '0',
+          'region' => 'sidebar_second',
+          'weight' => '-9',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 1;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('desktop');
+  t('全站: 側欄');
+  $export['desktop_sidebar'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'desktop_banner';
   $context->description = '全站: Banner';
-  $context->tag = 'theme';
+  $context->tag = 'desktop';
   $context->conditions = array(
+    'cmd' => array(
+      'values' => array(
+        2 => 2,
+        3 => 3,
+      ),
+    ),
     'path' => array(
       'values' => array(
         '~monthly-topics' => '~monthly-topics',
@@ -40,7 +90,7 @@ function enw_desktop_context_default_contexts() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('theme');
+  t('desktop');
   t('全站: Banner');
   $export['desktop_banner'] = $context;
 
