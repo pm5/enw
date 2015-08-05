@@ -15,7 +15,6 @@ features[context][] = desktop_banner
 features[context][] = desktop_copyright
 features[context][] = desktop_menu
 features[context][] = desktop_sidebar
-features[context][] = desktop_video
 features[ctools][] = context:context:3
 features[features_api][] = api:1
 mtime = 1438766492
