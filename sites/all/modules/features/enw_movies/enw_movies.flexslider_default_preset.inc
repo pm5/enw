@@ -16,8 +16,6 @@ function enw_movies_flexslider_default_presets() {
   $preset->name = 'movies_theater_w_thumbnail_slider';
   $preset->title = 'Movies Theater with Thumbnail Slider';
   $preset->theme = 'classic';
-  $preset->imagestyle_normal = 'flexslider_full';
-  $preset->imagestyle_thumbnail = 'flexslider_thumbnail';
   $preset->options = array(
     'namespace' => 'flex-',
     'selector' => '.slides > li',
@@ -68,8 +66,6 @@ function enw_movies_flexslider_default_presets() {
   $preset->name = 'movies_thumbnail_slider';
   $preset->title = 'Movies Thumbnail Slider';
   $preset->theme = 'classic';
-  $preset->imagestyle_normal = 'flexslider_full';
-  $preset->imagestyle_thumbnail = 'flexslider_thumbnail';
   $preset->options = array(
     'namespace' => 'flex-',
     'selector' => '.slides > li',

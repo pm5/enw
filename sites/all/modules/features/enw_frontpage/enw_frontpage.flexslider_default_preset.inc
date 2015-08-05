@@ -16,8 +16,6 @@ function enw_frontpage_flexslider_default_presets() {
   $preset->name = 'frontpage_promotion_carousel';
   $preset->title = 'Frontpage Promotion Carousel';
   $preset->theme = 'classic';
-  $preset->imagestyle_normal = 'flexslider_full';
-  $preset->imagestyle_thumbnail = 'flexslider_thumbnail';
   $preset->options = array(
     'namespace' => 'flex-',
     'selector' => '.slides > li',
@@ -68,8 +66,6 @@ function enw_frontpage_flexslider_default_presets() {
   $preset->name = 'frontpage_slider';
   $preset->title = 'Frontpage Slider';
   $preset->theme = 'classic';
-  $preset->imagestyle_normal = 'flexslider_full';
-  $preset->imagestyle_thumbnail = 'flexslider_thumbnail';
   $preset->options = array(
     'namespace' => 'flex-',
     'selector' => '.slides > li',
