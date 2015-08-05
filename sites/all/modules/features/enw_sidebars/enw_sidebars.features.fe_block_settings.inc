@@ -19,15 +19,10 @@ function enw_sidebars_default_fe_block_settings() {
     'delta' => '0',
     'module' => 'fb_likebox',
     'node_types' => array(),
-    'pages' => 'video-main
-events
+    'pages' => 'events
 events/*
-month_topic
-month_topic/*
 monthly-topics
 monthly-topics/*
-video-list
-video-list/*
 video/*',
     'roles' => array(),
     'themes' => array(
@@ -47,7 +42,7 @@ video/*',
         'region' => '',
         'status' => 0,
         'theme' => 'theme721',
-        'weight' => '-32',
+        'weight' => '-27',
       ),
     ),
     'title' => '<none>',
@@ -89,7 +84,7 @@ video/*',
         'region' => '',
         'status' => 0,
         'theme' => 'theme721',
-        'weight' => '-34',
+        'weight' => '-31',
       ),
     ),
     'title' => '最新新聞',
@@ -128,7 +123,7 @@ video-list/*',
         'region' => '',
         'status' => 0,
         'theme' => 'theme721',
-        'weight' => '-33',
+        'weight' => '-28',
       ),
     ),
     'title' => '本月主打影片',
@@ -161,7 +156,7 @@ video-list/*',
         'region' => '',
         'status' => 0,
         'theme' => 'theme721',
-        'weight' => '-33',
+        'weight' => '-31',
       ),
     ),
     'title' => '影片列表',
@@ -202,7 +197,7 @@ video-list',
         'region' => '',
         'status' => 0,
         'theme' => 'theme721',
-        'weight' => '-31',
+        'weight' => '-26',
       ),
     ),
     'title' => '<none>',
