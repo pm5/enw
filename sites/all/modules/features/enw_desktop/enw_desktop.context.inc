@@ -13,35 +13,30 @@ function enw_desktop_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'desktop_sidebar';
-  $context->description = '全站: 側欄';
+  $context->name = 'desktop_copyright';
+  $context->description = '全站: 版權宣告';
   $context->tag = 'desktop';
   $context->conditions = array(
     'path' => array(
       'values' => array(
-        '~events' => '~events',
-        '~events/*' => '~events/*',
-        '~monthly-topics' => '~monthly-topics',
-        '~monthly-topics/*' => '~monthly-topics/*',
-        '~movies' => '~movies',
-        '~video/*' => '~video/*',
+        '*' => '*',
       ),
     ),
   );
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-latest_news-block' => array(
-          'module' => 'views',
-          'delta' => 'latest_news-block',
-          'region' => 'sidebar_second',
-          'weight' => '-10',
+        'block-5' => array(
+          'module' => 'block',
+          'delta' => '5',
+          'region' => 'footer',
+          'weight' => '-7',
         ),
-        'fb_likebox-0' => array(
-          'module' => 'fb_likebox',
-          'delta' => '0',
-          'region' => 'sidebar_second',
-          'weight' => '-9',
+        'block-14' => array(
+          'module' => 'block',
+          'delta' => '14',
+          'region' => 'footer',
+          'weight' => '-6',
         ),
       ),
     ),
@@ -50,9 +45,9 @@ function enw_desktop_context_default_contexts() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('desktop');
-  t('全站: 側欄');
-  $export['desktop_sidebar'] = $context;
+  t('theme');
+  t('全站: 版權宣告');
+  $export['desktop_copyright'] = $context;
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
@@ -162,6 +157,62 @@ function enw_desktop_context_default_contexts() {
   t('desktop');
   t('全站: 選單');
   $export['desktop_menu'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'desktop_sidebar';
+  $context->description = '全站: 側欄';
+  $context->tag = 'desktop';
+  $context->conditions = array(
+    'cmd' => array(
+      'values' => array(
+        2 => 2,
+        3 => 3,
+      ),
+    ),
+    'path' => array(
+      'values' => array(
+        '~events' => '~events',
+        '~events/*' => '~events/*',
+        '~monthly-topics' => '~monthly-topics',
+        '~monthly-topics/*' => '~monthly-topics/*',
+        '~movies' => '~movies',
+        '~video/*' => '~video/*',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-latest_news-block' => array(
+          'module' => 'views',
+          'delta' => 'latest_news-block',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+        'fb_likebox-0' => array(
+          'module' => 'fb_likebox',
+          'delta' => '0',
+          'region' => 'sidebar_second',
+          'weight' => '-9',
+        ),
+        'visitors-0' => array(
+          'module' => 'visitors',
+          'delta' => '0',
+          'region' => 'sidebar_second',
+          'weight' => '-8',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 1;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('desktop');
+  t('全站: 側欄');
+  $export['desktop_sidebar'] = $context;
 
   return $export;
 }
