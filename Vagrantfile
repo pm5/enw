@@ -27,7 +27,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     web.vm.network :forwarded_port, guest: 80, host: 8080
     web.vm.network :private_network, ip: "192.168.10.2"    # for NFS
     web.vm.synced_folder "docroot", "/var/www", :nfs => true
-    web.vm.synced_folder "log", "/var/log/drupal7"
+    web.vm.synced_folder "log", "/var/log/drupal7",
+      owner: "vagrant",
+      group: "www-data",
+      mount_options: ["dmode=775,fmode=664"]
   end
 
   config.vm.define "db" do |db|
@@ -41,7 +44,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     db.vm.network :private_network, ip: "192.168.10.3"
     db.vm.network :forwarded_port, guest: 3306, host: 3306
     db.vm.network :forwarded_port, guest: 11211, host: 11211
-    db.vm.synced_folder "log", "/var/log/drupal7"
+    db.vm.synced_folder "log", "/var/log/drupal7",
+      owner: "vagrant",
+      group: "www-data",
+      mount_options: ["dmode=775,fmode=664"]
 
     db.vm.provision :ansible do |ansible|
       # provision in parallel
