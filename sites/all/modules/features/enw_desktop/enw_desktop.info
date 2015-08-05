@@ -1,12 +1,15 @@
 name = enw_desktop
 core = 7.x
 package = Features
+php = 5.2.4
 dependencies[] = block
 dependencies[] = context
 dependencies[] = ctools
 dependencies[] = search
 dependencies[] = superfish
 dependencies[] = system
+features[context][] = desktop_banner
 features[context][] = desktop_menu
 features[ctools][] = context:context:3
 features[features_api][] = api:1
+mtime = 1438765674
