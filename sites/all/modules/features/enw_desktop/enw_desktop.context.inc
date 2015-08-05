@@ -220,44 +220,5 @@ function enw_desktop_context_default_contexts() {
   t('全站: 側欄');
   $export['desktop_sidebar'] = $context;
 
-  $context = new stdClass();
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
-  $context->api_version = 3;
-  $context->name = 'desktop_video';
-  $context->description = '環境教育影片';
-  $context->tag = 'desktop';
-  $context->conditions = array(
-    'cmd' => array(
-      'values' => array(
-        2 => 2,
-        3 => 3,
-      ),
-    ),
-    'path' => array(
-      'values' => array(
-        'video/*' => 'video/*',
-      ),
-    ),
-  );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'views-videolist-block_1' => array(
-          'module' => 'views',
-          'delta' => 'videolist-block_1',
-          'region' => 'sidebar_second',
-          'weight' => '-10',
-        ),
-      ),
-    ),
-  );
-  $context->condition_mode = 1;
-
-  // Translatables
-  // Included for use with string extractors like potx.
-  t('desktop');
-  t('環境教育影片');
-  $export['desktop_video'] = $context;
-
   return $export;
 }
