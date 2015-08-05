@@ -143,14 +143,13 @@ function enw_movies_views_default_views() {
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = '環境教育影片列表';
+  $view->human_name = '環境教育影片';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = '環境教育影片';
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
@@ -175,6 +174,7 @@ function enw_movies_views_default_views() {
   $handler->display->display_options['fields']['field_vvid']['table'] = 'field_data_field_vvid';
   $handler->display->display_options['fields']['field_vvid']['field'] = 'field_vvid';
   $handler->display->display_options['fields']['field_vvid']['label'] = '';
+  $handler->display->display_options['fields']['field_vvid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_vvid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_vvid']['click_sort_column'] = 'video_url';
   $handler->display->display_options['fields']['field_vvid']['type'] = 'video_embed_field_thumbnail';
@@ -188,6 +188,7 @@ function enw_movies_views_default_views() {
   $handler->display->display_options['fields']['field_video_link']['field'] = 'field_video_link';
   $handler->display->display_options['fields']['field_video_link']['label'] = '';
   $handler->display->display_options['fields']['field_video_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_video_link']['empty'] = '[field_vvid]';
   $handler->display->display_options['fields']['field_video_link']['click_sort_column'] = 'input';
   $handler->display->display_options['fields']['field_video_link']['type'] = 'youtube_thumbnail';
   $handler->display->display_options['fields']['field_video_link']['settings'] = array(
@@ -305,18 +306,8 @@ function enw_movies_views_default_views() {
     'default' => 0,
     'block_1' => 0,
   );
-
-  /* Display: Block: Thin */
-  $handler = $view->new_display('block', 'Block: Thin', 'block_2');
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $translatables['video_list'] = array(
     t('Master'),
-    t('環境教育影片'),
     t('more'),
     t('Apply'),
     t('重設'),
@@ -330,11 +321,11 @@ function enw_movies_views_default_views() {
     t('‹ 上一頁'),
     t('下一頁 ›'),
     t('最後一頁 »'),
+    t('[field_vvid]'),
     t('所有'),
     t('%1'),
     t('Block'),
     t('Attachment: Movies'),
-    t('Block: Thin'),
   );
   $export['video_list'] = $view;
 
