@@ -1,6 +1,7 @@
-name = enw_devel
+name = ENW Development
+description = 開發相關設定。正式版網站應關閉此項。
 core = 7.x
-package = Features
+package = 環境通訊網
 dependencies[] = ctools
 dependencies[] = strongarm
 features[ctools][] = strongarm:strongarm:1

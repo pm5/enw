@@ -1,6 +1,7 @@
-name = enw_desktop
+name = ENW Desktop
+description = 桌面版網站相關功能。
 core = 7.x
-package = Features
+package = 環境通訊網
 php = 5.2.4
 dependencies[] = block
 dependencies[] = context
