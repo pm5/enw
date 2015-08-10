@@ -306,6 +306,15 @@ function enw_movies_views_default_views() {
     'default' => 0,
     'block_1' => 0,
   );
+
+  /* Display: Block: Thin */
+  $handler = $view->new_display('block', 'Block: Thin', 'thin_block');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $translatables['video_list'] = array(
     t('Master'),
     t('more'),
@@ -326,6 +335,7 @@ function enw_movies_views_default_views() {
     t('%1'),
     t('Block'),
     t('Attachment: Movies'),
+    t('Block: Thin'),
   );
   $export['video_list'] = $view;
 

@@ -162,7 +162,18 @@ function enw_movies_default_page_manager_pages() {
     $pane->type = 'block';
     $pane->subtype = 'quicktabs-video_list';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'mobile_detect_ctools',
+          'settings' => array(
+            'type' => 'isMobile',
+          ),
+          'context' => array(),
+          'not' => TRUE,
+        ),
+      ),
+    );
     $pane->configuration = array(
       'override_title' => 0,
       'override_title_text' => '',
@@ -176,6 +187,50 @@ function enw_movies_default_page_manager_pages() {
     $pane->uuid = '2326c2ca-da5a-4459-aa8a-f87e2702b36a';
     $display->content['new-2326c2ca-da5a-4459-aa8a-f87e2702b36a'] = $pane;
     $display->panels['middle'][2] = 'new-2326c2ca-da5a-4459-aa8a-f87e2702b36a';
+    $pane = new stdClass();
+    $pane->pid = 'new-94047054-3015-4db9-9946-519a2d87f4f8';
+    $pane->panel = 'middle';
+    $pane->type = 'views';
+    $pane->subtype = 'video_list';
+    $pane->shown = TRUE;
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'mobile_detect_ctools',
+          'settings' => array(
+            'type' => 'isMobile',
+          ),
+          'context' => array(),
+          'not' => FALSE,
+        ),
+      ),
+    );
+    $pane->configuration = array(
+      'override_pager_settings' => 0,
+      'use_pager' => 1,
+      'nodes_per_page' => '9',
+      'pager_id' => '0',
+      'offset' => '0',
+      'more_link' => 0,
+      'feed_icons' => 0,
+      'panel_args' => 0,
+      'link_to_view' => 0,
+      'args' => '',
+      'url' => '',
+      'display' => 'thin_block',
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array();
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $pane->uuid = '94047054-3015-4db9-9946-519a2d87f4f8';
+    $display->content['new-94047054-3015-4db9-9946-519a2d87f4f8'] = $pane;
+    $display->panels['middle'][3] = 'new-94047054-3015-4db9-9946-519a2d87f4f8';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
