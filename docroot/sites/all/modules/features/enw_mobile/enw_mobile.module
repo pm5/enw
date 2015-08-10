@@ -37,3 +37,35 @@ function enw_mobile_block_view($delta = '') {
     );
   }
 }
+
+/**
+ * Implements hook_menu_block_blocks().
+ */
+function enw_mobile_menu_block_blocks() {
+  return array(
+    // The array key is the block id used by menu block.
+    'enw_mobile-mobile-main-menu' => array(
+      // Use the array keys/values described in menu_tree_build().
+      'menu_name'   => 'menu-secondary-menu',
+      'parent_mlid' => 0,
+      'title_link'  => FALSE,
+      'admin_title' => 'Mobile main menu',
+      'level'       => 1,
+      'follow'      => 0,
+      'depth'       => 2,
+      'expanded'    => TRUE,
+      'sort'        => FALSE,
+    ),
+  );
+}
+
+/**
+ * Implements hook_menu_block_get_menus().
+ */
+function enw_mobile_menu_block_get_menus() {
+  $menus = array();
+  $menus['menu-secondary-menu'] = '';
+
+  return $menus;
+}
+

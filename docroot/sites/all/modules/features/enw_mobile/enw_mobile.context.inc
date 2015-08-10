@@ -71,9 +71,9 @@ function enw_mobile_context_default_contexts() {
           'region' => 'menu',
           'weight' => '-10',
         ),
-        'menu_block-1' => array(
+        'enw_mobile-mobile-main-menu' => array(
           'module' => 'menu_block',
-          'delta' => '1',
+          'delta' => 'enw_mobile-mobile-main-menu',
           'region' => 'mobile_menu',
           'weight' => '-10',
         ),
