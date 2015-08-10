@@ -15,4 +15,5 @@ features[context][] = mobile_menu
 features[ctools][] = context:context:3
 features[features_api][] = api:1
 features[themekey_features_rule_chain][] = mobile_detect:isMobile = true >>> enwmobile
+stylesheets[screen][] = enw_mobile.css
 mtime = 1438772307
