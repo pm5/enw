@@ -28,35 +28,35 @@ function enw_devel_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'views_ui_display_embed';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['views_ui_display_embed'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'views_ui_show_advanced_column';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['views_ui_show_advanced_column'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'views_ui_show_advanced_help_warning';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['views_ui_show_advanced_help_warning'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'views_ui_show_listing_filters';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['views_ui_show_listing_filters'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'views_ui_show_master_display';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['views_ui_show_master_display'] = $strongarm;
 
   $strongarm = new stdClass();
