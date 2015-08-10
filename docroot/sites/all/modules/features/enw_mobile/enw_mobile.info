@@ -9,6 +9,7 @@ dependencies[] = context_mobile_detect
 dependencies[] = ctools
 dependencies[] = menu_block
 dependencies[] = themekey_features
+dependencies[] = bigslide
 features[context][] = mobile_copyright
 features[context][] = mobile_menu
 features[ctools][] = context:context:3
