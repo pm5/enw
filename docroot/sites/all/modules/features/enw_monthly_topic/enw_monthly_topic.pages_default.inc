@@ -175,7 +175,18 @@ function enw_monthly_topic_default_page_manager_pages() {
     $pane->type = 'views_panes';
     $pane->subtype = 'monthly_topic-pane';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'mobile_detect_ctools',
+          'settings' => array(
+            'type' => 'isMobile',
+          ),
+          'context' => array(),
+          'not' => TRUE,
+        ),
+      ),
+    );
     $pane->configuration = array(
       'override_title' => 1,
       'override_title_text' => '',
@@ -190,12 +201,46 @@ function enw_monthly_topic_default_page_manager_pages() {
     $display->content['new-dd270d79-fd9e-418b-9ef0-61dc81b1c64f'] = $pane;
     $display->panels['middle'][0] = 'new-dd270d79-fd9e-418b-9ef0-61dc81b1c64f';
     $pane = new stdClass();
+    $pane->pid = 'new-15301f9f-f30f-4a6e-90fe-3b1c027bbaa8';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'monthly_topic-thin_pane';
+    $pane->shown = TRUE;
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'mobile_detect_ctools',
+          'settings' => array(
+            'type' => 'isMobile',
+          ),
+          'context' => array(),
+          'not' => FALSE,
+        ),
+      ),
+    );
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array();
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '15301f9f-f30f-4a6e-90fe-3b1c027bbaa8';
+    $display->content['new-15301f9f-f30f-4a6e-90fe-3b1c027bbaa8'] = $pane;
+    $display->panels['middle'][1] = 'new-15301f9f-f30f-4a6e-90fe-3b1c027bbaa8';
+    $pane = new stdClass();
     $pane->pid = 'new-964ace9e-c604-4e99-a4f0-375fdc49940f';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
     $pane->subtype = 'monthly_topic-latest_pane';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(),
+    );
     $pane->configuration = array(
       'override_title' => 1,
       'override_title_text' => '',
@@ -204,11 +249,11 @@ function enw_monthly_topic_default_page_manager_pages() {
     $pane->style = array();
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
     $pane->uuid = '964ace9e-c604-4e99-a4f0-375fdc49940f';
     $display->content['new-964ace9e-c604-4e99-a4f0-375fdc49940f'] = $pane;
-    $display->panels['middle'][1] = 'new-964ace9e-c604-4e99-a4f0-375fdc49940f';
+    $display->panels['middle'][2] = 'new-964ace9e-c604-4e99-a4f0-375fdc49940f';
   $display->hide_title = PANELS_TITLE_PANE;
   $display->title_pane = 'new-964ace9e-c604-4e99-a4f0-375fdc49940f';
   $handler->conf['display'] = $display;
