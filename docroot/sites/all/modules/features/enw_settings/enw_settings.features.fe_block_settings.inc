@@ -23,8 +23,8 @@ function enw_settings_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'enwmobile' => array(
-        'region' => '',
-        'status' => 0,
+        'region' => 'content',
+        'status' => '1',
         'theme' => 'enwmobile',
         'weight' => '-28',
       ),
