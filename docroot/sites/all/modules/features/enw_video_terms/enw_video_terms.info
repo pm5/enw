@@ -1,0 +1,12 @@
+name = ENW Video Terms
+core = 7.x
+package = 環境通訊網
+php = 5.2.4
+version = 7.x-1.1-beta1
+project = enw_video_terms
+dependencies[] = ctools
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:1
+features[views_view][] = video_term
+mtime = 1438764183

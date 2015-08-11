@@ -1,0 +1,71 @@
+<?php
+/**
+ * @file
+ * Code for the enw_mobile feature.
+ */
+
+include_once 'enw_mobile.features.inc';
+
+/**
+ * Implements hook_block_info().
+ */
+function enw_mobile_block_info() {
+  $blocks = array();
+  $blocks['enw_mobile_dashboard'] = array(
+    'info' => t('Mobile dashboard'),
+  );
+  $blocks['enw_mobile_menu_button'] = array(
+    'info' => t('Trigger button for mobile main menu'),
+  );
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function enw_mobile_block_view($delta = '') {
+  if ($delta === 'enw_mobile_dashboard') {
+    return array(
+      'subject' => '',
+      'content' => '<div id="mobile-menu"><div class="item"><a href="/monthly-topics"><img class="icon" src="/sites/all/themes/enwmobile/images/icon-monthly-topics.png"> </a><div class="label"><a href="/monthly-topics">環境節日</a></div></div><div class="item"><a href="/affair"><img class="icon" src="/sites/all/themes/enwmobile/images/icon-affair.png"> </a><div class="label"><a href="/affair">最新新聞</a></div></div><div class="item"><a href="/movies"><img class="icon" src="/sites/all/themes/enwmobile/images/icon-movies.png"> </a><div class="label"><a href="/movies">環境影展</a></div></div><div class="item"><a href="/issues"><img class="icon" src="/sites/all/themes/enwmobile/images/icon-issues.png"> </a><div class="label"><a href="/issues">熱門議題</a></div></div><div class="item"><a href="/events"><img class="icon" src="/sites/all/themes/enwmobile/images/icon-events.png"> </a><div class="label"><a href="/events">活動訊息</a></div></div><div class="item"><a href="/熱門環境議題/綠繪本"><img class="icon" src="/sites/all/themes/enwmobile/images/icon-picture-book.png"> </a><div class="label"><a href="/熱門環境議題/綠繪本">綠繪本</a></div></div><div class="item"><a href="/about-us"><img class="icon" src="/sites/all/themes/enwmobile/images/icon-about-us.png"> </a><div class="label"><a href="/about-us">關於我們</a></div></div><div class="item"><a href="https://www.facebook.com/ENV.Republic"><img class="icon" src="/sites/all/themes/enwmobile/images/icon-env-republic.png"> </a><div class="label"><a href="https://www.facebook.com/ENV.Republic">環境共和國</a></div></div><div class="item"><a href="/contactform"><img class="icon" src="/sites/all/themes/enwmobile/images/icon-contactform.png"> </a><div class="label"><a href="/contactform">徵件活動</a></div></div></div>',
+    );
+  }
+  if ($delta === 'enw_mobile_menu_button') {
+    return array(
+      'subject' => '',
+      'content' => '<div><a class="menu-link" href="/#mobile-menu">☰</a></div>',
+    );
+  }
+}
+
+/**
+ * Implements hook_menu_block_blocks().
+ */
+function enw_mobile_menu_block_blocks() {
+  return array(
+    // The array key is the block id used by menu block.
+    'enw_mobile-mobile-main-menu' => array(
+      // Use the array keys/values described in menu_tree_build().
+      'menu_name'   => 'menu-secondary-menu',
+      'parent_mlid' => 0,
+      'title_link'  => FALSE,
+      'admin_title' => 'Mobile main menu',
+      'level'       => 1,
+      'follow'      => 0,
+      'depth'       => 2,
+      'expanded'    => TRUE,
+      'sort'        => FALSE,
+    ),
+  );
+}
+
+/**
+ * Implements hook_menu_block_get_menus().
+ */
+function enw_mobile_menu_block_get_menus() {
+  $menus = array();
+  $menus['menu-secondary-menu'] = '';
+
+  return $menus;
+}
+
