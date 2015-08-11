@@ -59,7 +59,18 @@ function enw_monthly_topic_default_page_manager_handlers() {
     $pane->type = 'views_panes';
     $pane->subtype = 'monthly_topic-pane';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'mobile_detect_ctools',
+          'settings' => array(
+            'type' => 'isMobile',
+          ),
+          'context' => array(),
+          'not' => TRUE,
+        ),
+      ),
+    );
     $pane->configuration = array(
       'override_title' => 1,
       'override_title_text' => '',
@@ -74,12 +85,44 @@ function enw_monthly_topic_default_page_manager_handlers() {
     $display->content['new-f1fed27d-3d48-4388-b148-155c09ce164d'] = $pane;
     $display->panels['middle'][0] = 'new-f1fed27d-3d48-4388-b148-155c09ce164d';
     $pane = new stdClass();
+    $pane->pid = 'new-9920cf61-25d3-4f79-96b6-4799d5af81c2';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'monthly_topic-thin_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array();
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '9920cf61-25d3-4f79-96b6-4799d5af81c2';
+    $display->content['new-9920cf61-25d3-4f79-96b6-4799d5af81c2'] = $pane;
+    $display->panels['middle'][1] = 'new-9920cf61-25d3-4f79-96b6-4799d5af81c2';
+    $pane = new stdClass();
     $pane->pid = 'new-1125cac8-2fa0-4022-a68c-1cee32fad0a7';
     $pane->panel = 'middle';
     $pane->type = 'node_content';
     $pane->subtype = 'node_content';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'mobile_detect_ctools',
+          'settings' => array(
+            'type' => 'isMobile',
+          ),
+          'context' => array(),
+          'not' => FALSE,
+        ),
+      ),
+    );
     $pane->configuration = array(
       'links' => 0,
       'no_extras' => 0,
@@ -95,11 +138,11 @@ function enw_monthly_topic_default_page_manager_handlers() {
     $pane->style = array();
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
     $pane->uuid = '1125cac8-2fa0-4022-a68c-1cee32fad0a7';
     $display->content['new-1125cac8-2fa0-4022-a68c-1cee32fad0a7'] = $pane;
-    $display->panels['middle'][1] = 'new-1125cac8-2fa0-4022-a68c-1cee32fad0a7';
+    $display->panels['middle'][2] = 'new-1125cac8-2fa0-4022-a68c-1cee32fad0a7';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-1125cac8-2fa0-4022-a68c-1cee32fad0a7';
   $handler->conf['display'] = $display;
@@ -239,7 +282,16 @@ function enw_monthly_topic_default_page_manager_pages() {
     $pane->subtype = 'monthly_topic-latest_pane';
     $pane->shown = TRUE;
     $pane->access = array(
-      'plugins' => array(),
+      'plugins' => array(
+        0 => array(
+          'name' => 'mobile_detect_ctools',
+          'settings' => array(
+            'type' => 'isMobile',
+          ),
+          'context' => array(),
+          'not' => TRUE,
+        ),
+      ),
     );
     $pane->configuration = array(
       'override_title' => 1,
@@ -254,6 +306,38 @@ function enw_monthly_topic_default_page_manager_pages() {
     $pane->uuid = '964ace9e-c604-4e99-a4f0-375fdc49940f';
     $display->content['new-964ace9e-c604-4e99-a4f0-375fdc49940f'] = $pane;
     $display->panels['middle'][2] = 'new-964ace9e-c604-4e99-a4f0-375fdc49940f';
+    $pane = new stdClass();
+    $pane->pid = 'new-db920a9c-662b-4500-9f29-aa9453213147';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'monthly_topic-thin_latest_pane';
+    $pane->shown = TRUE;
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'mobile_detect_ctools',
+          'settings' => array(
+            'type' => 'isMobile',
+          ),
+          'context' => array(),
+          'not' => FALSE,
+        ),
+      ),
+    );
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array();
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $pane->uuid = 'db920a9c-662b-4500-9f29-aa9453213147';
+    $display->content['new-db920a9c-662b-4500-9f29-aa9453213147'] = $pane;
+    $display->panels['middle'][3] = 'new-db920a9c-662b-4500-9f29-aa9453213147';
   $display->hide_title = PANELS_TITLE_PANE;
   $display->title_pane = 'new-964ace9e-c604-4e99-a4f0-375fdc49940f';
   $handler->conf['display'] = $display;

@@ -175,6 +175,72 @@ function enw_monthly_topic_views_default_views() {
   $handler->display->display_options['allow']['title_override'] = 'title_override';
   $handler->display->display_options['allow']['exposed_form'] = 0;
   $handler->display->display_options['allow']['fields_override'] = 0;
+
+  /* Display: Content pane: Latest Thin */
+  $handler = $view->new_display('panel_pane', 'Content pane: Latest Thin', 'thin_latest_pane');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'field_topic_month' => 'field_topic_month',
+    'field_doll' => 'field_doll',
+  );
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* 欄位: 內容: 節日月份 */
+  $handler->display->display_options['fields']['field_topic_month']['id'] = 'field_topic_month';
+  $handler->display->display_options['fields']['field_topic_month']['table'] = 'field_data_field_topic_month';
+  $handler->display->display_options['fields']['field_topic_month']['field'] = 'field_topic_month';
+  $handler->display->display_options['fields']['field_topic_month']['label'] = '';
+  $handler->display->display_options['fields']['field_topic_month']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_topic_month']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_topic_month']['settings'] = array(
+    'format_type' => 'long',
+    'fromto' => '',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* 欄位: 內容: 公仔 */
+  $handler->display->display_options['fields']['field_doll']['id'] = 'field_doll';
+  $handler->display->display_options['fields']['field_doll']['table'] = 'field_data_field_doll';
+  $handler->display->display_options['fields']['field_doll']['field'] = 'field_doll';
+  $handler->display->display_options['fields']['field_doll']['label'] = '';
+  $handler->display->display_options['fields']['field_doll']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_doll']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_doll']['settings'] = array(
+    'image_style' => 'monthly_topic_thumbnail',
+    'image_link' => 'content',
+  );
+  /* 欄位: 內容: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: 內容: 節日月份 (field_topic_month) */
+  $handler->display->display_options['sorts']['field_topic_month_value']['id'] = 'field_topic_month_value';
+  $handler->display->display_options['sorts']['field_topic_month_value']['table'] = 'field_data_field_topic_month';
+  $handler->display->display_options['sorts']['field_topic_month_value']['field'] = 'field_topic_month_value';
+  $handler->display->display_options['sorts']['field_topic_month_value']['order'] = 'DESC';
+  $handler->display->display_options['pane_category']['name'] = '環境通訊網';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
   $translatables['monthly_topic'] = array(
     t('Master'),
     t('環境節日'),
@@ -190,6 +256,7 @@ function enw_monthly_topic_views_default_views() {
     t('環境通訊網'),
     t('Content pane: Latest'),
     t('Content pane: Thin'),
+    t('Content pane: Latest Thin'),
   );
   $export['monthly_topic'] = $view;
 
