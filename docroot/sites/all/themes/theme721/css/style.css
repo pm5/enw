@@ -1534,3 +1534,7 @@ border-bottom: 2px dotted #e0e0e0;
 margin:10px!important;
 line-height:50px!important;
 }
+
+.views-field-field-video-link {
+text-align: center;
+}
