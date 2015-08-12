@@ -38,6 +38,24 @@ function enw_frontpage_context_default_contexts() {
           'region' => 'header',
           'weight' => '-10',
         ),
+        'views-latest_news-block' => array(
+          'module' => 'views',
+          'delta' => 'latest_news-block',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+        'fb_likebox-0' => array(
+          'module' => 'fb_likebox',
+          'delta' => '0',
+          'region' => 'sidebar_second',
+          'weight' => '-9',
+        ),
+        'visitors-0' => array(
+          'module' => 'visitors',
+          'delta' => '0',
+          'region' => 'sidebar_second',
+          'weight' => '-8',
+        ),
       ),
     ),
   );
