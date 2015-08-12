@@ -444,8 +444,16 @@ border: 5px solid #00BB7F;
 padding: 10px 20px 10px 20px;
 margin: 0px 0px 0px -80px;
 }
-.views-field-field-topic-month{
-margin: -100px 0px 70px 190px;
+
+.view-monthly-topic .views-row {
+  position: relative;
+  margin: 20px 0;
+}
+
+.views-field-field-topic-month {
+  position: absolute;
+  top: 156px;
+  left: 205px;
 }
 
 #aftermath {
