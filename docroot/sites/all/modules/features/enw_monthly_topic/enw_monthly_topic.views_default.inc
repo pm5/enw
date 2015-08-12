@@ -53,12 +53,39 @@ function enw_monthly_topic_views_default_views() {
   $handler->display->display_options['fields']['field_doll']['table'] = 'field_data_field_doll';
   $handler->display->display_options['fields']['field_doll']['field'] = 'field_doll';
   $handler->display->display_options['fields']['field_doll']['label'] = '';
+  $handler->display->display_options['fields']['field_doll']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_doll']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_doll']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_doll']['settings'] = array(
     'image_style' => 'monthly_topic_thumbnail',
-    'image_link' => 'content',
+    'image_link' => '',
   );
+  /* 欄位: 內容: 標題 */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* 欄位: 內容: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  /* 欄位: Colorbox: Colorbox trigger */
+  $handler->display->display_options['fields']['colorbox']['id'] = 'colorbox';
+  $handler->display->display_options['fields']['colorbox']['table'] = 'colorbox';
+  $handler->display->display_options['fields']['colorbox']['field'] = 'colorbox';
+  $handler->display->display_options['fields']['colorbox']['label'] = '';
+  $handler->display->display_options['fields']['colorbox']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['colorbox']['trigger_field'] = 'field_doll';
+  $handler->display->display_options['fields']['colorbox']['popup'] = '<div class="field-doll">[field_doll]</div>
+<h3>[title]</h3>
+[body]';
+  $handler->display->display_options['fields']['colorbox']['gid'] = 1;
   /* Sort criterion: 內容: 節日月份 (field_topic_month) */
   $handler->display->display_options['sorts']['field_topic_month_value']['id'] = 'field_topic_month_value';
   $handler->display->display_options['sorts']['field_topic_month_value']['table'] = 'field_data_field_topic_month';
