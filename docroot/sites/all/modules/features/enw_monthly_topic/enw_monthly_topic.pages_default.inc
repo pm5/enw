@@ -306,38 +306,6 @@ function enw_monthly_topic_default_page_manager_pages() {
     $pane->uuid = '964ace9e-c604-4e99-a4f0-375fdc49940f';
     $display->content['new-964ace9e-c604-4e99-a4f0-375fdc49940f'] = $pane;
     $display->panels['middle'][2] = 'new-964ace9e-c604-4e99-a4f0-375fdc49940f';
-    $pane = new stdClass();
-    $pane->pid = 'new-db920a9c-662b-4500-9f29-aa9453213147';
-    $pane->panel = 'middle';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'monthly_topic-thin_latest_pane';
-    $pane->shown = TRUE;
-    $pane->access = array(
-      'plugins' => array(
-        0 => array(
-          'name' => 'mobile_detect_ctools',
-          'settings' => array(
-            'type' => 'isMobile',
-          ),
-          'context' => array(),
-          'not' => FALSE,
-        ),
-      ),
-    );
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
-      'override_title_heading' => 'h2',
-    );
-    $pane->cache = array();
-    $pane->style = array();
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 3;
-    $pane->locks = array();
-    $pane->uuid = 'db920a9c-662b-4500-9f29-aa9453213147';
-    $display->content['new-db920a9c-662b-4500-9f29-aa9453213147'] = $pane;
-    $display->panels['middle'][3] = 'new-db920a9c-662b-4500-9f29-aa9453213147';
   $display->hide_title = PANELS_TITLE_PANE;
   $display->title_pane = 'new-964ace9e-c604-4e99-a4f0-375fdc49940f';
   $handler->conf['display'] = $display;
