@@ -4,6 +4,7 @@ core = 7.x
 package = 環境通訊網
 php = 5.2.4
 dependencies[] = ctools
+dependencies[] = devel
 dependencies[] = strongarm
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:1
