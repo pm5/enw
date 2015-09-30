@@ -1601,3 +1601,7 @@ line-height:50px!important;
 .view-display-id-thin_block {
   text-align: center;
 }
+
+#mobile-menu img.icon {
+  width: 56px;
+}
