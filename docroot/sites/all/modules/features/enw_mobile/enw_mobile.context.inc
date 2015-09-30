@@ -88,5 +88,38 @@ function enw_mobile_context_default_contexts() {
   t('選單');
   $export['mobile_menu'] = $context;
 
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'mobile_node';
+  $context->description = '手機版文章瀏覽功能';
+  $context->tag = 'mobile';
+  $context->conditions = array(
+    'cmd' => array(
+      'values' => array(
+        1 => 1,
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'linebutton-linebutton' => array(
+          'module' => 'linebutton',
+          'delta' => 'linebutton',
+          'region' => 'content',
+          'weight' => '-37',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 1;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('mobile');
+  t('手機版文章瀏覽功能');
+  $export['mobile_node'] = $context;
+
   return $export;
 }
