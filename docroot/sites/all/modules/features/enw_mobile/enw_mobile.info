@@ -8,6 +8,7 @@ dependencies[] = block
 dependencies[] = context
 dependencies[] = context_mobile_detect
 dependencies[] = ctools
+dependencies[] = enw_desktop
 dependencies[] = linebutton
 dependencies[] = menu_block
 dependencies[] = themekey_features
@@ -17,5 +18,5 @@ features[context][] = mobile_node
 features[ctools][] = context:context:3
 features[features_api][] = api:1
 features[themekey_features_rule_chain][] = mobile_detect:isMobile = true >>> enwmobile
-mtime = 1443577964
+mtime = 1443581536
 stylesheets[screen][] = enw_mobile.css

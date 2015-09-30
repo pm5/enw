@@ -100,6 +100,15 @@ function enw_mobile_context_default_contexts() {
         1 => 1,
       ),
     ),
+    'node' => array(
+      'values' => array(
+        'article' => 'article',
+        'page' => 'page',
+      ),
+      'options' => array(
+        'node_form' => '1',
+      ),
+    ),
   );
   $context->reactions = array(
     'block' => array(
