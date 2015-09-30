@@ -177,16 +177,6 @@ function enw_desktop_context_default_contexts() {
         3 => 3,
       ),
     ),
-    'node' => array(
-      'values' => array(
-        'article' => 'article',
-        'month_topic' => 'month_topic',
-        'page' => 'page',
-      ),
-      'options' => array(
-        'node_form' => '1',
-      ),
-    ),
     'path' => array(
       'values' => array(
         '~events' => '~events',
