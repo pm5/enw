@@ -1,3 +1,5 @@
 name = LINE it!
 description = Adds a simple block that shows a LINE it! button for the page.
 core = 7.x
+
+stylesheets[screen][] = linebutton.css

@@ -1,6 +1,62 @@
 <?php
 
 /**
+ * Implements hook_menu().
+ */
+function linebutton_menu() {
+  $items = array();
+  $items['admin/config/services/linebutton'] = array(
+    'title' => 'LINE it! button',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('linebutton_config_form'),
+    'access arguments' => array('access content'),
+  );
+  return $items;
+}
+
+function linebutton_config_form($form, &$form_state)
+{
+    $form = array();
+
+    $path = '/' . drupal_get_path('module', 'linebutton') . '/images';
+
+    $form['#prefix'] = '<p>' . t('Select the LINE it! icon to use:') . '</p>';
+    $form['icon'] = array(
+      '#type' => 'radios',
+      '#options' => array(
+        '78x20' => '<label for="78x20"><img width="78" class="line-icon" src="' . $path . '/linebutton_78x20_en.png"></img></label>',
+        '20x20' => '<label for="20x20"><img width="20" class="line-icon" src="' . $path . '/linebutton_20x20_en.png"></img></label>',
+        '30x30' => '<label for="30x30"><img width="30" class="line-icon" src="' . $path . '/linebutton_30x30_en.png"></img></label>',
+        '40x40' => '<label for="40x40"><img width="40" class="line-icon" src="' . $path . '/linebutton_40x40_en.png"></img></label>',
+        '36x60' => '<label for="36x60"><img width="36" class="line-icon" src="' . $path . '/linebutton_36x60_en.png"></img></label>',
+      ),
+      '#default_value' => variable_get('linebutton_icon', '78x20')
+    );
+
+    $form['submit'] = array(
+      '#type' => 'submit',
+      '#value' => 'Submit'
+    );
+
+    return $form;
+}
+
+function linebutton_config_form_validate($form, &$form_state)
+{
+  if (array_search($form_state['values']['icon'], _linebutton_icon_names()) === FALSE) {
+    form_set_error('icon', t('Invalid icon selection.'));
+  }
+}
+
+function linebutton_config_form_submit($form, &$form_state)
+{
+  variable_set('linebutton_icon', $form_state['values']['icon']);
+  drupal_set_message(t('Selected icon has been saved.'));
+}
+
+
+
+/**
  * Implements hook_block_info().
  */
 function linebutton_block_info() {
@@ -11,6 +67,19 @@ function linebutton_block_info() {
   return $blocks;
 }
 
+function _linebutton_icon_names()
+{
+  return array('78x20', '20x20', '30x30', '40x40', '36x60');
+}
+
+function _linebutton_icon_width($icon_name)
+{
+  if (array_search($icon_name, _linebutton_icon_names()) === FALSE) {
+    return FALSE;
+  }
+  return substr($icon_name, 0, 2);
+}
+
 /**
  * Implements hook_block_view().
  */
@@ -19,41 +88,12 @@ function linebutton_block_view($delta = '') {
   if (arg(0) !== 'node' || !is_numeric(arg(1))) { return array(); }
   $nid = arg(1);
   $node = node_load($nid);
+  $icon = variable_get('linebutton_icon', '78x20');
   $linkURL = 'http://line.me/R/msg/text/?' . $node->title . ' ' . url('node/' . $node->nid, array('absolute' => TRUE));
-  $linkIcon = '<img src="/' . drupal_get_path('module', 'linebutton') . '/linebutton_75x30_en.png" width="75" height="30" alt="LINE 分享" />';
+  $linkIcon = '<img src="/' . drupal_get_path('module', 'linebutton') . '/images/linebutton_' . $icon . '_en.png" width="' . _linebutton_icon_width($icon) . '" alt="LINE it!" />';
   return array(
     'content' => array(
       '#markup' => l($linkIcon, $linkURL, array('html' => TRUE)),
     ),
   );
-}
-
-/**
- * Implements hook_block_save().
- */
-function linebutton_block_save($delta = '', $edit = array()) {
-}
-
-/**
- * Implements hook_block_configure().
- */
-function linebutton_block_configure($delta = '') {
-}
-
-/**
- * Implements hook_block_list_alter().
- */
-function linebutton_block_list_alter(&$blocks) {
-}
-
-/**
- * Implements hook_block_info_alter().
- */
-function linebutton_block_info_alter(&$blocks, $theme, $code_blocks) {
-}
-
-/**
- * Implements hook_block_view_alter().
- */
-function linebutton_block_view_alter(&$data, $block) {
 }
