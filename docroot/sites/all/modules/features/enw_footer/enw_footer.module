@@ -3,3 +3,74 @@
  * @file
  * Drupal needs this blank file.
  */
+
+/**
+ * Implements hook_block_info().
+ */
+function enw_footer_block_info() {
+    $blocks = array();
+    $blocks['desktop-footer-copyright-text'] = array(
+        'info' => t('版權宣告'),
+    );
+    return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function enw_footer_block_view($delta = '') {
+    if ($delta == 'desktop-footer-copyright-text') {
+        return array(
+          'subject' => '<none>',
+          'content' => '
+            <div style="margin: 5px 10px 30px; border-width: 5px; border-style: solid; width: 43px; height: 45px; float: left;">
+              <a href="http://www.webguide.nat.gov.tw/wSite/sp?xdUrl=/wSite/enable/valid.jsp&amp;conId=20130326154811" target="_blank"><img alt="我的E政府" src="http://farm9.staticflickr.com/8100/8525994783_6235eac3d8_o.gif" title="我的E政府"></a>
+            </div>
+            <div style="font-family:微軟正黑體,helvetica,sans-serif; margin-left: 73px; color: #000000; line-height: 1.538em; word-break: keep-all;">
+              <div><strong><a href="http://www.epa.gov.tw/" target="_blank"><span style="color:#0099cc;">行政院環境保護署</span></a></strong>&nbsp;版權所有 <span style="white-space: nowrap;">2013 All Right Reserved</span></div>
+              <div>10042 臺北市中正區中華路一段83號 總機:02-23117722</div>
+              <div>維護單位:<a href="http://www.e-info.org.tw/" target="_blank"><strong><span style="color:#0099cc;">台灣環境資訊協會</span></strong></a> 聯絡電話:02-29332233</div>
+              <div><strong><a href="http://enw.e-info.org.tw/content/338" target="_blank"><span style="color:#0099cc;">隱私權政策</span></a> <a href="http://enw.e-info.org.tw/content/339" target="_blank"><span style="color:#0099cc;">資訊安全政策</span></a> <a href="http://enw.e-info.org.tw/content/340" target="_blank"><span style="color:#0099cc;">版權宣告</span></a></strong></div>
+              <div><strong>行政院環境保護署 &nbsp; 廣告</strong></div>
+            </div>
+          ',
+        );
+    }
+}
+
+/**
+ * Implements hook_block_save().
+ */
+function enw_footer_block_save($delta = '', $edit = array()) {
+}
+
+/**
+ * Implements hook_block_configure().
+ */
+function enw_footer_block_configure($delta = '') {
+}
+
+/**
+ * Implements hook_block_list_alter().
+ */
+function enw_footer_block_list_alter(&$blocks) {
+}
+
+/**
+ * Implements hook_block_info_alter().
+ */
+function enw_footer_block_info_alter(&$blocks, $theme, $code_blocks) {
+}
+
+/**
+ * Implements hook_block_view_alter().
+ */
+function enw_footer_block_view_alter(&$data, $block) {
+}
+
+/**
+ * Implements hook_block_view_MODULE_DELTA_alter().
+ */
+function enw_footer_block_view_MODULE_DELTA_alter(&$data, $block) {
+}
+

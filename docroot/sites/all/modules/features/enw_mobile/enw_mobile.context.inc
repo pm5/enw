@@ -26,17 +26,17 @@ function enw_mobile_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'block-5' => array(
-          'module' => 'block',
-          'delta' => '5',
-          'region' => 'footer',
-          'weight' => '-7',
-        ),
         'block-14' => array(
           'module' => 'block',
           'delta' => '14',
           'region' => 'footer',
-          'weight' => '-6',
+          'weight' => '36',
+        ),
+        'enw_footer-desktop-footer-copyright-text' => array(
+          'module' => 'enw_footer',
+          'delta' => 'desktop-footer-copyright-text',
+          'region' => 'footer',
+          'weight' => '10',
         ),
       ),
     ),
