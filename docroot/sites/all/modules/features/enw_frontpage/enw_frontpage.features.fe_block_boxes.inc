@@ -31,7 +31,7 @@ function enw_frontpage_default_fe_block_boxes() {
       <div class="label">關於我們</div></a></div>
   <div class="item"><a href="https://www.facebook.com/ENV.Republic"><img src="/sites/all/themes/enwmobile/images/icon-env-republic.png" class="icon"/>
       <div class="label">環境共和國</div></a></div>
-  <div class="item"><a href="/contactform"><img src="/sites/all/themes/enwmobile/images/icon-contactform.png" class="icon"/>
+  <div class="item"><a href="/2015%E5%BE%B5%E4%BB%B6"><img src="/sites/all/themes/enwmobile/images/icon-contactform.png" class="icon"/>
       <div class="label">徵件活動</div></a></div>
 </div>';
 
