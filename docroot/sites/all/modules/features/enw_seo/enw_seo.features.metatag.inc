@@ -185,7 +185,7 @@ function enw_seo_metatag_export_default() {
     'instance' => 'node',
     'config' => array(
       'title' => array(
-        'value' => '[node:title] | [site:name]',
+        'value' => '[node:title] - [site:name]',
       ),
       'description' => array(
         'value' => '[node:summary]',
@@ -202,14 +202,11 @@ function enw_seo_metatag_export_default() {
       'dcterms.date' => array(
         'value' => '[node:created:custom:Y-m-d\\TH:iP]',
       ),
-      'dcterms.modified' => array(
-        'value' => '[node:changed:custom:Y-m-d\\TH:iP]',
-      ),
       'dcterms.language' => array(
         'value' => '[node:language]',
       ),
       'og:title' => array(
-        'value' => '[node:title]',
+        'value' => '[node:title] - [site:name]',
       ),
       'og:description' => array(
         'value' => '[node:summary]',
@@ -219,6 +216,15 @@ function enw_seo_metatag_export_default() {
       ),
       'og:image' => array(
         'value' => '[node:field_image]',
+      ),
+      'og:locale' => array(
+        'value' => 'zh_TW',
+      ),
+      'article:author' => array(
+        'value' => 'https://www.facebook.com/ENV.Republic',
+      ),
+      'article:publisher' => array(
+        'value' => 'https://www.facebook.com/ENV.Republic',
       ),
       'article:published_time' => array(
         'value' => '[node:created:custom:c]',
@@ -231,6 +237,38 @@ function enw_seo_metatag_export_default() {
       ),
       'twitter:description' => array(
         'value' => '[node:summary]',
+      ),
+    ),
+  );
+
+  // Exported Metatag config instance: node:movie.
+  $config['node:movie'] = array(
+    'instance' => 'node:movie',
+    'config' => array(
+      'og:type' => array(
+        'value' => 'video.movie',
+      ),
+      'og:image' => array(
+        'value' => '[node:field-vvid:thumbnail_path]',
+      ),
+    ),
+  );
+
+  // Exported Metatag config instance: node:video.
+  $config['node:video'] = array(
+    'instance' => 'node:video',
+    'config' => array(
+      'og:type' => array(
+        'value' => 'video.other',
+      ),
+      'og:image' => array(
+        'value' => '[node:field_video_link__youtube_image_url]',
+      ),
+      'og:video' => array(
+        'value' => '[node:field_video_link__youtube_video_url]',
+      ),
+      'twitter:title' => array(
+        'value' => '[node:title] - [site:name]',
       ),
     ),
   );
