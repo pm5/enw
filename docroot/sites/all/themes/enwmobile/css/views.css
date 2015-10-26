@@ -45,7 +45,7 @@ background:#fff;
 .event-views {
   #background: url(../images/active.png) left top no-repeat;
   background:#eee7c8;
-  
+
   #border-bottom: 5px solid rgb(162, 182, 86);
 }
 tr.even.row-date {
