@@ -1563,7 +1563,7 @@ margin:10px!important;
 line-height:50px!important;
 }
 
-#mobile-menu .item {
+#mobile-dashboard .item {
   float: left;
   width: 33%;
 }
@@ -1602,6 +1602,6 @@ line-height:50px!important;
   text-align: center;
 }
 
-#mobile-menu img.icon {
+#mobile-dashboard img.icon {
   width: 56px;
 }
