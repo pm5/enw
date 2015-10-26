@@ -208,7 +208,7 @@ function enw_monthly_topic_default_page_manager_pages() {
   $display->layout_settings = array();
   $display->panel_settings = array();
   $display->cache = array();
-  $display->title = '';
+  $display->title = '環境節日';
   $display->uuid = '21110130-5280-4237-95be-86cc465796d1';
   $display->content = array();
   $display->panels = array();
@@ -275,39 +275,8 @@ function enw_monthly_topic_default_page_manager_pages() {
     $pane->uuid = '15301f9f-f30f-4a6e-90fe-3b1c027bbaa8';
     $display->content['new-15301f9f-f30f-4a6e-90fe-3b1c027bbaa8'] = $pane;
     $display->panels['middle'][1] = 'new-15301f9f-f30f-4a6e-90fe-3b1c027bbaa8';
-    $pane = new stdClass();
-    $pane->pid = 'new-964ace9e-c604-4e99-a4f0-375fdc49940f';
-    $pane->panel = 'middle';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'monthly_topic-latest_pane';
-    $pane->shown = TRUE;
-    $pane->access = array(
-      'plugins' => array(
-        0 => array(
-          'name' => 'mobile_detect_ctools',
-          'settings' => array(
-            'type' => 'isMobile',
-          ),
-          'context' => array(),
-          'not' => TRUE,
-        ),
-      ),
-    );
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array();
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $pane->uuid = '964ace9e-c604-4e99-a4f0-375fdc49940f';
-    $display->content['new-964ace9e-c604-4e99-a4f0-375fdc49940f'] = $pane;
-    $display->panels['middle'][2] = 'new-964ace9e-c604-4e99-a4f0-375fdc49940f';
-  $display->hide_title = PANELS_TITLE_PANE;
-  $display->title_pane = 'new-964ace9e-c604-4e99-a4f0-375fdc49940f';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['monthly_topics'] = $page;
