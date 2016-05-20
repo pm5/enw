@@ -187,5 +187,26 @@ function enw_movies_strongarm() {
   $strongarm->value = 'movies/[node:nid]';
   $export['pathauto_node_movie_pattern'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_video_pattern';
+  $strongarm->value = 'video/[node:nid]';
+  $export['pathauto_node_video_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_information_pattern';
+  $strongarm->value = 'type/[term:tid]';
+  $export['pathauto_taxonomy_term_information_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_vedios_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_vedios_pattern'] = $strongarm;
+
   return $export;
 }

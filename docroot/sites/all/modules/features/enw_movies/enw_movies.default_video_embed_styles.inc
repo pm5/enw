@@ -20,6 +20,7 @@ function enw_movies_default_video_embed_styles() {
       'height' => '540',
       'width' => '960',
       'allowfullscreen' => 1,
+      'class' => '',
     ),
     'youtube' => array(
       'width' => '960px',
@@ -32,6 +33,7 @@ function enw_movies_default_video_embed_styles() {
       'iv_load_policy' => '1',
       'autohide' => '2',
       'vq' => 'hd720',
+      'class' => '',
     ),
     'vimeo' => array(
       'width' => '960px',
@@ -42,8 +44,9 @@ function enw_movies_default_video_embed_styles() {
       'byline' => 1,
       'autoplay' => 0,
       'loop' => 0,
+      'class' => '',
     ),
-    'data__active_tab' => 'edit-data-facebook',
+    'data__active_tab' => '' . "\0" . 'dit-data-facebook',
   );
   $export['fullpage'] = $video_embed_style;
 

@@ -33,7 +33,7 @@ function enw_movies_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'flexslider';
   $handler->display->display_options['style_options']['optionset'] = 'movies_theater_w_thumbnail_slider';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* 欄位: 內容: vvid */
+  /* Field: Content: vvid */
   $handler->display->display_options['fields']['field_vvid']['id'] = 'field_vvid';
   $handler->display->display_options['fields']['field_vvid']['table'] = 'field_data_field_vvid';
   $handler->display->display_options['fields']['field_vvid']['field'] = 'field_vvid';
@@ -43,26 +43,26 @@ function enw_movies_views_default_views() {
   $handler->display->display_options['fields']['field_vvid']['settings'] = array(
     'video_style' => 'normal',
   );
-  /* Sort criterion: 內容: Post date */
+  /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: 內容: 已發表 */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: 內容: 類型 */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'movie' => 'movie',
   );
-  /* Filter criterion: 內容: 首頁推薦 */
+  /* Filter criterion: Content: Promoted to front page */
   $handler->display->display_options['filters']['promote']['id'] = 'promote';
   $handler->display->display_options['filters']['promote']['table'] = 'node';
   $handler->display->display_options['filters']['promote']['field'] = 'promote';
@@ -71,7 +71,7 @@ function enw_movies_views_default_views() {
   /* Display: 影片 */
   $handler = $view->new_display('panel_pane', '影片', 'theater_pane');
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* 欄位: 內容: vvid */
+  /* Field: Content: vvid */
   $handler->display->display_options['fields']['field_vvid']['id'] = 'field_vvid';
   $handler->display->display_options['fields']['field_vvid']['table'] = 'field_data_field_vvid';
   $handler->display->display_options['fields']['field_vvid']['field'] = 'field_vvid';
@@ -81,13 +81,13 @@ function enw_movies_views_default_views() {
   $handler->display->display_options['fields']['field_vvid']['settings'] = array(
     'video_style' => 'fullpage',
   );
-  /* 欄位: 內容: 標題 */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* 欄位: 內容: Body */
+  /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -110,7 +110,7 @@ function enw_movies_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* 欄位: 內容: vvid */
+  /* Field: Content: vvid */
   $handler->display->display_options['fields']['field_vvid']['id'] = 'field_vvid';
   $handler->display->display_options['fields']['field_vvid']['table'] = 'field_data_field_vvid';
   $handler->display->display_options['fields']['field_vvid']['field'] = 'field_vvid';
@@ -169,7 +169,7 @@ function enw_movies_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'grid';
   $handler->display->display_options['style_options']['columns'] = '3';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* 欄位: 內容: vvid */
+  /* Field: Content: vvid */
   $handler->display->display_options['fields']['field_vvid']['id'] = 'field_vvid';
   $handler->display->display_options['fields']['field_vvid']['table'] = 'field_data_field_vvid';
   $handler->display->display_options['fields']['field_vvid']['field'] = 'field_vvid';
@@ -182,7 +182,7 @@ function enw_movies_views_default_views() {
     'image_style' => 'video_list_thumbnail',
     'image_link' => 'content',
   );
-  /* 欄位: 內容: Video link */
+  /* Field: Content: Video link */
   $handler->display->display_options['fields']['field_video_link']['id'] = 'field_video_link';
   $handler->display->display_options['fields']['field_video_link']['table'] = 'field_data_field_video_link';
   $handler->display->display_options['fields']['field_video_link']['field'] = 'field_video_link';
@@ -195,14 +195,14 @@ function enw_movies_views_default_views() {
     'image_style' => 'video_list_thumbnail',
     'image_link' => 'content',
   );
-  /* 欄位: 內容: 標題 */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* 欄位: 內容: Body */
+  /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -212,16 +212,16 @@ function enw_movies_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '200',
   );
-  /* Sort criterion: 內容: Post date */
+  /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Sort criterion: 內容: 類型 */
+  /* Sort criterion: Content: Type */
   $handler->display->display_options['sorts']['type']['id'] = 'type';
   $handler->display->display_options['sorts']['type']['table'] = 'node';
   $handler->display->display_options['sorts']['type']['field'] = 'type';
-  /* Contextual filter: 內容: Has taxonomy term ID (with depth) */
+  /* Contextual filter: Content: Has taxonomy term ID (with depth) */
   $handler->display->display_options['arguments']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
   $handler->display->display_options['arguments']['term_node_tid_depth']['table'] = 'node';
   $handler->display->display_options['arguments']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
@@ -233,14 +233,14 @@ function enw_movies_views_default_views() {
   $handler->display->display_options['arguments']['term_node_tid_depth']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['term_node_tid_depth']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['term_node_tid_depth']['depth'] = '0';
-  /* Filter criterion: 內容: 已發表 */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: 內容: 類型 */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -257,7 +257,7 @@ function enw_movies_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* 欄位: 內容: vvid */
+  /* Field: Content: vvid */
   $handler->display->display_options['fields']['field_vvid']['id'] = 'field_vvid';
   $handler->display->display_options['fields']['field_vvid']['table'] = 'field_data_field_vvid';
   $handler->display->display_options['fields']['field_vvid']['field'] = 'field_vvid';
@@ -269,14 +269,14 @@ function enw_movies_views_default_views() {
     'image_style' => 'enw_movies_thumbnail_slider',
     'image_link' => 'content',
   );
-  /* 欄位: 內容: 標題 */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* 欄位: 內容: Body */
+  /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -288,14 +288,14 @@ function enw_movies_views_default_views() {
   );
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: 內容: 已發表 */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: 內容: 類型 */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';

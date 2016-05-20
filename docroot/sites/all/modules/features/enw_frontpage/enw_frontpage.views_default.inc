@@ -36,7 +36,7 @@ function enw_frontpage_views_default_views() {
   $handler->display->display_options['style_options']['optionset'] = 'frontpage_promotion_carousel';
   $handler->display->display_options['style_options']['captionfield'] = 'title';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* 欄位: 內容: 標題 */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -45,7 +45,7 @@ function enw_frontpage_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* 欄位: 內容: Image */
+  /* Field: Content: Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -56,19 +56,19 @@ function enw_frontpage_views_default_views() {
     'image_style' => 'frontpage_promotion_medium',
     'image_link' => 'content',
   );
-  /* Sort criterion: 內容: Post date */
+  /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: 內容: 已發表 */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: 內容: 首頁推薦 */
+  /* Filter criterion: Content: Promoted to front page */
   $handler->display->display_options['filters']['promote']['id'] = 'promote';
   $handler->display->display_options['filters']['promote']['table'] = 'node';
   $handler->display->display_options['filters']['promote']['field'] = 'promote';
@@ -77,7 +77,7 @@ function enw_frontpage_views_default_views() {
   /* Display: Carousel: Taxonomy */
   $handler = $view->new_display('panel_pane', 'Carousel: Taxonomy', 'taxonomy_carousel_pane');
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: 內容: Has taxonomy term ID */
+  /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
   $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['arguments']['tid']['field'] = 'tid';
@@ -91,20 +91,20 @@ function enw_frontpage_views_default_views() {
   $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: 內容: 已發表 */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: 內容: 首頁推薦 */
+  /* Filter criterion: Content: Promoted to front page */
   $handler->display->display_options['filters']['promote']['id'] = 'promote';
   $handler->display->display_options['filters']['promote']['table'] = 'node';
   $handler->display->display_options['filters']['promote']['field'] = 'promote';
   $handler->display->display_options['filters']['promote']['value'] = '1';
   $handler->display->display_options['filters']['promote']['group'] = 1;
-  /* Filter criterion: 內容: 類型 */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -118,7 +118,7 @@ function enw_frontpage_views_default_views() {
   /* Display: Carousel: 本月主題文章 */
   $handler = $view->new_display('panel_pane', 'Carousel: 本月主題文章', 'article_carousel_pane');
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: 內容: Has taxonomy term ID */
+  /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
   $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['arguments']['tid']['field'] = 'tid';
@@ -131,20 +131,20 @@ function enw_frontpage_views_default_views() {
   $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: 內容: 已發表 */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: 內容: 首頁推薦 */
+  /* Filter criterion: Content: Promoted to front page */
   $handler->display->display_options['filters']['promote']['id'] = 'promote';
   $handler->display->display_options['filters']['promote']['table'] = 'node';
   $handler->display->display_options['filters']['promote']['field'] = 'promote';
   $handler->display->display_options['filters']['promote']['value'] = '1';
   $handler->display->display_options['filters']['promote']['group'] = 1;
-  /* Filter criterion: 內容: 類型 */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -152,7 +152,7 @@ function enw_frontpage_views_default_views() {
     'article' => 'article',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: 內容: Has taxonomy term */
+  /* Filter criterion: Content: Has taxonomy term */
   $handler->display->display_options['filters']['tid']['id'] = 'tid';
   $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['filters']['tid']['field'] = 'tid';
@@ -169,7 +169,7 @@ function enw_frontpage_views_default_views() {
   /* Display: Carousel: 本月主打影片 */
   $handler = $view->new_display('panel_pane', 'Carousel: 本月主打影片', 'video_carousel_pane');
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* 欄位: 內容: 標題 */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -178,7 +178,7 @@ function enw_frontpage_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* 欄位: 內容: 縮圖 */
+  /* Field: Content: 縮圖 */
   $handler->display->display_options['fields']['field_thumbs']['id'] = 'field_thumbs';
   $handler->display->display_options['fields']['field_thumbs']['table'] = 'field_data_field_thumbs';
   $handler->display->display_options['fields']['field_thumbs']['field'] = 'field_thumbs';
@@ -189,7 +189,7 @@ function enw_frontpage_views_default_views() {
     'image_style' => 'frontpage_promotion_medium',
     'image_link' => 'content',
   );
-  /* 欄位: 內容: vvid */
+  /* Field: Content: vvid */
   $handler->display->display_options['fields']['field_vvid']['id'] = 'field_vvid';
   $handler->display->display_options['fields']['field_vvid']['table'] = 'field_data_field_vvid';
   $handler->display->display_options['fields']['field_vvid']['field'] = 'field_vvid';
@@ -202,7 +202,7 @@ function enw_frontpage_views_default_views() {
     'image_link' => 'node',
   );
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: 內容: Has taxonomy term ID */
+  /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
   $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['arguments']['tid']['field'] = 'tid';
@@ -215,20 +215,20 @@ function enw_frontpage_views_default_views() {
   $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: 內容: 已發表 */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: 內容: 首頁推薦 */
+  /* Filter criterion: Content: Promoted to front page */
   $handler->display->display_options['filters']['promote']['id'] = 'promote';
   $handler->display->display_options['filters']['promote']['table'] = 'node';
   $handler->display->display_options['filters']['promote']['field'] = 'promote';
   $handler->display->display_options['filters']['promote']['value'] = '1';
   $handler->display->display_options['filters']['promote']['group'] = 1;
-  /* Filter criterion: 內容: 類型 */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -283,14 +283,14 @@ function enw_frontpage_views_default_views() {
   $handler->display->display_options['row_options']['inline'] = array(
     'body_1' => 'body_1',
   );
-  /* 頁首: Global: Text area */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['empty'] = TRUE;
   $handler->display->display_options['header']['area']['content'] = ' ';
   $handler->display->display_options['header']['area']['format'] = 'plain_text';
-  /* 欄位: 內容: Upload slide */
+  /* Field: Content: Upload slide */
   $handler->display->display_options['fields']['field_slide_image']['id'] = 'field_slide_image';
   $handler->display->display_options['fields']['field_slide_image']['table'] = 'field_data_field_slide_image';
   $handler->display->display_options['fields']['field_slide_image']['field'] = 'field_slide_image';
@@ -301,7 +301,7 @@ function enw_frontpage_views_default_views() {
     'image_style' => '',
     'image_link' => '',
   );
-  /* 欄位: 內容: Post date */
+  /* Field: Content: Post date */
   $handler->display->display_options['fields']['created']['id'] = 'created';
   $handler->display->display_options['fields']['created']['table'] = 'node';
   $handler->display->display_options['fields']['created']['field'] = 'created';
@@ -310,7 +310,7 @@ function enw_frontpage_views_default_views() {
   $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['created']['date_format'] = 'custom';
   $handler->display->display_options['fields']['created']['custom_date_format'] = 'Y 年 M d 日';
-  /* 欄位: 內容: 標題 */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -319,7 +319,7 @@ function enw_frontpage_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* 欄位: 內容: Body */
+  /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -330,7 +330,7 @@ function enw_frontpage_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '600',
   );
-  /* 欄位: 內容: 連結 */
+  /* Field: Content: Link */
   $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
@@ -338,7 +338,7 @@ function enw_frontpage_views_default_views() {
   $handler->display->display_options['fields']['view_node']['exclude'] = TRUE;
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['text'] = '閱讀全文';
-  /* 欄位: 內容: Slide text */
+  /* Field: 內容: Slide text */
   $handler->display->display_options['fields']['body_1']['id'] = 'body_1';
   $handler->display->display_options['fields']['body_1']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body_1']['field'] = 'body';
@@ -352,19 +352,19 @@ function enw_frontpage_views_default_views() {
   $handler->display->display_options['fields']['body_1']['element_class'] = 'views-field-slide-text';
   $handler->display->display_options['fields']['body_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body_1']['type'] = 'text_plain';
-  /* Sort criterion: 內容: Post date */
+  /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: 內容: 已發表 */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: 內容: 類型 */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -375,7 +375,7 @@ function enw_frontpage_views_default_views() {
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: 內容: Updated date */
+  /* Sort criterion: Content: Updated date */
   $handler->display->display_options['sorts']['changed']['id'] = 'changed';
   $handler->display->display_options['sorts']['changed']['table'] = 'node';
   $handler->display->display_options['sorts']['changed']['field'] = 'changed';
@@ -387,7 +387,7 @@ function enw_frontpage_views_default_views() {
   /* Display: Block: compact */
   $handler = $view->new_display('block', 'Block: compact', 'compact_block');
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* 欄位: 內容: Upload slide */
+  /* Field: Content: Upload slide */
   $handler->display->display_options['fields']['field_slide_image']['id'] = 'field_slide_image';
   $handler->display->display_options['fields']['field_slide_image']['table'] = 'field_data_field_slide_image';
   $handler->display->display_options['fields']['field_slide_image']['field'] = 'field_slide_image';
@@ -398,7 +398,7 @@ function enw_frontpage_views_default_views() {
     'image_style' => '',
     'image_link' => '',
   );
-  /* 欄位: 內容: Post date */
+  /* Field: Content: Post date */
   $handler->display->display_options['fields']['created']['id'] = 'created';
   $handler->display->display_options['fields']['created']['table'] = 'node';
   $handler->display->display_options['fields']['created']['field'] = 'created';
@@ -407,7 +407,7 @@ function enw_frontpage_views_default_views() {
   $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['created']['date_format'] = 'custom';
   $handler->display->display_options['fields']['created']['custom_date_format'] = 'Y 年 M d 日';
-  /* 欄位: 內容: 標題 */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -416,7 +416,7 @@ function enw_frontpage_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* 欄位: 內容: Body */
+  /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -427,7 +427,7 @@ function enw_frontpage_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '600',
   );
-  /* 欄位: 內容: 連結 */
+  /* Field: Content: Link */
   $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
@@ -435,7 +435,7 @@ function enw_frontpage_views_default_views() {
   $handler->display->display_options['fields']['view_node']['exclude'] = TRUE;
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['text'] = '閱讀全文';
-  /* 欄位: 內容: Slide text */
+  /* Field: 內容: Slide text */
   $handler->display->display_options['fields']['body_1']['id'] = 'body_1';
   $handler->display->display_options['fields']['body_1']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body_1']['field'] = 'body';
@@ -447,7 +447,7 @@ function enw_frontpage_views_default_views() {
   $handler->display->display_options['fields']['body_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body_1']['type'] = 'text_plain';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: 內容: Updated date */
+  /* Sort criterion: Content: Updated date */
   $handler->display->display_options['sorts']['changed']['id'] = 'changed';
   $handler->display->display_options['sorts']['changed']['table'] = 'node';
   $handler->display->display_options['sorts']['changed']['field'] = 'changed';

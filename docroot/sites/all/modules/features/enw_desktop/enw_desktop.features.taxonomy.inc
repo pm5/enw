@@ -41,6 +41,14 @@ function enw_desktop_taxonomy_default_vocabularies() {
       'module' => 'taxonomy',
       'weight' => '0',
     ),
+    'style_2016' => array(
+      'name' => '文章類型',
+      'machine_name' => 'style_2016',
+      'description' => '生活/親子/影音',
+      'hierarchy' => '0',
+      'module' => 'taxonomy',
+      'weight' => '0',
+    ),
     'theme' => array(
       'name' => '熱門環境議題',
       'machine_name' => 'theme',
