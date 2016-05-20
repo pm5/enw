@@ -24,7 +24,7 @@ function enw_footer_block_view($delta = '') {
           'subject' => '<none>',
           'content' => '
             <div style="margin: 5px 10px 30px; border-width: 5px; border-style: solid; width: 43px; height: 45px; float: left;">
-              <a href="http://www.webguide.nat.gov.tw/wSite/sp?xdUrl=/wSite/enable/valid.jsp&amp;conId=20130326154811" target="_blank"><img alt="我的E政府" src="http://farm9.staticflickr.com/8100/8525994783_6235eac3d8_o.gif" title="我的E政府"></a>
+              <a href="http://www.gov.tw/" target="_blank"><img alt="我的E政府" src="http://farm9.staticflickr.com/8100/8525994783_6235eac3d8_o.gif" title="我的E政府"></a>
             </div>
             <div style="font-family:微軟正黑體,helvetica,sans-serif; margin-left: 73px; color: #000000; line-height: 1.538em; word-break: keep-all;">
               <div><strong><a href="http://www.epa.gov.tw/" target="_blank"><span style="color:#0099cc;">行政院環境保護署</span></a></strong>&nbsp;版權所有 <span style="white-space: nowrap;">2013 All Right Reserved</span></div>
