@@ -210,13 +210,20 @@
  *   );
  * @endcode
  */
-$databases['default']['default'] = array(
-  'driver' => 'mysql',
-  'database' => getenv('DB_NAME'),
-  'username' => getenv('DB_USER'),
-  'password' => getenv('DB_PASS'),
-  'host' => getenv('DB_HOST'),
-  'prefix' => '',
+$databases = array (
+  'default' => 
+  array (
+    'default' => 
+    array (
+      'database' => 'enw-new',
+      'username' => 'root',
+      'password' => '184184',
+      'host' => 'localhost',
+      'port' => '',
+      'driver' => 'mysql',
+      'prefix' => '',
+    ),
+  ),
 );
 
 /**
@@ -249,7 +256,7 @@ $update_free_access = FALSE;
  *   $drupal_hash_salt = file_get_contents('/home/example/salt.txt');
  *
  */
-$drupal_hash_salt = '';
+$drupal_hash_salt = 'yguYxIWBjogr9LuMVD__4PZwuBCGtp7TH9yGcxcx7Tk';
 
 /**
  * Base URL (optional).
@@ -558,11 +565,3 @@ $conf['404_fast_html'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
  * Remove the leading hash signs to disable.
  */
 # $conf['allow_authorize_operations'] = FALSE;
-
-$conf['cache_backends'][] = 'sites/all/modules/contrib/memcache/memcache.inc';
-$conf['cache_default_class'] = 'MemCacheDrupal';
-$conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
-
-$conf['memcache_servers'] = array(
-  '192.168.10.3:11211' => 'default',  // to your Memcached installation
-);

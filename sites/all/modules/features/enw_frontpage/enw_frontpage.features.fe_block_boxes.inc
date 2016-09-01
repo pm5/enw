@@ -14,7 +14,9 @@ function enw_frontpage_default_fe_block_boxes() {
   $fe_block_boxes->info = '手機版首頁選單';
   $fe_block_boxes->format = 'full_html';
   $fe_block_boxes->machine_name = 'mobile_menu';
-  $fe_block_boxes->body = '<div id="mobile-menu">
+  $fe_block_boxes->body ='';
+/*
+  '<div id="mobile-menu">
   <div class="item"><a href="/monthly-topics"><img src="/sites/all/themes/enwmobile/images/icon-monthly-topics.png" class="icon"/>
       <div class="label">環境節日</div></a></div>
   <div class="item"><a href="/affair"><img src="/sites/all/themes/enwmobile/images/icon-affair.png" class="icon"/>
@@ -34,7 +36,7 @@ function enw_frontpage_default_fe_block_boxes() {
   <div class="item"><a href="/2015%E5%BE%B5%E4%BB%B6"><img src="/sites/all/themes/enwmobile/images/icon-contactform.png" class="icon"/>
       <div class="label">徵件活動</div></a></div>
 </div>';
-
+*/
   $export['mobile_menu'] = $fe_block_boxes;
 
   return $export;

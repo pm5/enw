@@ -26,12 +26,12 @@ function enw_footer_block_view($delta = '') {
             <div style="margin: 5px 10px 30px; border-width: 5px; border-style: solid; width: 43px; height: 45px; float: left;">
               <a href="http://www.gov.tw/" target="_blank"><img alt="我的E政府" src="http://farm9.staticflickr.com/8100/8525994783_6235eac3d8_o.gif" title="我的E政府"></a>
             </div>
-            <div style="font-family:微軟正黑體,helvetica,sans-serif; margin-left: 73px; color: #000000; line-height: 1.538em; word-break: keep-all;">
-              <div>指導單位：<strong><a href="http://www.epa.gov.tw/" target="_blank"><span style="color:#0099cc;">行政院環境保護署</span></a></strong></div>
-              <div>維護單位：<a href="http://www.e-info.org.tw/" target="_blank"><strong><span style="color:#0099cc;">台灣環境資訊協會</span></strong></a></div>
-              <div>116 臺北市文山區萬隆街38號  聯絡電話：02-29332233</div>
-              <div><strong><a href="http://enw.e-info.org.tw/content/338" target="_blank"><span style="color:#0099cc;">隱私權政策</span></a> <a href="http://enw.e-info.org.tw/content/339" target="_blank"><span style="color:#0099cc;">資訊安全政策</span></a> <a href="http://enw.e-info.org.tw/content/340" target="_blank"><span style="color:#0099cc;">版權宣告</span></a></strong></div>
-              <div><strong style="font-size: 10px">[行政院環境保護署 &nbsp; 廣告]</strong></div>
+            <div style="font-family:微軟正黑體,helvetica,sans-serif; margin-left: 73px; color: #eeeeee; line-height: 1.538em; word-break: keep-all;">
+              <div><strong><a class="epa" href="http://www.epa.gov.tw/" target="_blank">行政院環境保護署</a></strong>&nbsp;版權所有 <span style="white-space: nowrap;">2013 All Right Reserved</span></div>
+              <div>10042 臺北市中正區中華路一段83號 總機:02-23117722</div>
+              <div>維護單位:<a class="epa" href="http://www.e-info.org.tw/" target="_blank"><strong>台灣環境資訊協會</strong></a> 聯絡電話:02-29332233</div>
+              <div><strong><a class="epa" href="http://enw.e-info.org.tw/content/338" target="_blank">隱私權政策</a> <a class="epa" href="http://enw.e-info.org.tw/content/339" target="_blank">資訊安全政策</a> <a class="epa" href="http://enw.e-info.org.tw/content/340" target="_blank">版權宣告</a></strong></div>
+              <div><strong>行政院環境保護署 &nbsp; 廣告</strong></div>
             </div>
           ',
         );

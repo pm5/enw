@@ -1,0 +1,194 @@
+.switcher { display:none; }
+@media (max-width: 1250px) {
+	body { min-width:320px; }
+	.switcher { display:inline-block; }
+	h3 {
+		font-size:22px;
+		line-height:25px;
+	}
+	h4 {
+		font-size:14px;
+		line-height:17px;
+	}
+	h5 {
+		font-size:14px;
+		line-height:17px;
+	}
+	.view-top-games .views-field-field-top-game-image { max-width:35%; }
+	.view-slider .flex-caption h2 {
+		font-size:35px;
+		line-height:40px;
+	}
+	.view-article .views-field-title { padding:0; }
+	.view-article .views-row,
+	.view-front-parallax-one .views-row	{ padding:0; }
+}
+@media (max-width: 995px) {
+	.page-page-404 .panel-col-first { font-size:160px; }
+	.stickup {
+		box-shadow:none !important;
+		position:static !important;
+	}
+	.pseudoStickyBlock {
+		display:none !important;
+		height:0 !important;
+	}
+	#backtotop { display:none !important; }
+	#superfish-1 > li { font-size:20px; }
+	.view-slider .flex-caption h2 {
+		font-size:30px;
+		line-height:35px;
+	}
+	.view-games .views-row h3 {
+		position:static;
+		padding-top:5px;
+	}
+	.view-games .views-row h3 a { color:#313131; }
+	.view-games .views-row h3 a:hover {
+		text-decoration:none;
+		color:#f12929;
+	}
+	.view-latest-games .views-row, .view-featured-games .views-row, .view-popular-games .views-row { margin-bottom:30px !important; }
+	.view-latest-games .views-field-field-latest-games-image, .view-latest-games .views-field-field-featured-games-image, .view-latest-games .views-field-field-popular-games-image, .view-featured-games .views-field-field-latest-games-image, .view-featured-games .views-field-field-featured-games-image, .view-featured-games .views-field-field-popular-games-image, .view-popular-games .views-field-field-latest-games-image, .view-popular-games .views-field-field-featured-games-image, .view-popular-games .views-field-field-popular-games-image {
+		float:none;
+		width:100%;
+		max-width:none;
+		margin:0 0 10px;
+	}
+	.view-article .views-field-title {
+		font-size:35px;
+		line-height:40px;
+	}
+	.block-tm-follow-site .tm-follow-links span.tm-follow-link-wrapper a:before { margin-right:15px; }
+	.view-offer .views-row { padding:10px; }
+	.view-offer .counter {
+		float:none;
+		margin:0 0 20px;
+	}
+	.region-header .grid-8, .region-header .grid-4 {
+		float:none !important;
+		width:100% !important;
+		margin:0 !important;
+	}
+}
+@media (max-width: 767px) {
+	#superfish-1 { display:none; }
+	.select-menu {
+		display:block !important;
+		width:100%;
+	}
+	.comment-wrapper { overflow:visible; }
+	.user-picture { margin-bottom:12px; }
+	.views-field-field-portfolio-image { pointer-events:none; }
+	.panel-2col .panel-col-first, .panel-2col .panel-col-last {
+		float:none;
+		width:100%;
+	}
+	.panel-2col .panel-col-first .inside, .panel-2col .panel-col-last .inside { margin:0; }
+	.page-page-404 .panel-col-first {
+		font-size:170px;
+		line-height:170px;
+		text-align:center;
+	}
+	.filter-help {
+		float:none;
+		margin-bottom:15px;
+		padding-top:0;
+	}
+	.mobile-two-column .views-row {
+		float:left !important;
+		width:46% !important;
+		margin-bottom:30px !important;
+		margin-right:4% !important;
+	}
+	.mobile-two-column .views-row.even { margin-right:0 !important; }
+	.mobile-two-column .views-row.odd { clear:left; }
+	.contact-form .form-type-textfield {
+		float:none;
+		margin-left:0;
+		width:100%;
+	}
+	.node-teaser .field-type-file, .node-teaser .field-type-image, .node-employee .field-type-image {
+		float:none;
+		margin:0 0 20px;
+		max-width:100%;
+	}
+	#comments .indented { margin-left:0; }
+	.header-section-1 { padding:15px 0; }
+	.header-section-1 .col1 { float:none; }
+	.header-section-1 .col2 {
+		padding:0 0 25px;
+		float:none;
+	}
+	.header-section-2 { padding:15px 0; }
+	.header-section-2 .col1 {
+		float:none;
+		padding-bottom:15px;
+	}
+	.header-section-2 .col2 {
+		width:100%;
+		float:none;
+	}
+	.view-slider .flex-caption h2 {
+		font-size:25px;
+		line-height:28px;
+	}
+	.view-slider .flex-caption p { display:none; }
+	.view-latest-games .views-row, .view-featured-games .views-row, .view-popular-games .views-row { margin-bottom:30px !important; }
+	.view-latest-games .views-field-field-latest-games-image, .view-latest-games .views-field-field-featured-games-image, .view-latest-games .views-field-field-popular-games-image, .view-featured-games .views-field-field-latest-games-image, .view-featured-games .views-field-field-featured-games-image, .view-featured-games .views-field-field-popular-games-image, .view-popular-games .views-field-field-latest-games-image, .view-popular-games .views-field-field-featured-games-image, .view-popular-games .views-field-field-popular-games-image {
+		float:none;
+		width:100%;
+		max-width:none;
+		margin:0 0 10px;
+	}
+	.view-latest-games .views-field-field-latest-games-image img, .view-latest-games .views-field-field-featured-games-image img, .view-latest-games .views-field-field-popular-games-image img, .view-featured-games .views-field-field-latest-games-image img, .view-featured-games .views-field-field-featured-games-image img, .view-featured-games .views-field-field-popular-games-image img, .view-popular-games .views-field-field-latest-games-image img, .view-popular-games .views-field-field-featured-games-image img, .view-popular-games .views-field-field-popular-games-image img { width:100%; }
+	.block-tm-follow-site .tm-follow-links span.tm-follow-link-wrapper {
+		width:100%;
+		margin:0 0 10px;
+		float:none;
+	}
+	.img-left {
+		float:none;
+		max-width:none;
+		margin:0 0 20px;
+	}
+}
+@media (max-width: 479px) {
+	#comments .comment .comment-wrapper { overflow:visible; }
+	.page-tracker #main-wrapper .content { overflow-x:scroll; }
+	.page-tracker #main-wrapper .content table.sticky-header { display:none !important; }
+	.page-forum #forum { overflow-x:scroll; }
+	.page-forum #forum td.forum .icon {
+		float:none;
+		margin:0 0 5px;
+	}
+	.field-name-field-testi-image {
+		float:none;
+		margin:0 0 20px;
+		max-width:inherit;
+	}
+	.mobile-two-column .views-row {
+		float:none;
+		width:100% !important;
+		margin-right:0 !important;
+	}
+	#isotope-options #filters li {
+		display:block;
+		margin:0 0 10px;
+	}
+	.node-submitted ul.submitted-list li {
+		border-bottom:1px solid #cecece;
+		float:none;
+		margin:0;
+		padding:3px 0;
+	}
+	.view-slider .flex-direction-nav { display:none; }
+	.view-slider .flex-caption {
+		position:static;
+		padding:20px;
+	}
+	.region-top-menu ul.menu li {
+		font-size:11px;
+		margin:0 0 0 10px;
+	}
+}
